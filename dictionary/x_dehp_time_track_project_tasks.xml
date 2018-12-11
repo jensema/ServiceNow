@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Project Tasks" max_length="40" name="x_dehp_time_track_project_tasks" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Train" max_length="100" name="train" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Badger Express" sequence="1" value="badger_express"/>
+                <element inactive_on_update="false" label="Infinity" sequence="2" value="Infinity"/>
+                <element inactive_on_update="false" label="Shared Services" sequence="3" value="shared_services"/>
+            </choice>
+        </element>
+    </element>
+</database>

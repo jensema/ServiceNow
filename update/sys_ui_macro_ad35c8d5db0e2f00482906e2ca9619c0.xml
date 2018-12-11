@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description>Add a required marker to a label.</description>
+        <media_type/>
+        <name>required_marker</name>
+        <scoped_name>x_dehp_time_track_required_marker</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 02:17:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ad35c8d5db0e2f00482906e2ca9619c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>required_marker</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_macro_ad35c8d5db0e2f00482906e2ca9619c0</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-27 02:17:11</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<span class="required-marker sn-tooltip-basic" title="${gs.getMessage('Required')}"
+		  data-original-title="${gs.getMessage('Required')}" aria-label="${gs.getMessage('Required')}"/>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <enforce_license>log</enforce_license>
+        <js_level>helsinki_es5</js_level>
+        <licensable>true</licensable>
+        <license_category>none</license_category>
+        <license_model>none</license_model>
+        <logo/>
+        <menu display_value="Time Track (DHP)">97c58a0ddb82eb00aa0f7104399619e4</menu>
+        <name>Time Tracking</name>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_dehp_time_track</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description>Financial time tracking application for users. Ties to labor rates to report costs to finance department.</short_description>
+        <source>x_dehp_time_track</source>
+        <store_correlation_id/>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 16:58:46</sys_created_on>
+        <sys_id>fd7546c9db82eb00aa0f71043996190b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-08 00:23:20</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <user_role display_value="x_dehp_time_track.user" name="x_dehp_time_track.user">17c58a0ddb82eb00aa0f7104399619ee</user_role>
+        <vendor/>
+        <vendor_prefix/>
+        <version>0.2.0</version>
+    </sys_app>
+</record_update>

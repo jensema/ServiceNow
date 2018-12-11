@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Automaticly Build Timesheets</name>
+        <run_as display_value="Mid Server">d5d34dd06fbf8100b85fcb512e3ee4ab</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-11-27 03:11:13</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[TimeSheetUtil.autoBuildTimesheets();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 03:12:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1da1d811db4e2f00482906e2ca96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Automaticly Build Timesheets</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sysauto_script_1da1d811db4e2f00482906e2ca96192f</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-27 03:12:21</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>delegate_warning</key>
+        <language>en</language>
+        <message>&lt;strong&gt;WARNING&lt;/strong&gt;: When setting up approvers for time sheets, only users with the 'Time Sheet Aprover' role will be allowed to approve timesheets. Check with the time sheet administrators if you have questions on who is allowed to approve time sheets.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 02:55:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>df1e409ddb0e2f00482906e2ca9619ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>delegate_warning</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_message_df1e409ddb0e2f00482906e2ca9619ed</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-27 02:55:54</sys_updated_on>
+    </sys_ui_message>
+</record_update>

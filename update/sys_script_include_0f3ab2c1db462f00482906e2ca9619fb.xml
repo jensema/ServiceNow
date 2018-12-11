@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.TimeCardUtils</api_name>
+        <client_callable>false</client_callable>
+        <description>Various Time Card functions&#13;
+&#13;
+cardsByChargeCode(chargeCode, timeSheet)&#13;
+	Returns: GlideRecord object of cards with a specific time code for a time sheet.&#13;
+	chargeCode: Valid Values are "Capital" and "Expense"&#13;
+	timeSheet: Can take a TimeSheet object, GlideRecord, or Sys_Id.&#13;
+&#13;
+getTimeCardRecord(timeSheet, category)&#13;
+	timeSheet: Can take a TimeSheet object, GlideRecord, or Sys_Id.&#13;
+	</description>
+        <name>TimeCardUtils</name>
+        <script><![CDATA[var TimeCardUtils = Class.create();
+
+TimeCardUtils.cardsByChargeCode = function (chargeCode, timeSheet) {
+	timeSheet = TimeSheetUtil.verifyTimeSheet(timeSheet);
+	if(timeSheet) {
+	var timeCards = new GlideRecord('x_dehp_time_track_time_card');
+	var query = 'category.code=' + chargeCode + '^time_sheet=' + timeSheet.sysId;
+	timeCards.addEncodedQuery(query);
+	timeCards.query();
+	return timeCards;
+		}
+	gs.error('Failed to get cardsByChargeCode for TimeSheet: ' + timeSheet.sysId + '\tchargeCode: ' + chargeCode);
+	return false;
+};
+
+TimeCardUtils.getTimeCardRecord = function(timeSheet, category) {
+	timeSheet = TimeSheetUtil.verifyTimeSheet(timeSheet);
+	var gr = new GlideRecord('x_dehp_time_track_time_card');
+	gr.addQuery('time_sheet', timeSheet.sysId);
+	gr.addQuery('category', category);
+	gr.query();
+	if(gr.next())
+		return gr;
+	return false;
+};
+
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 20:49:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0f3ab2c1db462f00482906e2ca9619fb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>TimeCardUtils</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_0f3ab2c1db462f00482906e2ca9619fb</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-26 20:50:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

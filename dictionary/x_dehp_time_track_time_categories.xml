@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Time Categories" max_length="40" name="x_dehp_time_track_time_categories" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Account" mandatory="true" max_length="32" name="account" reference="x_dehp_time_track_accounts" reference_qual="type.contains_tasks=true^EQ" reference_qual_condition="type.contains_tasks=true^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element choice="1" label="Charge Code" mandatory="true" max_length="40" name="code" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Capital" sequence="1" value="Capital"/>
+                <element inactive_on_update="false" label="Expense" sequence="2" value="Expense"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Link to Feature/Task" max_length="40" name="is_task" type="boolean"/>
+        <element label="Name" max_length="203" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" label="Task" max_length="32" name="task" reference="task" reference_qual="javascript:gs.getProperty('x_dehp_time_track.taskWorkTables')" type="reference" use_reference_qualifier="advanced"/>
+        <index name="index">
+            <element name="task"/>
+        </index>
+        <index name="index2">
+            <element name="account"/>
+        </index>
+        <index name="index3">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

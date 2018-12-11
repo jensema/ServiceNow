@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="lookback" label="Auto Fill Time Card Lookback" language="en" table="x_dehp_time_track_time_sheet_policy">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>lookback</element>
+            <help/>
+            <hint/>
+            <label>Auto Fill Time Card Lookback</label>
+            <language>en</language>
+            <name>x_dehp_time_track_time_sheet_policy</name>
+            <plural>Auto Fill Time Card Lookbacks</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-26 21:58:31</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>e41a4b81db862f00482906e2ca96196f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Auto Fill Time Card Lookback</sys_name>
+            <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+            <sys_update_name>sys_documentation_x_dehp_time_track_time_sheet_policy_lookback_en</sys_update_name>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-26 21:58:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

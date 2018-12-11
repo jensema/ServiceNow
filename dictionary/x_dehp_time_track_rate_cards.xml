@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Rate Cards" max_length="40" name="x_dehp_time_track_rate_cards" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Default Rate" max_length="40" name="default_rate" read_only="true" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" label="Hourly Rate" mandatory="true" max_length="20" name="hourly_rate" type="currency"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Employee" sequence="1" value="Employee"/>
+                <element inactive_on_update="false" label="Contractor" sequence="2" value="Contractor"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Staffing Agency" max_length="32" name="vendor" reference="core_company" type="reference"/>
+        <index name="index">
+            <element name="vendor"/>
+        </index>
+    </element>
+</database>

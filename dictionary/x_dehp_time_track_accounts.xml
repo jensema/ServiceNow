@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Accounts" max_length="40" name="x_dehp_time_track_accounts" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function() {&#10;&#9;var account = new Account(current);&#10;&#9;categories = account.getSubAccountsCategories();&#10;&#9;var costs = DayCard.getTaskCosts(categories);&#10;&#9;return costs.Capital;&#10;})();" default="0" label="Capital Cost" max_length="20" name="capital_cost" read_only="true" type="currency" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#10;&#9;var number = current.number;&#10;&#9;var displayName = '';&#10;&#9;if (number) {&#10;&#9;&#9;number = number.trim();&#10;&#9;&#9;displayName = number + ' - ';&#10;&#9;}&#10;&#9;// Add your code here&#10;&#9;return displayName + current.name;  // return the calculated value&#10;&#10;})(current);" display="true" label="Display Name" max_length="150" name="display_name" read_only="true" type="string" virtual="true"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function() {&#10;&#9;var account = new Account(current);&#10;&#9;categories = account.getSubAccountsCategories();&#10;&#9;var costs = DayCard.getTaskCosts(categories);&#10;&#9;return costs.Expense;&#10;})();" default="0" label="Expense Cost" max_length="20" name="expense_cost" read_only="true" type="currency" virtual="true"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Account Number" max_length="20" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Parent" max_length="32" name="parent" reference="x_dehp_time_track_accounts" reference_qual="active=true^type.contains_tasks=false^EQ" reference_qual_condition="active=true^type.contains_tasks=false^EQ" type="reference"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function() {&#10;&#9;var account = new Account(current);&#10;&#9;categories = account.getSubAccountsCategories();&#10;&#9;var costs = DayCard.getTaskCosts(categories);&#10;&#9;return parseFloat(costs.Expense) + parseFloat(costs.Capital);&#10;})();" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency" virtual="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Type" max_length="32" name="type" reference="x_dehp_time_track_account_type" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <index name="index">
+            <element name="parent"/>
+        </index>
+        <index name="index2">
+            <element name="type"/>
+        </index>
+    </element>
+</database>

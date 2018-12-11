@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function getFields() {
+	return {
+		'category': document.getElementById('selectCategory'),
+		'categoryError':document.getElementById('error_msg_selectCategory'),
+		'task': document.getElementById('category_select_task'),
+		'taskError': document.getElementById('error_msg_selectTask'),
+	};
+}
+
+function dispalyTask() {
+	var fields = getFields();
+	if(fields.category.getValue() != 'selectTask')
+		fields.task.style.display = "none";
+	else
+		fields.task.style.display = "block";
+}
+
+function addSelectedCategory() {
+	var fields = getFields();
+	var categoryID = fields.category.getValue();
+	
+	if(checkRequiredFields()){
+		// If the category is to select tasks, use the task field for the value
+		if(categoryID == 'selectTask')
+			categoryID = (document.getElementById('categoryTaskId')).getValue();
+		buildTimeCard(categoryID);
+	}
+}
+function clearErrors() {
+	var fields = getFields();
+	fields.categoryError.innerHTML = '';
+	fields.taskError.innerHTML = '';
+}
+
+function checkRequiredFields() {
+	clearErrors();
+	var fields = getFields();
+	if(fields.category.getValue() == '') {
+		fields.categoryError.innerHTML = "Select a category.";
+		return false;
+	}
+	if(fields.task.style == 'block' && fields.task.getValue() == '') {
+		fields.taskError.innerHTML = "Select a task.";
+		return false;
+	}
+	return true;
+}
+
+function buildTimeCard(id) {
+	var ga = new GlideAjax('x_dehp_time_track.TimeSheetAjax');
+	ga.addParam('sysparm_name', 'buildTimeCard');
+	ga.addParam('sysparm_timeSheetId', g_form.getUniqueValue());
+	ga.addParam('sysparm_category', id);
+	ga.getXML(cardBuilt);
+}
+
+function cardBuilt(response) {
+	destroyModal();
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	gsftSubmit(null, g_form.getFormElement(), 'add_category');
+}
+function destroyModal() {
+	(GlideModal.get()).destroy();
+}
+//@ sourceURL=MyInlineScript.js]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_dehp_time_track_get_category.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g2:evaluate>
+		var categories = new GlideRecord('x_dehp_time_track_time_categories');
+		categories.addQuery('is_task=false^active=true');
+		categories.orderBy('name');
+		categories.query();
+	</g2:evaluate>
+	<form>
+		<div class="form-horizontal">
+			<div id="category_select_id" class="form-group is-required">
+				<label for="selectCategory" class="control-label col-sm-3">
+					<g:macro_invoke macro='x_dehp_time_track_required_marker'/>
+					${gs.getMessage("Select Category")}
+				</label>
+				<div class="col-sm-9">
+					<select id="selectCategory" class="form-control select2" required="true" aria-required="true" name="selectCategory" onchange="dispalyTask();">
+						<option value="">${gs.getMessage('-- Select a Category --')}</option>
+						<j2:while test="$[categories.next()]">
+							<option value="$[categories.sys_id]">$[categories.name]</option>
+						</j2:while>
+						<option value="selectTask">${gs.getMessage('Task or Feature...')}</option>
+					</select>
+				</div>
+				<span class="col-sm-3"/><span id="error_msg_selectCategory" class="help-block col-sm-9"/>
+			</div>
+			<div id="category_select_task" class="form-group is-required" style="display:none">
+				<label for="categorySelectTask" class="control-label col-sm-3" >
+					<g:macro_invoke macro='x_dehp_time_track_required_marker'/>
+					${gs.getMessage("Select Task")}
+				</label>
+				<div class="col-sm-9">
+					<g:macro_invoke macro="ui_reference" id="categoryTaskId" name="categoryTaskId"
+									table="x_dehp_time_track_time_categories" show_popup="true" show_lookup="true"
+									query="is_task=true^active=true"/>
+				</div>
+				<span class="col-sm-3"/><span id="error_msg_selectTask" class="help-block col-sm-9"/>
+			</div>
+		</div>
+	</form>
+
+	<div class="modal-footer">
+		<div class="row">
+			<div class="col-sm-6"/>
+			<div class="col-sm-3"><button class="btn btn-block btn-default" onClick="destroyModal()">Cancel</button></div>
+			<div class="col-sm-3"><button class="btn btn-block btn-primary" onClick="addSelectedCategory()">Add</button>
+			</div>
+		</div>
+	</div>	
+</j:jelly>]]></html>
+        <name>get_category</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 02:15:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0de40095db0e2f00482906e2ca9619a2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>get_category</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_page_0de40095db0e2f00482906e2ca9619a2</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:11:16</sys_updated_on>
+    </sys_ui_page>
+</record_update>

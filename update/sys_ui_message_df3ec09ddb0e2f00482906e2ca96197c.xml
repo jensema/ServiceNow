@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>insufficient_hours</key>
+        <language>en</language>
+        <message>You reported a total of {0} hours, but require a minimum of {1} hours. Submission rejected.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 02:56:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>df3ec09ddb0e2f00482906e2ca96197c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>insufficient_hours</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_message_df3ec09ddb0e2f00482906e2ca96197c</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-27 02:56:29</sys_updated_on>
+    </sys_ui_message>
+</record_update>

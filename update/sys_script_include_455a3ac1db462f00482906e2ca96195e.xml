@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.TimeSheet</api_name>
+        <client_callable>false</client_callable>
+        <description>Time Sheet Class&#13;
+&#13;
+allowEdit(): Checks to see if we are allowed to edit (State is Pending or Rejected);&#13;
+</description>
+        <name>TimeSheet</name>
+        <script><![CDATA[var TimeSheet = Class.create();
+TimeSheet.prototype = {
+	initialize : function (obj) {
+		this.gr = TimeUtils.verifyIsGlideRecord(obj, 'x_dehp_time_track_time_sheet');
+		this.sysId = this.gr.sys_id;
+	},
+	
+	allowEdit: function() {
+		var allow = this.gr.getValue('state') == 'Pending';
+		allow = allow || this.gr.getValue('state') == 'Rejected';
+		return allow;
+	},
+	
+	updateTime: function() {
+		var costs = this.getCosts();
+		this.gr.expense_cost = costs.Expense;
+		this.gr.capital_cost = costs.Capital;
+		this.gr.total_cost = (parseFloat(costs.Expense) + parseFloat(costs.Capital)).toFixed(2);
+		this.gr.total_hours = costs.Hours;
+		this.gr.update();
+	},
+	
+	checkUnique: function() {
+		var gr = new GlideRecord('x_dehp_time_track_time_sheet');
+		gr.addQuery('week_starts_on', this.gr.getValue('week_starts_on'));
+		gr.addQuery('user', this.gr.getValue('user'));
+		gr.addQuery('sys_id', '!=', this.sysId);
+		gr.query();
+		return !gr.next();
+	},
+	
+	getTimeCards: function() {
+		var timeCardIDs = [];
+		var timeCards = new GlideRecord('x_dehp_time_track_time_card');
+		timeCards.addQuery('time_sheet', this.sysId);
+		timeCards.query();
+		while(timeCards.next())
+			timeCardIDs.push(new TimeCard(timeCards.sys_id));
+		return timeCardIDs;
+	},
+	
+	getPreviousTimeSheets : function(weeks){
+		var timeSheets = new GlideRecord('x_dehp_time_track_time_sheet');
+		timeSheets.addQuery('user', this.gr.getValue('user'));
+		timeSheets.addQuery('week_starts_on', '<', this.gr.week_starts_on);
+		timeSheets.orderByDesc('week_starts_on');
+		timeSheets.query();
+		weeks = parseInt(weeks);
+		var oldSheets = [];
+		while(weeks > 0 && timeSheets.next()) {
+			oldSheets.push(new TimeSheet(timeSheets.sys_id));
+			weeks--;
+		}
+		return oldSheets;		
+	},
+	
+	populateTimeCards: function() {
+		var timeCardCategories = [];
+		var policy = TimeSheetPolicy.getFromUser(this.gr.getValue('user'));
+		var oldSheets = this.getPreviousTimeSheets(policy.lookbackWeeks());
+		for (var i = 0; i < oldSheets.length; i++) {
+			var categories = oldSheets[i].getTimeCards();
+			for(var j = 0; j < categories.length; j++) {
+				timeCardCategories = TimeUtils.addUniqueValueToArray(timeCardCategories, categories[j].category);
+			}
+		}
+		// Build the time cards.
+		for (var n = 0; n < timeCardCategories.length; n++) {
+			TimeCard.buildNew(this, timeCardCategories[n]);
+		}
+	},
+	
+	_getDueDate: function(daysAfter, time) {
+		var dueDate = this.gr.week_starts_on;
+		dueDate = new GlideDateTime(this.gr.week_starts_on);
+		dueDate.addWeeksLocalTime(1);
+		dueDate.addDaysLocalTime(daysAfter);
+		var gt = new GlideTime();
+		gt.setValue(time);
+		dueDate.add(gt);
+		return dueDate;		
+	},
+	
+	getSubmissionDueDate: function() {
+		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
+		return this._getDueDate(policy.submissionDue(), policy.submissionTime());	
+	},
+	
+	getApprovalDueDate: function() {
+		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
+		return this._getDueDate(policy.approvalDue(), policy.approvalTime());	
+	},
+	
+	cleanBlankCards: function() {
+		var timeCards = new GlideRecord('x_dehp_time_track_time_card');
+		timeCards.addQuery('time_sheet', this.sysId);
+		timeCards.addQuery('total_hours', 0);
+		timeCards.query();
+		timeCards.deleteMultiple();
+	},
+	
+	totalHours: function () {
+		return parseFloat(this.gr.getValue('total_hours')).toFixed(2);
+	},
+	
+	verifyHours: function() {
+		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
+		var verified = true;
+		var totalHours = this.totalHours();
+		var maxHours = policy.maxHours();
+		var minHours = policy.minHours();
+		if(totalHours < maxHours) {
+			gs.addErrorMessage(gs.getMessage('excessive_hours', [totalHours, maxHours]));
+			verified = false;
+		}
+		if(totalHours < minHours) {
+			gs.addErrorMessage(gs.getMessage('insufficient_hours', [totalHours, minHours]));
+			verified = false;
+		}
+		
+		return verified;
+	},
+	
+	_nextOrPrev: function(way) {
+		// if the way is neither greater or less, it will return the current record
+		way = way=== '<' || way ==='>' ?  way: '==';
+		
+		var timeSheets = new GlideRecord('x_dehp_time_track_time_sheet');
+		timeSheets.addQuery('week_starts_on', way, this.gr.week_starts_on);
+		timeSheets.addQuery('user', this.gr.user.sys_id);
+		timeSheets.orderByDesc('week_starts_on');
+		timeSheets.setLimit(1);
+		timeSheets.query();
+		if(timeSheets.next())
+			return timeSheets;
+		return false;
+	},
+	
+	getPrev: function() {
+		return this._nextOrPrev('<');
+	},
+	
+	getNext: function() {
+		return this._nextOrPrev('>');
+	},
+	
+	getCosts: function(code) {
+		code = code === 'Capital' || code === 'Expense' ? code : undefined;
+		var dayCardsAgg = new GlideAggregate('x_dehp_time_track_time_card_day');
+		dayCardsAgg.groupBy('time_card.category.code');
+		dayCardsAgg.addAggregate('SUM', 'cost');
+		dayCardsAgg.addAggregate('SUM', 'hours');
+		dayCardsAgg.addQuery('time_card.time_sheet.sys_id', this.sysId);
+		if(typeof code !== 'undefined')
+			dayCardsAgg.addQuery('time_card.category.code', code);
+		dayCardsAgg.query();
+		var returnVal = {'Capital': 0, 'Expense': 0, 'Hours' : 0};
+		while(dayCardsAgg.next()) {
+			var cost = dayCardsAgg.getAggregate('SUM', 'cost');
+			returnVal[dayCardsAgg.getValue('time_card.category.code')] = cost;
+			returnVal.Hours += parseFloat(dayCardsAgg.getAggregate('SUM', 'hours'));
+		}
+		return returnVal;		
+	},
+	
+
+	
+	type : 'TimeSheet'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 20:49:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>455a3ac1db462f00482906e2ca96195e</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>TimeSheet</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_455a3ac1db462f00482906e2ca96195e</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-03 20:01:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

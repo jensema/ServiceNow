@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>vendor</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 03:18:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>71539451db4e2f00482906e2ca961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>vendor</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_71539451db4e2f00482906e2ca961913</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-27 03:18:53</sys_updated_on>
+        <table>x_dehp_time_track_rate_cards</table>
+        <ui_policy display_value="Show Vendor">7833d851db4e2f00482906e2ca9619d2</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

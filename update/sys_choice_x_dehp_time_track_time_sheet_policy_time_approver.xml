@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="time_approver" table="x_dehp_time_track_time_sheet_policy" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time_approver</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Auto</label>
+            <language>en</language>
+            <name>x_dehp_time_track_time_sheet_policy</name>
+            <sequence>1</sequence>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-26 22:08:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>8b5c8f05db862f00482906e2ca961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-26 22:08:45</sys_updated_on>
+            <value>auto</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time_approver</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>User Manager</label>
+            <language>en</language>
+            <name>x_dehp_time_track_time_sheet_policy</name>
+            <sequence>2</sequence>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-26 22:09:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>508ccf05db862f00482906e2ca9619fb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-26 22:09:08</sys_updated_on>
+            <value>user_manager</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>time_approver</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Specific Person</label>
+            <language>en</language>
+            <name>x_dehp_time_track_time_sheet_policy</name>
+            <sequence>3</sequence>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-26 22:09:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a38ccf05db862f00482906e2ca961903</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-26 22:09:22</sys_updated_on>
+            <value>other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>time_approver</element>
+            <name>x_dehp_time_track_time_sheet_policy</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-26 22:08:45</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>686dd2b5db966300482906e2ca9619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>time_approver</sys_name>
+            <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+            <sys_update_name>sys_choice_x_dehp_time_track_time_sheet_policy_time_approver</sys_update_name>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-26 22:08:45</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

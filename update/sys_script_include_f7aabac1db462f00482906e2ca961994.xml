@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.TimeSheetPolicy</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TimeSheetPolicy</name>
+        <script><![CDATA[var TimeSheetPolicy = Class.create();
+
+TimeSheetPolicy.getFromUser = function (user) {
+	user = TimeUtils.verifyIsGlideRecord(user, 'sys_user');
+	if (user.x_dehp_time_track_time_sheet_policy.nil())
+		return TimeSheetPolicy.getDefault();
+	else
+		return new TimeSheetPolicy(user.x_dehp_time_track_time_sheet_policy.getRefRecord());
+};
+
+TimeSheetPolicy.getPoliciesForDay = function(dayOfWeek) {
+	dayOfWeek += '';
+	var policies = new GlideRecord('x_dehp_time_track_time_sheet_policy');
+	policies.addQuery('week_starts_on', dayOfWeek);
+	policies.addQuery('auto_generate_time_cards', true);
+	policies.query();
+	return policies;
+};
+
+TimeSheetPolicy.getDefault = function () {
+	var gr = new GlideRecord('x_dehp_time_track_time_sheet_policy');
+	gr.get('is_default', '1');
+	return new TimeSheetPolicy(gr);
+};
+
+TimeSheetPolicy.getDefaultPolicyUserIDs = function (dayOfWeek) {
+	var userIDs = [];
+	var policy = TimeSheetPolicy.getDefault();
+	var query = 'role=6523d238db9d6f00aa0f710439961929^user.active=true';
+	query+= '^user.x_dehp_time_track_time_sheet_policyISEMPTY';
+	query+= '^ORuser.x_dehp_time_track_time_sheet_policy=' + policy.sysId;
+	if(policy.gr.week_starts_on == dayOfWeek) {
+		var roles = new GlideRecord('sys_user_has_role');
+		roles.addEncodedQuery(query);
+		roles.query();
+		while(roles.next()){
+			userIDs.push(roles.getValue('user'));
+		}
+	}
+	return userIDs;
+};
+
+TimeSheetPolicy.getPolicyUserIDs = function (dayOfWeek) {
+	var userIDs = TimeSheetPolicy.getDefaultPolicyUserIDs(dayOfWeek);
+	var users = new GlideRecord('sys_user');
+	var query = 'x_dehp_time_track_time_sheet_policy.is_default=false';
+	query += '^x_dehp_time_track_time_sheet_policy.auto_generate_time_cards=true';
+	query += '^x_dehp_time_track_time_sheet_policy.week_starts_on=' + dayOfWeek;
+	users.addEncodedQuery(query);
+	users.query();
+	while(users.next()) {
+		userIDs = TimeUtils.addUniqueValueToArray(userIDs, users.getValue('sys_id'));
+	}
+	return userIDs;
+};
+
+TimeSheetPolicy.prototype = {
+	initialize: function (gr) {
+		// handle if GlideRecord or SysID was passed.
+		gr = TimeUtils.verifyIsGlideRecord(gr, 'x_dehp_time_track_time_sheet_policy');
+		this.gr = gr;
+		this.sysId = gr.sys_id;
+	},
+
+	name: function () {
+		return this.gr.getValue('name');
+	},
+
+	sysId: function () {
+		return this.gr.getValue('sys_id');
+	},
+
+	weekStartsOn: function () {
+		return parseInt(this.gr.getValue('week_starts_on'));
+	},
+
+	weekStartsOnDisplayValue: function () {
+		return this.gr.getDisplayValue('week_starts_on');
+	},
+
+	autoGenerateTimeCards: function () {
+		return this.gr.getValue('auto_generate_time_cards') == '1';
+	},
+
+	isDefault: function () {
+		return this.gr.getValue('is_default') == '1';
+	},
+
+	allowBlankTimeCards: function () {
+		return this.gr.getValue('allow_blank_time_cards') == '1';
+	},
+
+	maxHoursPerWeek: function () {
+		return parseFloat(this.gr.getValue('max_hours_per_week'));
+	},
+
+	maxHoursPerDay: function () {
+		var maxHours = parseFloat(this.gr.getValue('max_hours_per_day'));
+		if (maxHours < 0 || maxHours > 24)
+			maxHours = 24;
+		return maxHours;
+	},
+
+	autoCreateOnTaskUpdate: function () {
+		return this.gr.getValue('auto_create_on_task_update') == '1';
+	},
+
+	autoFillFromTimeWorked: function () {
+		return this.gr.getValue('auto_fill_from_time_worked') == '1';
+	},
+
+	projectTimeApprover: function () {
+		return this.gr.getValue('task_time_approver');
+	},
+
+	nonProjectTimeApprover: function () {
+		return this.gr.getValue('time_approver');
+	},
+	lookbackWeeks: function() {
+		return parseInt(this.gr.getValue('lookback'));
+	},
+	autoCreateSheets: function() {
+			return this.gr.getValue('x_dehp_time_track_time_sheet_policy') == '1';
+	},
+	getPolicyUsers: function() {
+		var users = [];
+		var userRoles = new GlideRecord('sys_user_has_role');
+		var query = 'role=6523d238db9d6f00aa0f710439961929'; // timesheet user role
+		query += '^user.active=true^user.x_dehp_time_track_time_sheet_policy=' + this.sysId;
+		userRoles.addEncodedQuery(query);
+		userRoles.query();
+		while(userRoles.next()) {
+			users.push(userRoles.getValue('user'));
+		}				
+		return users;
+	},
+	
+	submissionDue: function() {
+		return parseInt(this.gr.getValue('submission_due'));
+	},
+	
+	approvalDue: function() {
+		return parseInt(this.gr.getValue('approval_due'));
+	},
+	
+	submissionTime: function() {
+		var submissionTime = new GlideDateTime(this.gr.submission_due_time);
+		var time = submissionTime.getTime();
+		return time;
+	},
+	
+	approvalTime: function() {
+		var approvalTime = new GlideDateTime(this.gr.approval_due_time);
+		var time = approvalTime.getTime();
+		return time;
+	},
+	
+	maxHours: function() {
+		return parseFloat(this.gr.max_hours_per_week).toFixed(2);
+	},
+	
+	minHours: function() {
+		return parseFloat(this.gr.minimum_hours_per_week).toFixed(2);
+	},
+
+	type: 'TimeSheetPolicy'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 20:51:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f7aabac1db462f00482906e2ca961994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TimeSheetPolicy</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_f7aabac1db462f00482906e2ca961994</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-26 20:51:32</sys_updated_on>
+    </sys_script_include>
+</record_update>

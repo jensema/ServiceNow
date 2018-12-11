@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.TimeSheetUtil</api_name>
+        <client_callable>false</client_callable>
+        <description>Various utiity scripts for timesheets.&#13;
+weekStartHint: Built the annotation for the Time Sheet form.&#13;
+getCurrentTimeSheet: Gets the timesheet for the user, based on the current date. If not found for this week, creates the timesheet.&#13;
+verifyTimeSheet: Submit an object. Will return a TimeSheet object if it can. Returns False otherwise&#13;
+&#13;
+getCardsForSheet(timeSheet) &#13;
+	Returns: Array of TimeCard objects for a specific timesheet.&#13;
+	timeSheet: Can take a TimeSheet object, GlideRecord, or Sys_Id.</description>
+        <name>TimeSheetUtil</name>
+        <script><![CDATA[var TimeSheetUtil = Class.create();
+
+TimeSheetUtil.verifyTimeSheet = function (timeSheet) {
+	if (!(timeSheet instanceof TimeSheet)) {
+		timeSheet = TimeUtils.verifyIsGlideRecord(timeSheet, 'x_dehp_time_track_time_sheet');
+		if (timeSheet instanceof GlideRecord) {
+			timeSheet = new TimeSheet(timeSheet);
+		}
+		else {
+			return false;
+		}
+	}
+	return timeSheet;
+};
+
+TimeSheetUtil.weekStartHint = function () {
+	var returnMessage = '';
+	try {
+		var timeSheetPolicy = TimeSheetPolicy.getFromUser(gs.getUserID());
+		var start = timeSheetPolicy.weekStartsOnDisplayValue();
+		returnMessage = gs.getMessage('Choose any {0} ({1}).', [start, timeSheetPolicy.name()]);
+	} catch (e) {
+		gs.addErrorMessage('Failed to load Hint');
+		returnMessage = e + '';
+	}
+	return returnMessage;
+};
+
+TimeSheetUtil.getTimeSheet = function (userId, weekStartsOn) {
+	var timeSheet = new GlideRecord('x_dehp_time_track_time_sheet');
+	timeSheet.addQuery('user', userId);
+	timeSheet.addQuery('week_starts_on', weekStartsOn);
+	timeSheet.query();
+	if(timeSheet.next())
+		return timeSheet;
+	return false;	
+};
+// Verify that timesheet exists before calling, else insert business rule will fail.
+TimeSheetUtil.buildTimeSheet = function (userId, weekStartsOn) {
+	if (TimeUtils.nil(userId))
+		userId = gs.getUserID();
+	if (TimeUtils.nil(weekStartsOn))
+		weekStartsOn = TimeCardUtil.getStartOfCurrentWeek(userId);
+	var timeSheet = new GlideRecord('x_dehp_time_track_time_sheet');
+	timeSheet.initialize();
+	timeSheet.setValue('user', userId);
+	timeSheet.setValue('week_starts_on', weekStartsOn);
+	var sysId = timeSheet.insert();
+	return sysId;	
+};
+
+TimeSheetUtil.getCurrentTimeSheet = function (userId) {
+	if (gs.nil(userId))
+		userId = gs.getUserID();
+		
+	// Get the oldest open, unsubmitted timesheet.
+	var weekStarts = TimeSheetUtil.getStartOfCurrentWeek();
+	var timeSheet = new GlideRecord('x_dehp_time_track_time_sheet');
+	timeSheet.addQuery('user', userId);
+	timeSheet.addQuery('week_starts_on', '<=', weekStarts);
+	timeSheet.addEncodedQuery('stateINPending,Rejected');
+	timeSheet.orderBy('week_starts_on');
+	timeSheet.query();
+	
+	if(timeSheet.next()) {
+		return timeSheet.getValue('sys_id');
+	}
+	// build time sheet if not found.
+	timeSheet = TimeSheetUtil.getTimeSheet(userId, weekStarts);
+	if(timeSheet)
+		return timeSheet.getValue('sys_id');
+	return TimeSheetUtil.buildTimeSheet(userId, weekStarts);
+};
+
+TimeSheetUtil.getStartOfCurrentWeek = function (userId) {
+	var todayDateTime = new GlideDateTime();
+	var today = new GlideDate();
+	today.setDisplayValue(todayDateTime.getDisplayValue());
+	if (gs.nil(userId))
+		userId = gs.getUserID();
+	return TimeSheetUtil.getStartOfWeekByDate(today, userId);
+};
+
+TimeSheetUtil.getStartOfWeekByDate = function (aDate, userId) {
+	var timeSheetPolicy = TimeSheetPolicy.getFromUser(userId);
+	var firstDayOfWeek = timeSheetPolicy.weekStartsOn();
+
+	var gd = new GlideDate();
+	gd.setValue(aDate);
+	var currentDay = gd.getDayOfWeekUTC();
+
+	var daysInWeek = 7;
+	var daysToMoveBehind = (firstDayOfWeek - currentDay - daysInWeek) % daysInWeek;
+	gd.addDaysLocalTime(daysToMoveBehind);
+
+	return gd;
+};
+TimeSheetUtil.autoBuildTimesheets = function() {
+	var now = new GlideDateTime();
+	var todayDayOfWeek = now.getDayOfWeekLocalTime();
+	var users = TimeSheetPolicy.getPolicyUserIDs(todayDayOfWeek);
+	var userPolicy;
+	var timeSheet;
+	var weeksAhead = 0;
+	
+	for(var i = 0; i < users.length; i++) {
+		// Check user policy and create new timesheets for each appropriate week.
+		userPolicy = TimeSheetPolicy.getFromUser(users[i]);
+		// Check to see if policy allows auto generation.
+		if(!userPolicy.gr.auto_generate_time_cards)
+			continue;
+		weeksAhead = parseInt(userPolicy.gr.populate_weeks);
+		while(weeksAhead >= 0) {
+			var gdt = new GlideDateTime(now);
+			gdt.addWeeksLocalTime(weeksAhead);
+			var timeSheetDate = GlideDate(gdt.getLocalDate());
+			timeSheet = TimeSheetUtil.getTimeSheet(users[i], timeSheetDate);
+			if(!timeSheet) {
+				var currentTimeSheet = TimeSheetUtil.buildTimeSheet(users[i], timeSheetDate);
+			}
+			 weeksAhead--;
+		}
+	}
+};
+
+TimeSheetUtil.getApprovers = function(user) {
+	user = TimeUtils.verifyIsGlideRecord(user, 'sys_user');
+	var policy = TimeSheetPolicy.getFromUser(user);
+	var approvers = [];
+	var approverType = policy.gr.getValue('time_approver');
+	if(approverType == 'other')
+		approvers.push(policy.gr.getValue('approver'));
+	if(approverType == 'user_manager')
+		approvers.push(user.getValue('manager'));
+	// TO DO: need to check for delegates
+	
+	return approvers.join(',');
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 20:52:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5eda3ec1db462f00482906e2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TimeSheetUtil</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_5eda3ec1db462f00482906e2ca9619ec</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-26 20:52:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

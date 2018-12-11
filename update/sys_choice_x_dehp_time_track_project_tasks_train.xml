@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="train" table="x_dehp_time_track_project_tasks" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>train</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Badger Express</label>
+            <language>en</language>
+            <name>x_dehp_time_track_project_tasks</name>
+            <sequence>1</sequence>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-12-07 17:07:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>38f0fa2cdbdae300482906e2ca9619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-12-07 17:07:48</sys_updated_on>
+            <value>badger_express</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>train</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Infinity</label>
+            <language>en</language>
+            <name>x_dehp_time_track_project_tasks</name>
+            <sequence>2</sequence>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-12-07 17:08:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>5d01f6e8dbdae300482906e2ca961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-12-07 17:08:02</sys_updated_on>
+            <value>Infinity</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>train</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Shared Services</label>
+            <language>en</language>
+            <name>x_dehp_time_track_project_tasks</name>
+            <sequence>3</sequence>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-12-07 17:08:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7011f62cdbdae300482906e2ca9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-12-07 17:08:14</sys_updated_on>
+            <value>shared_services</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>train</element>
+            <name>x_dehp_time_track_project_tasks</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-12-07 17:07:48</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>906dd2b5db966300482906e2ca9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>train</sys_name>
+            <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+            <sys_update_name>sys_choice_x_dehp_time_track_project_tasks_train</sys_update_name>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-12-07 17:07:48</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

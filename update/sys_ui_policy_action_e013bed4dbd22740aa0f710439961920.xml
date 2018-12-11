@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>false</disabled>
+        <field>number</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 22:38:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e013bed4dbd22740aa0f710439961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>number</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_e013bed4dbd22740aa0f710439961920</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 22:38:42</sys_updated_on>
+        <table>x_dehp_time_track_project_tasks</table>
+        <ui_policy display_value="Allow Number Edit">1ef23ed4dbd22740aa0f71043996199d</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

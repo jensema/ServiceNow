@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Confirm that the following UI actions are not visible: Submit Timesheet, Populate Categories, Approve, Previous Time Sheet, Add Category, Next Time Sheet
+With a failure timeout of 5 Seconds</description>
+        <display_name>UI Action Visibility</display_name>
+        <inputs/>
+        <order>33</order>
+        <step_config display_value="UI Action Visibility">d8fdf5e10b1022009cfdc71437673adc</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 20:11:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>33fdb3e7db86a340aa0f710439961988</sys_id>
+        <sys_mod_count>80</sys_mod_count>
+        <sys_name>UI Action Visibility</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_33fdb3e7db86a340aa0f710439961988</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-07 02:29:50</sys_updated_on>
+        <table>x_dehp_time_track_time_sheet</table>
+        <test display_value="Time Sheet Testing">1b4bc323db06a340aa0f71043996198e</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=33fdb3e7db86a340aa0f710439961988"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33fdb3e7db86a340aa0f710439961988</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 20:11:49</sys_created_on>
+        <sys_id>af5eb3e7db86a340aa0f7104399619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 20:11:49</sys_updated_on>
+        <value>x_dehp_time_track_time_sheet</value>
+        <variable display_value="">ba62b4075320220002c6435723dc34b9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33fdb3e7db86a340aa0f710439961988</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 20:11:49</sys_created_on>
+        <sys_id>e35eb3e7db86a340aa0f7104399619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 20:11:49</sys_updated_on>
+        <value/>
+        <variable display_value="">56e6bee65320220002c6435723dc34b9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33fdb3e7db86a340aa0f710439961988</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 20:11:49</sys_created_on>
+        <sys_id>eb5eb3e7db86a340aa0f7104399619dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 20:11:49</sys_updated_on>
+        <value>3d58cc59db0e2f00482906e2ca9619f6,80e6cc19db0e2f00482906e2ca9619db,1d768819db0e2f00482906e2ca96193a,0437c059db0e2f00482906e2ca961969,0e168419db0e2f00482906e2ca961902,88b64c19db0e2f00482906e2ca96190f</value>
+        <variable display_value="">6619c7aa5320220002c6435723dc34e2</variable>
+    </sys_variable_value>
+</record_update>

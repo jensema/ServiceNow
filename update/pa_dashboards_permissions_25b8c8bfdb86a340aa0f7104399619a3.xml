@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_permissions">
+    <pa_dashboards_permissions action="INSERT_OR_UPDATE">
+        <dashboard display_value="Time Sheet Administration">70ccc759db422f00aa0f7104399619ee</dashboard>
+        <delete>false</delete>
+        <group/>
+        <identity>de369b8837a80b00d914a9c2b3990e47</identity>
+        <read>true</read>
+        <role/>
+        <sys_class_name>pa_dashboards_permissions</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 20:57:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>25b8c8bfdb86a340aa0f7104399619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>de369b8837a80b00d914a9c2b3990e47</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>pa_dashboards_permissions_25b8c8bfdb86a340aa0f7104399619a3</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 20:57:00</sys_updated_on>
+        <type>3</type>
+        <user display_value="Ian Barrett - Admin">de369b8837a80b00d914a9c2b3990e47</user>
+        <write>true</write>
+    </pa_dashboards_permissions>
+</record_update>

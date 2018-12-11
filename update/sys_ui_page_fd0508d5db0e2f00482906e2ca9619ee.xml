@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[document.location.href = "x_dehp_time_track_time_sheet_list.do?sysparm_query=sys_idIN$[jvar_sysIDs]";]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_dehp_time_track_list_my_approvals.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g2:evaluate var="jvar_sysIDs">
+		var sys_ids = TimeUtils.getMyApprovalSheets();
+		sys_ids;
+	</g2:evaluate>
+	<p>Loading your Time Sheets to Approve.</p>
+</j:jelly>]]></html>
+        <name>list_my_approvals</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-27 02:16:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fd0508d5db0e2f00482906e2ca9619ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>list_my_approvals</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_ui_page_fd0508d5db0e2f00482906e2ca9619ee</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-27 02:16:20</sys_updated_on>
+    </sys_ui_page>
+</record_update>

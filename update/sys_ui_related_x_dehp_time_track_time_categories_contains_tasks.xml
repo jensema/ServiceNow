@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_dehp_time_track_time_categories" version="2" view="contains_tasks">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Time Categories - Contains Tasks" name="x_dehp_time_track_time_categories" related_list="NULL" sys_domain="global" view="03019011db4e2f00482906e2ca961910">ca706df1db866f00aa0f710439961947</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-28 22:12:35</sys_created_on>
+            <sys_id>0a706df1db866f00aa0f710439961948</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-28 22:12:35</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Time Categories - Contains Tasks</calculated_name>
+            <filter/>
+            <name>x_dehp_time_track_time_categories</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2018-11-28 22:12:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>ca706df1db866f00aa0f710439961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Time Categories - Contains Tasks</sys_name>
+            <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+            <sys_update_name>sys_ui_related_x_dehp_time_track_time_categories_contains_tasks</sys_update_name>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2018-11-28 22:12:35</sys_updated_on>
+            <sys_user/>
+            <view display_value="Contains Tasks" name="contains_tasks">03019011db4e2f00482906e2ca961910</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.TimeCard</api_name>
+        <client_callable>false</client_callable>
+        <description>Time Card functions</description>
+        <name>TimeCard</name>
+        <script><![CDATA[var TimeCard = Class.create();
+TimeCard.buildNew = function(timeSheet, category) {
+	gs.info("Adding Category.\nTime Sheet: {0}\nCategory:{1}", [timeSheet, category]);
+	timeSheet = TimeSheetUtil.verifyTimeSheet(timeSheet);
+	var timeCardGR = new GlideRecord('x_dehp_time_track_time_card');
+	timeCardGR.initialize();
+	timeCardGR.time_sheet = timeSheet.sysId;
+	timeCardGR.category = category;
+	var timeCard = new TimeCard(timeCardGR);
+	if(timeCard.checkUnique())
+		timeCardGR.update();
+	else
+		timeCard = new TimeCard(TimeCardUtils.getTimeCardRecord(timeSheet, category));
+	return timeCard;
+};
+
+TimeCard.prototype = {
+	initialize : function (card) {
+		// handle if GlideRecord was passed.
+		card = TimeUtils.verifyIsGlideRecord(card, 'x_dehp_time_track_time_card');
+		this.gr = card;
+		this.sysId = card.sys_id;
+		// day of week listings
+		this.dayOfWeek = {'mon' : 1, 'tue' : 2, 'wed' : 3, 'thur' : 4, 'fri' : 5, 'sat' : 6, 'sun' : 7};
+		this.fieldNames = Object.keys(this.dayOfWeek);
+		this.category = card.getValue('category');
+	},
+	buildDay : function (dayOfWeek) {
+		try {
+		var dayCard = this.findDay(dayOfWeek);
+		if (!(dayCard instanceof GlideRecord)) {
+			var gdt = new GlideDateTime(this.gr.time_sheet.week_starts_on);
+			// Need an offset for the start of the week.
+			var weekStartsOn = gdt.getDayOfWeekUTC();
+			gdt.addDaysLocalTime(this.getDayOffset(weekStartsOn,dayOfWeek));
+			dayCard = new GlideRecord('x_dehp_time_track_time_card_day');
+			dayCard.initialize();
+			dayCard.time_card = this.sysId;
+			dayCard.day = gdt;
+			dayCard.insert();
+		}
+		return dayCard;
+			}
+		catch(e) {
+			gs.error('Error when running buildDay function in TimeCard object. Error is:\n{0}', e);
+		}
+	},
+	findDay : function (dayOfWeek) {
+		var dayCard = new GlideRecord('x_dehp_time_track_time_card_day');
+		dayCard.addQuery('time_card', this.sysId);
+		dayCard.addQuery('day_of_week_function', dayOfWeek);
+		dayCard.query();
+		if (dayCard.next()) {
+			return dayCard;
+		}
+		return false;
+	},
+	updateDay : function (hours, dayOfWeek) {
+		hours = parseFloat(hours) ? parseFloat(hours) : 0;
+		var dayCard = this.findDay(dayOfWeek);
+		if (!dayCard && hours != 0) {
+			// Create the day if not found
+			dayCard = this.buildDay(dayOfWeek); // Assume Sunday for now....
+		}
+		// Check to see if we have a valid day card. Still could if hours was zero.
+		if(!dayCard)
+			return;
+		var field = this.fieldNames[dayOfWeek - 1];
+		if (dayCard.hours != hours) {
+			dayCard.hours = hours;
+			dayCard.update();
+		}
+	},
+	updateDayCards : function () {
+		for (var i = 0; i < this.fieldNames.length; i++) {
+			var field = this.fieldNames[i];
+			var hours = this.gr.getValue(field);
+			this.updateDay(hours, i + 1);
+		}
+
+	},
+	getDayOffset: function (startOfWeek, day) {
+		// For this to work, sunday needs to be a zero, but us usually a seven.
+		function fixSunday(day) {return day == 7 ? 0 : day;}
+		
+		startOfWeek = fixSunday(startOfWeek);
+		day = fixSunday(day);
+		var offset = day - startOfWeek;
+		if(offset < 0)
+			offset += 7;
+		return offset;
+	},
+	getTotalCost: function() {
+		var dayCards = new GlideRecord('x_dehp_time_track_time_card_day');
+		dayCards.addQuery('time_card', this.sysId);
+		dayCards.query();
+		var cost = 0;
+		while(dayCards.next()) {
+			cost += parseFloat(dayCards.cost);
+		}
+		return cost;
+	},
+	updateTotalCost: function() {
+		this.gr.total_cost = this.getTotalCost();
+		this.gr.update();		
+	},
+	checkUnique: function() {
+		//var gr = new GlideRecord('x_dehp_time_track_time_card');
+		var gr = TimeCardUtils.getTimeCardRecord(this.gr.time_sheet, this.category);
+		return gr ? gr.sys_id == this.sysId : true;
+	},
+	type : 'TimeCard'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 20:48:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0c0af6c1db462f00482906e2ca961926</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>TimeCard</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_0c0af6c1db462f00482906e2ca961926</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 18:47:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

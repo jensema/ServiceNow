@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <extension_model/>
+        <is_extendable>true</is_extendable>
+        <label>Time Categories</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_dehp_time_track_time_categories</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <super_class/>
+        <sys_class_code/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_class_path/>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-11-26 22:17:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7e2ecf45db862f00482906e2ca9619e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Time Categories</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_db_object_7e2ecf45db862f00482906e2ca9619e4</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-11-26 22:32:15</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_dehp_time_track.admin" name="x_dehp_time_track.admin">46d5ca0ddb82eb00aa0f7104399619b7</user_role>
+        <ws_access>false</ws_access>
+    </sys_db_object>
+</record_update>

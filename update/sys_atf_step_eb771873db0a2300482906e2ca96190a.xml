@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Validate that the form matches the following condition:
+Week starts on on 2018-12-03
+and User = {{Step 3: Record Insert.Record}}
+and Submission Due on 2018-12-11
+With a failure timeout of 5 Seconds</description>
+        <display_name>Field Values Validation</display_name>
+        <inputs/>
+        <inputs/>
+        <order>42</order>
+        <step_config display_value="Field Values Validation">1b97cd31872022008182c9ded0e3ece5</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 22:03:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>eb771873db0a2300482906e2ca96190a</sys_id>
+        <sys_mod_count>138</sys_mod_count>
+        <sys_name>Field Values Validation</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_eb771873db0a2300482906e2ca96190a</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-07 02:29:54</sys_updated_on>
+        <table>x_dehp_time_track_time_sheet</table>
+        <test display_value="Time Sheet Testing">1b4bc323db06a340aa0f71043996198e</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=eb771873db0a2300482906e2ca96190a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>eb771873db0a2300482906e2ca96190a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 22:03:23</sys_created_on>
+        <sys_id>71e79c73db0a2300482906e2ca9619c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 22:03:23</sys_updated_on>
+        <value>x_dehp_time_track_time_sheet</value>
+        <variable display_value="">a0e13cc35320220002c6435723dc3467</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>eb771873db0a2300482906e2ca96190a</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 22:03:23</sys_created_on>
+        <sys_id>7de79c73db0a2300482906e2ca9619c4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 23:10:14</sys_updated_on>
+        <value>week_starts_onON2018-12-03@javascript:gs.dateGenerate('2018-12-03','start')@javascript:gs.dateGenerate('2018-12-03','end')^user={{step['869d47efdbc2a340aa0f710439961970'].record_id}}^submission_dueON2018-12-11@javascript:gs.dateGenerate('2018-12-11','start')@javascript:gs.dateGenerate('2018-12-11','end')^EQ</value>
+        <variable display_value="">4aa838f25320220002c6435723dc34e1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=eb771873db0a2300482906e2ca96190a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>eb771873db0a2300482906e2ca96190a</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 22:03:23</sys_created_on>
+        <sys_id>f9e79c73db0a2300482906e2ca9619c4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 23:10:14</sys_updated_on>
+        <table>var__m_atf_input_variable_1b97cd31872022008182c9ded0e3ece5</table>
+        <value>week_starts_onON2018-12-03@javascript:gs.dateGenerate('2018-12-03','start')@javascript:gs.dateGenerate('2018-12-03','end')^user={{step['869d47efdbc2a340aa0f710439961970'].record_id}}^submission_dueON2018-12-11@javascript:gs.dateGenerate('2018-12-11','start')@javascript:gs.dateGenerate('2018-12-11','end')^EQ</value>
+    </sys_element_mapping>
+</record_update>

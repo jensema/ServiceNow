@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Time Track M2m Users Rate Cards" max_length="40" name="x_dehp_time_track_m2m_users_rate_cards" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Rate Cards" max_length="32" name="rate_cards" reference="x_dehp_time_track_rate_cards" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="rate_cards"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
