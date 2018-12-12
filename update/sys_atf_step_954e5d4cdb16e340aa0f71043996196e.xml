@@ -12,17 +12,15 @@ With a failure timeout of 5 Seconds</description>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 21:50:07</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>954e5d4cdb16e340aa0f71043996196e</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Record Query</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_954e5d4cdb16e340aa0f71043996196e</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 23:25:38</sys_updated_on>
+        <sys_updated_on>2018-12-07 02:29:55</sys_updated_on>
         <table>x_dehp_time_track_time_card_day</table>
         <test display_value="Time Sheet Testing">1b4bc323db06a340aa0f71043996198e</test>
         <timeout>1970-01-01 00:00:05</timeout>
@@ -34,11 +32,25 @@ With a failure timeout of 5 Seconds</description>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
-        <sys_created_on>2018-12-11 22:53:33</sys_created_on>
-        <sys_id>09862c82db5e6300482906e2ca961941</sys_id>
+        <sys_created_on>2018-12-05 21:50:07</sys_created_on>
+        <sys_id>557ed94cdb16e340aa0f710439961928</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:53:33</sys_updated_on>
+        <sys_updated_on>2018-12-05 21:50:07</sys_updated_on>
+        <value>time_card={{step['8897d548db16e340aa0f7104399619a4'].record_id}}^EQ</value>
+        <variable display_value="">cf167c405f30220012b44adb7f46660d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>954e5d4cdb16e340aa0f71043996196e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 21:50:07</sys_created_on>
+        <sys_id>917ed94cdb16e340aa0f710439961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 21:50:07</sys_updated_on>
         <value>x_dehp_time_track_time_card_day</value>
         <variable display_value="">6fe5f8405f30220012b44adb7f4666e4</variable>
     </sys_variable_value>
@@ -48,27 +60,13 @@ With a failure timeout of 5 Seconds</description>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
-        <sys_created_on>2018-12-11 23:25:38</sys_created_on>
-        <sys_id>c3dd280adb5e6300482906e2ca961914</sys_id>
+        <sys_created_on>2018-12-05 21:50:07</sys_created_on>
+        <sys_id>9d7ed94cdb16e340aa0f710439961927</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 23:25:38</sys_updated_on>
+        <sys_updated_on>2018-12-05 21:50:07</sys_updated_on>
         <value>no_records_match_query</value>
         <variable display_value="">dd091e22675003007ba405225685ef69</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_atf_step</document>
-        <document_key>954e5d4cdb16e340aa0f71043996196e</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>_ejense</sys_created_by>
-        <sys_created_on>2018-12-11 22:53:33</sys_created_on>
-        <sys_id>c9862c82db5e6300482906e2ca961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:53:33</sys_updated_on>
-        <value>time_card={{step['8897d548db16e340aa0f7104399619a4'].record_id}}^EQ</value>
-        <variable display_value="">cf167c405f30220012b44adb7f46660d</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=954e5d4cdb16e340aa0f71043996196e"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">

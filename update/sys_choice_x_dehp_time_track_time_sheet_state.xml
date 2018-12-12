@@ -12,6 +12,7 @@
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 19:53:11</sys_created_on>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>ce5d6a09db062f00482906e2ca9619cd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
@@ -30,6 +31,7 @@
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 19:53:29</sys_created_on>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>917de209db062f00482906e2ca961962</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
@@ -48,6 +50,7 @@
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 19:53:46</sys_created_on>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>998d6a09db062f00482906e2ca961935</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
@@ -66,6 +69,7 @@
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 19:54:01</sys_created_on>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>0d9daa09db062f00482906e2ca96195e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
@@ -84,6 +88,7 @@
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 19:54:15</sys_created_on>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>dcadea09db062f00482906e2ca96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
@@ -96,13 +101,11 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 19:53:11</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
-            <sys_id>e46dd2b5db966300482906e2ca9619e8</sys_id>
+            <sys_id>fbe0a886375223001595dc1873990ea1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>state</sys_name>
             <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
             <sys_update_name>sys_choice_x_dehp_time_track_time_sheet_state</sys_update_name>
             <sys_updated_by>_ejense</sys_updated_by>

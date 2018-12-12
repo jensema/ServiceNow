@@ -19,24 +19,21 @@
         <query/>
         <report/>
         <roles>x_dehp_time_track.admin,x_dehp_time_track.finance</roles>
-        <survey/>
-        <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
-        <sys_created_on>2018-12-11 21:57:47</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
+        <sys_created_on>2018-11-27 01:04:44</sys_created_on>
         <sys_domain>global</sys_domain>
-        <sys_id>de29dc86db1e6300482906e2ca961998</sys_id>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0b74f34ddbca2f00482906e2ca96190f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Day Cards</sys_name>
         <sys_overrides/>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
-        <sys_update_name>sys_app_module_de29dc86db1e6300482906e2ca961998</sys_update_name>
+        <sys_update_name>sys_app_module_0b74f34ddbca2f00482906e2ca96190f</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 21:57:47</sys_updated_on>
+        <sys_updated_on>2018-11-27 01:04:44</sys_updated_on>
         <timeline_page/>
         <title>Day Cards</title>
         <uncancelable>false</uncancelable>

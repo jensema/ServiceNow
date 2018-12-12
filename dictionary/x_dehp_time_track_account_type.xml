@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="update_synch=true" audit="true" extends="sys_metadata" label="Account Type" max_length="40" name="x_dehp_time_track_account_type" type="collection">
-        <element attributes="edge_encryption_enabled=true" default="true" label="Active" max_length="40" name="active" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" label="Contains Tasks" max_length="40" name="contains_tasks" type="boolean"/>
-        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+    <element attributes="update_synch=true" audit="true" calculation="answer = &quot;&quot;;" extends="sys_metadata" label="Account Type" max_length="40" name="x_dehp_time_track_account_type" type="collection">
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Contains Tasks" max_length="40" name="contains_tasks" type="boolean"/>
+        <element calculation="answer = &quot;&quot;;" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
     </element>
 </database>

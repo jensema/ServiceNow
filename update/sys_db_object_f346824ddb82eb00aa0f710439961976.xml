@@ -16,19 +16,17 @@
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Application File" name="sys_metadata">4a8337126f130200b85fcb512e3ee448</super_class>
+        <super_class display_value="Application File" name="sys_metadata">b9072112bc002300aadb875973a34b5e</super_class>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 17:03:07</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>f346824ddb82eb00aa0f710439961976</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Account Type</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_db_object_f346824ddb82eb00aa0f710439961976</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>

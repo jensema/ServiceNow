@@ -14,13 +14,11 @@ With a failure timeout of 5 Seconds</description>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-06 19:43:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>420b8e14db522740aa0f710439961928</sys_id>
         <sys_mod_count>23</sys_mod_count>
         <sys_name>Field State Validation</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_420b8e14db522740aa0f710439961928</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
@@ -30,4 +28,102 @@ With a failure timeout of 5 Seconds</description>
         <timeout>1970-01-01 00:00:05</timeout>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=420b8e14db522740aa0f710439961928"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>410</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>060b8e14db522740aa0f710439961929</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:43:20</sys_updated_on>
+        <value/>
+        <variable display_value="">787a9b535320220002c6435723dc3455</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>210</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>420b8e14db522740aa0f710439961929</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:57:52</sys_updated_on>
+        <value>time_card</value>
+        <variable display_value="">e81ad3535320220002c6435723dc340c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>4e0b8e14db522740aa0f710439961929</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:43:20</sys_updated_on>
+        <value>x_dehp_time_track_time_card_day</value>
+        <variable display_value="">80f953535320220002c6435723dc340f</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>8a0b8e14db522740aa0f710439961928</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:49:22</sys_updated_on>
+        <value>time_card.category,time_card.time_sheet.user,time_card.category.code,time_card.category.account,day,hours,cost,rate_card,day_of_week_function</value>
+        <variable display_value="">0cd9df135320220002c6435723dc3426</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>8a0b8e14db522740aa0f710439961929</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:57:52</sys_updated_on>
+        <value>rate_card</value>
+        <variable display_value="">6e5a1b535320220002c6435723dc3498</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>8e0b8e14db522740aa0f710439961928</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:57:52</sys_updated_on>
+        <value>day,hours,cost,time_card.category,time_card.time_sheet.user,time_card.category.code,time_card.category.account,day_of_week_function</value>
+        <variable display_value="">592a17535320220002c6435723dc34d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>420b8e14db522740aa0f710439961928</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-06 19:43:20</sys_created_on>
+        <sys_id>c60b8e14db522740aa0f710439961929</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-06 19:44:26</sys_updated_on>
+        <value>rate_card</value>
+        <variable display_value="">e63a97535320220002c6435723dc34b8</variable>
+    </sys_variable_value>
 </record_update>
