@@ -90,6 +90,18 @@ Confirm the record was successfully inserted</description>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=33ca25bfdb026300482906e2ca96192e"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>33ca25bfdb026300482906e2ca96192e</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:11</sys_created_on>
+        <sys_id>4bf9ec12db526300aa0f7104399619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-12 17:47:11</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>field_values</field>
         <id>33ca25bfdb026300482906e2ca96192e</id>
         <sys_created_by>_ejense</sys_created_by>
@@ -100,5 +112,17 @@ Confirm the record was successfully inserted</description>
         <sys_updated_on>2018-12-05 04:06:04</sys_updated_on>
         <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
         <value>number=112^active=true^name=Tasks 2^type={{step['cbf78d7fdb8e2300482906e2ca9619e3'].record_id}}^parent={{step['1519e13fdb026300482906e2ca9619bf'].record_id}}^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>33ca25bfdb026300482906e2ca96192e</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:11</sys_created_on>
+        <sys_id>0ff9ec12db526300aa0f7104399619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-12 17:47:11</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
     </sys_element_mapping>
 </record_update>

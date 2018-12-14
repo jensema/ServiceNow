@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Time Track M2m Accounts Groups" max_length="40" name="x_dehp_time_track_m2m_accounts_groups" type="collection">
+        <element label="Accounts" max_length="32" name="accounts" reference="x_dehp_time_track_accounts" type="reference"/>
+        <element label="Group" max_length="32" name="group" reference="sys_user_group" type="reference"/>
+        <index name="index">
+            <element name="accounts"/>
+        </index>
+        <index name="index2">
+            <element name="group"/>
+        </index>
+    </element>
+</database>

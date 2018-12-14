@@ -89,6 +89,18 @@ Confirm the record was successfully inserted</description>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=4acf9a94db922740aa0f710439961964"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>4acf9a94db922740aa0f710439961964</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:16</sys_created_on>
+        <sys_id>d80a6052db526300aa0f7104399619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-12 17:47:16</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>field_values</field>
         <id>4acf9a94db922740aa0f710439961964</id>
         <sys_created_by>_ejense</sys_created_by>
@@ -99,5 +111,17 @@ Confirm the record was successfully inserted</description>
         <sys_updated_on>2018-12-06 21:17:30</sys_updated_on>
         <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
         <value>time_sheet={{step['1d37d073db0a2300482906e2ca9619cb'].record_id}}^category={{step['3c179148db16e340aa0f71043996192c'].record_id}}^mon=6.5^tue=5.5^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>4acf9a94db922740aa0f710439961964</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:16</sys_created_on>
+        <sys_id>9c0a6052db526300aa0f7104399619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-12 17:47:16</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
     </sys_element_mapping>
 </record_update>

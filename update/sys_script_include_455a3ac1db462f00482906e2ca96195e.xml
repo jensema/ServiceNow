@@ -62,7 +62,7 @@ TimeSheet.prototype = {
 			oldSheets.push(new TimeSheet(timeSheets.sys_id));
 			weeks--;
 		}
-		return oldSheets;		
+		return oldSheets;
 	},
 	
 	populateTimeCards: function() {
@@ -89,17 +89,17 @@ TimeSheet.prototype = {
 		var gt = new GlideTime();
 		gt.setValue(time);
 		dueDate.add(gt);
-		return dueDate;		
+		return dueDate;
 	},
 	
 	getSubmissionDueDate: function() {
 		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
-		return this._getDueDate(policy.submissionDue(), policy.submissionTime());	
+		return this._getDueDate(policy.submissionDue(), policy.submissionTime());
 	},
 	
 	getApprovalDueDate: function() {
 		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
-		return this._getDueDate(policy.approvalDue(), policy.approvalTime());	
+		return this._getDueDate(policy.approvalDue(), policy.approvalTime());
 	},
 	
 	cleanBlankCards: function() {
@@ -120,7 +120,7 @@ TimeSheet.prototype = {
 		var totalHours = this.totalHours();
 		var maxHours = policy.maxHours();
 		var minHours = policy.minHours();
-		if(totalHours < maxHours) {
+		if(totalHours > maxHours) {
 			gs.addErrorMessage(gs.getMessage('excessive_hours', [totalHours, maxHours]));
 			verified = false;
 		}
@@ -166,24 +166,40 @@ TimeSheet.prototype = {
 			dayCardsAgg.addQuery('time_card.category.code', code);
 		dayCardsAgg.query();
 		var returnVal = {'Capital': 0, 'Expense': 0, 'Hours' : 0};
-		while(dayCardsAgg.next()) {
-			var cost = dayCardsAgg.getAggregate('SUM', 'cost');
-			returnVal[dayCardsAgg.getValue('time_card.category.code')] = cost;
-			returnVal.Hours += parseFloat(dayCardsAgg.getAggregate('SUM', 'hours'));
-		}
-		return returnVal;		
-	},
-	
-
-	
-	type : 'TimeSheet'
-};]]></script>
+			while(dayCardsAgg.next()) {
+				var cost = dayCardsAgg.getAggregate('SUM', 'cost');
+				returnVal[dayCardsAgg.getValue('time_card.category.code')] = cost;
+				returnVal.Hours += parseFloat(dayCardsAgg.getAggregate('SUM', 'hours'));
+			}
+			return returnVal;
+		},
+		
+		getApprovers: function() {
+			var approvers = [];
+			var policy = TimeSheetPolicy.getFromUser(this.gr.user);
+			var approverType = policy.gr.getValue('time_approver');
+			if (approverType == 'other')
+				approvers = this._getAllApprovers(policy.gr.approver + '');
+			else if (approverType == 'user_manager')
+				approvers = this._getAllApprovers(this.gr.user.manager + '');
+			return approvers.join(',');
+		},
+		
+		_getAllApprovers: function(primaryApprover) {
+			var approvers = [primaryApprover];
+			approvers = new global.ArrayUtil().union(approvers, TimeUtils.getApprovalDelegates(primaryApprover));
+			return approvers;
+		},
+		
+		
+		type : 'TimeSheet'
+	};]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 20:49:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>455a3ac1db462f00482906e2ca96195e</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>TimeSheet</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -191,6 +207,6 @@ TimeSheet.prototype = {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_455a3ac1db462f00482906e2ca96195e</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-03 20:01:50</sys_updated_on>
+        <sys_updated_on>2018-12-13 01:43:28</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -16,7 +16,7 @@
         </element>
         <element attributes="edge_encryption_enabled=true" default="0" label="Sunday" max_length="20" name="sun" type="decimal"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Thursday" max_length="20" name="thur" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" label="Time Sheet" max_length="32" name="time_sheet" reference="x_dehp_time_track_time_sheet" reference_cascade_rule="cascade" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Time Sheet" max_length="32" name="time_sheet" read_only="true" reference="x_dehp_time_track_time_sheet" reference_cascade_rule="cascade" type="reference"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency"/>
         <element attributes="edge_encryption_enabled=true" label="Total hours" max_length="20" name="total_hours" read_only="true" type="decimal"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Tueday" max_length="20" name="tue" type="decimal"/>

@@ -20,8 +20,7 @@ TimeSheetUtil.verifyTimeSheet = function (timeSheet) {
 		timeSheet = TimeUtils.verifyIsGlideRecord(timeSheet, 'x_dehp_time_track_time_sheet');
 		if (timeSheet instanceof GlideRecord) {
 			timeSheet = new TimeSheet(timeSheet);
-		}
-		else {
+		} else {
 			return false;
 		}
 	}
@@ -46,9 +45,9 @@ TimeSheetUtil.getTimeSheet = function (userId, weekStartsOn) {
 	timeSheet.addQuery('user', userId);
 	timeSheet.addQuery('week_starts_on', weekStartsOn);
 	timeSheet.query();
-	if(timeSheet.next())
+	if (timeSheet.next())
 		return timeSheet;
-	return false;	
+	return false;
 };
 // Verify that timesheet exists before calling, else insert business rule will fail.
 TimeSheetUtil.buildTimeSheet = function (userId, weekStartsOn) {
@@ -61,30 +60,39 @@ TimeSheetUtil.buildTimeSheet = function (userId, weekStartsOn) {
 	timeSheet.setValue('user', userId);
 	timeSheet.setValue('week_starts_on', weekStartsOn);
 	var sysId = timeSheet.insert();
-	return sysId;	
+	return sysId;
 };
 
 TimeSheetUtil.getCurrentTimeSheet = function (userId) {
 	if (gs.nil(userId))
 		userId = gs.getUserID();
-		
-	// Get the oldest open, unsubmitted timesheet.
-	var weekStarts = TimeSheetUtil.getStartOfCurrentWeek();
-	var timeSheet = new GlideRecord('x_dehp_time_track_time_sheet');
-	timeSheet.addQuery('user', userId);
-	timeSheet.addQuery('week_starts_on', '<=', weekStarts);
-	timeSheet.addEncodedQuery('stateINPending,Rejected');
-	timeSheet.orderBy('week_starts_on');
-	timeSheet.query();
-	
-	if(timeSheet.next()) {
-		return timeSheet.getValue('sys_id');
+	// check to make sure the user has the x_dehp_time_track.user role. Mainly to make sure admins
+	// don't accidently create timesheets for themselves.
+	var userRoles = new GlideRecord('sys_user_has_role');
+	userRoles.addActiveQuery();
+	userRoles.addQuery('user', gs.getUserID());
+	userRoles.addQuery('role', '17c58a0ddb82eb00aa0f7104399619ee');
+	userRoles.query();
+	if (userRoles.next()) {
+
+		// Get the oldest open, unsubmitted timesheet.
+		var weekStarts = TimeSheetUtil.getStartOfCurrentWeek();
+		var timeSheet = new GlideRecord('x_dehp_time_track_time_sheet');
+		timeSheet.addQuery('user', userId);
+		timeSheet.addQuery('week_starts_on', '<=', weekStarts);
+		timeSheet.addEncodedQuery('stateINPending,Rejected');
+		timeSheet.orderBy('week_starts_on');
+		timeSheet.query();
+
+		if (timeSheet.next()) {
+			return timeSheet.getValue('sys_id');
+		}
+		// build time sheet if not found.
+		timeSheet = TimeSheetUtil.getTimeSheet(userId, weekStarts);
+		if (timeSheet)
+			return timeSheet.getValue('sys_id');
+		return TimeSheetUtil.buildTimeSheet(userId, weekStarts);
 	}
-	// build time sheet if not found.
-	timeSheet = TimeSheetUtil.getTimeSheet(userId, weekStarts);
-	if(timeSheet)
-		return timeSheet.getValue('sys_id');
-	return TimeSheetUtil.buildTimeSheet(userId, weekStarts);
 };
 
 TimeSheetUtil.getStartOfCurrentWeek = function (userId) {
@@ -110,53 +118,39 @@ TimeSheetUtil.getStartOfWeekByDate = function (aDate, userId) {
 
 	return gd;
 };
-TimeSheetUtil.autoBuildTimesheets = function() {
+TimeSheetUtil.autoBuildTimesheets = function () {
 	var now = new GlideDateTime();
 	var todayDayOfWeek = now.getDayOfWeekLocalTime();
 	var users = TimeSheetPolicy.getPolicyUserIDs(todayDayOfWeek);
 	var userPolicy;
 	var timeSheet;
 	var weeksAhead = 0;
-	
-	for(var i = 0; i < users.length; i++) {
+
+	for (var i = 0; i < users.length; i++) {
 		// Check user policy and create new timesheets for each appropriate week.
 		userPolicy = TimeSheetPolicy.getFromUser(users[i]);
 		// Check to see if policy allows auto generation.
-		if(!userPolicy.gr.auto_generate_time_cards)
+		if (!userPolicy.gr.auto_generate_time_cards)
 			continue;
 		weeksAhead = parseInt(userPolicy.gr.populate_weeks);
-		while(weeksAhead >= 0) {
+		while (weeksAhead >= 0) {
 			var gdt = new GlideDateTime(now);
 			gdt.addWeeksLocalTime(weeksAhead);
 			var timeSheetDate = GlideDate(gdt.getLocalDate());
 			timeSheet = TimeSheetUtil.getTimeSheet(users[i], timeSheetDate);
-			if(!timeSheet) {
+			if (!timeSheet) {
 				var currentTimeSheet = TimeSheetUtil.buildTimeSheet(users[i], timeSheetDate);
 			}
-			 weeksAhead--;
+			weeksAhead--;
 		}
 	}
-};
-
-TimeSheetUtil.getApprovers = function(user) {
-	user = TimeUtils.verifyIsGlideRecord(user, 'sys_user');
-	var policy = TimeSheetPolicy.getFromUser(user);
-	var approvers = [];
-	var approverType = policy.gr.getValue('time_approver');
-	if(approverType == 'other')
-		approvers.push(policy.gr.getValue('approver'));
-	if(approverType == 'user_manager')
-		approvers.push(user.getValue('manager'));
-	// TO DO: need to check for delegates
-	
-	return approvers.join(',');
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 20:52:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5eda3ec1db462f00482906e2ca9619ec</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>TimeSheetUtil</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -164,6 +158,6 @@ TimeSheetUtil.getApprovers = function(user) {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_5eda3ec1db462f00482906e2ca9619ec</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-11-26 20:52:38</sys_updated_on>
+        <sys_updated_on>2018-12-13 02:23:37</sys_updated_on>
     </sys_script_include>
 </record_update>

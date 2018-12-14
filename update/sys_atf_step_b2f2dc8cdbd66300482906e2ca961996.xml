@@ -90,6 +90,18 @@ Confirm the record was successfully inserted</description>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=b2f2dc8cdbd66300482906e2ca961996"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>b2f2dc8cdbd66300482906e2ca961996</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:11</sys_created_on>
+        <sys_id>8ff9ec12db526300aa0f7104399619e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-12 17:47:11</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>field_values</field>
         <id>b2f2dc8cdbd66300482906e2ca961996</id>
         <sys_created_by>_ejense</sys_created_by>
@@ -100,5 +112,17 @@ Confirm the record was successfully inserted</description>
         <sys_updated_on>2018-12-05 16:20:25</sys_updated_on>
         <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
         <value>name=Stuff 120^code=Expense^account={{step['5c2be9bfdb026300482906e2ca96194f'].record_id}}^active=true^is_task=false^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>b2f2dc8cdbd66300482906e2ca961996</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:11</sys_created_on>
+        <sys_id>43f9ec12db526300aa0f7104399619e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-12 17:47:11</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
     </sys_element_mapping>
 </record_update>
