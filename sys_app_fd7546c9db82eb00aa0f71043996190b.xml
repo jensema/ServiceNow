@@ -23,14 +23,14 @@
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 16:58:46</sys_created_on>
         <sys_id>fd7546c9db82eb00aa0f71043996190b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-14 17:23:23</sys_updated_on>
+        <sys_updated_on>2018-12-17 23:06:37</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role display_value="x_dehp_time_track.user" name="x_dehp_time_track.user">17c58a0ddb82eb00aa0f7104399619ee</user_role>
         <vendor/>
         <vendor_prefix/>
-        <version>0.9.0</version>
+        <version>1.0.0</version>
     </sys_app>
 </record_update>
