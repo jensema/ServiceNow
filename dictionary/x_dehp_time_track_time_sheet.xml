@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" label="Time Sheet" max_length="40" name="x_dehp_time_track_time_sheet" type="collection">
         <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;var dueDate = timeSheet.getApprovalDueDate();&#10;&#9;return dueDate;&#10;&#10;})(current);" label="Approval Due" max_length="40" name="approval_due" read_only="true" type="glide_date_time" virtual="true"/>
-        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getCapitalCost();&#10;})();&#10;" label="Capital Cost" max_length="20" name="capital_cost" read_only="true" type="currency"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getCapitalCost();&#10;})();" label="Capital Cost" max_length="20" name="capital_cost" read_only="true" type="currency"/>
         <element label="Comments" max_length="4000" name="comments" type="string"/>
-        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getExpenseCost();&#10;})();&#10;" label="Expense Cost" max_length="20" name="expense_cost" read_only="true" type="currency"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getExpenseCost();&#10;})();" label="Expense Cost" max_length="20" name="expense_cost" read_only="true" type="currency"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Friday" max_length="15" name="friday" read_only="true" type="decimal"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Monday" max_length="20" name="monday" read_only="true" type="decimal"/>
         <element label="Notes" max_length="4000" name="notes" type="journal"/>

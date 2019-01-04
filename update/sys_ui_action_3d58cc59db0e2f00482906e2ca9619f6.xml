@@ -57,17 +57,14 @@ function submitSheet() {
 				current.state='Processed';
 				current.update();
 			}
-			else
-				submitTimeSheet();
+			else {
+				current.state='Submitted';
+				current.update();
+				gs.eventQueue('x_dehp_time_track.new_approval', current, timeSheet.getApprovers(), '');
+			}
 		}
 	}
-})();
-
-function submitTimeSheet() {
-	current.state='Submitted';
-	current.update();
-	gs.eventQueue('x_dehp_time_track.new_approval', current, TimeSheetUtil.getApprovers(current.user), '');
-}]]></script>
+})();]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -78,7 +75,7 @@ function submitTimeSheet() {
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>3d58cc59db0e2f00482906e2ca9619f6</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Submit Timesheet</sys_name>
         <sys_overrides/>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
@@ -87,7 +84,7 @@ function submitTimeSheet() {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_action_3d58cc59db0e2f00482906e2ca9619f6</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-17 23:54:55</sys_updated_on>
+        <sys_updated_on>2019-01-04 17:53:11</sys_updated_on>
         <table>x_dehp_time_track_time_sheet</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

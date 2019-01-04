@@ -2,7 +2,7 @@
     <element audit="true" label="Time Categories" max_length="40" name="x_dehp_time_track_time_categories" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Account" mandatory="true" max_length="32" name="account" reference="x_dehp_time_track_accounts" reference_qual="type.contains_tasks=true^EQ" reference_qual_condition="type.contains_tasks=true^EQ" type="reference"/>
         <element attributes="edge_encryption_enabled=true" default="true" label="Active" max_length="40" name="active" type="boolean"/>
-        <element choice="1" label="Charge Code" mandatory="true" max_length="40" name="code" type="string">
+        <element choice="1" label="Charge Code" max_length="40" name="code" type="string">
             <choice>
                 <element inactive_on_update="false" label="Capital" sequence="1" value="Capital"/>
                 <element inactive_on_update="false" label="Expense" sequence="2" value="Expense"/>

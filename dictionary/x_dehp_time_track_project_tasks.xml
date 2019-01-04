@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="Project Tasks" max_length="40" name="x_dehp_time_track_project_tasks" sizeclass="1" type="collection">
+    <element audit="true" extends="task" label="Project Tasks" max_length="40" name="x_dehp_time_track_project_tasks" sizeclass="224" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" label="Train" max_length="100" name="train" type="string">
             <choice>
                 <element inactive_on_update="false" label="Badger Express" sequence="1" value="badger_express"/>
