@@ -86,11 +86,11 @@ function destroyModal() {
 				</label>
 				<div class="col-sm-9">
 					<select id="selectCategory" class="form-control select2" required="true" aria-required="true" name="selectCategory" onchange="dispalyTask();">
-						<option value="">${gs.getMessage('-- Select a Category --')}</option>
+						<option value="">${gs.getMessage('-- Make a Selection --')}</option>
+						<option value="selectTask" style="font-style: italic; font-weight: bold;">${gs.getMessage('Select a Feature...')}</option>
 						<j2:while test="$[categories.next()]">
 							<option value="$[categories.sys_id]">$[categories.name]</option>
 						</j2:while>
-						<option value="selectTask">${gs.getMessage('Task or Feature...')}</option>
 					</select>
 				</div>
 				<span class="col-sm-3"/><span id="error_msg_selectCategory" class="help-block col-sm-9"/>
@@ -98,7 +98,7 @@ function destroyModal() {
 			<div id="category_select_task" class="form-group is-required" style="display:none">
 				<label for="categorySelectTask" class="control-label col-sm-3" >
 					<g:macro_invoke macro='x_dehp_time_track_required_marker'/>
-					${gs.getMessage("Select Task")}
+					${gs.getMessage("Select Feature")}
 				</label>
 				<div class="col-sm-9">
 					<g:macro_invoke macro="ui_reference" id="categoryTaskId" name="categoryTaskId"
@@ -126,7 +126,7 @@ function destroyModal() {
         <sys_created_on>2018-11-27 02:15:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0de40095db0e2f00482906e2ca9619a2</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>get_category</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -134,6 +134,6 @@ function destroyModal() {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_page_0de40095db0e2f00482906e2ca9619a2</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-06 19:11:16</sys_updated_on>
+        <sys_updated_on>2019-01-10 18:29:04</sys_updated_on>
     </sys_ui_page>
 </record_update>

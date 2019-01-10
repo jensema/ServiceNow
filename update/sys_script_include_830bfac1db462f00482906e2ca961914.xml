@@ -66,14 +66,23 @@ TimeUtils.getRecordCount = function(table, query) {
 TimeUtils.getMyApprovalSheets = function(state) {
 	var sheetIDs = [];
 	var currentSheet;
+	var approvers;
+	var currentUser = gs.getUserID();
 	var timeSheets = new GlideRecord('x_dehp_time_track_time_sheet');
 	timeSheets.addQuery('state', state);
+	timeSheets.addQuery('user', '!=', '');
+	timeSheets.orderBy('user');
 	timeSheets.query();
 	while (timeSheets.next()) {
 		currentSheet = new TimeSheet(timeSheets);
-		if(currentSheet.getApprovers().indexOf(gs.getUserID()) != -1)
-			sheetIDs.push(currentSheet.sysId);		
-	}	
+		approvers = currentSheet.getApprovers();
+		if(approvers.indexOf(currentUser) != -1) {
+			sheetIDs.push(currentSheet.sysId + '');
+			gs.info("\tPushed");
+		}
+	}
+	var arrayUtil = new global.ArrayUtil();
+	sheetIDs = arrayUtil.union(sheetIDs);
 	return sheetIDs.join();
 };
 
@@ -97,7 +106,7 @@ TimeUtils.getApprovalDelegates = function (approver) {
         <sys_created_on>2018-11-26 20:53:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>830bfac1db462f00482906e2ca961914</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>TimeUtils</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -105,6 +114,6 @@ TimeUtils.getApprovalDelegates = function (approver) {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_830bfac1db462f00482906e2ca961914</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-14 16:31:52</sys_updated_on>
+        <sys_updated_on>2019-01-10 21:54:48</sys_updated_on>
     </sys_script_include>
 </record_update>

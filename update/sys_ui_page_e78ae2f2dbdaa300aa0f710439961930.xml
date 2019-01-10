@@ -8,7 +8,10 @@
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 	<g2:evaluate var="jvar_sysIDs">
-		var sys_ids = TimeUtils.getMyApprovalSheets('Pending');
+		var pending_ids  = TimeUtils.getMyApprovalSheets('Pending');
+		var rejected_ids = TimeUtils.getMyApprovalSheets('Rejected');
+		var arrayUtil = new global.ArrayUtil();
+		var sys_ids = arrayUtil.union(pending_ids.split(','), rejected_ids.split(','));
 		sys_ids;
 	</g2:evaluate>
 	<p>Loading Time Sheets...</p>
@@ -20,7 +23,7 @@
         <sys_created_on>2018-12-14 16:25:52</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e78ae2f2dbdaa300aa0f710439961930</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>list_approvals_unsubmitted</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -28,6 +31,6 @@
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_page_e78ae2f2dbdaa300aa0f710439961930</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-14 16:31:56</sys_updated_on>
+        <sys_updated_on>2019-01-10 22:01:08</sys_updated_on>
     </sys_ui_page>
 </record_update>
