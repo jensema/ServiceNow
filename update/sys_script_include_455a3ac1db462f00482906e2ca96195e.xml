@@ -105,7 +105,7 @@ TimeSheet.prototype = {
 	cleanBlankCards: function() {
 		var timeCards = new GlideRecord('x_dehp_time_track_time_card');
 		timeCards.addQuery('time_sheet', this.sysId);
-		timeCards.addQuery('total_hours', 0);
+		timeCards.addEncodedQuery('total_hours=0^ORcategoryISEMPTY');
 		timeCards.query();
 		timeCards.deleteMultiple();
 	},
@@ -199,7 +199,7 @@ TimeSheet.prototype = {
         <sys_created_on>2018-11-26 20:49:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>455a3ac1db462f00482906e2ca96195e</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>TimeSheet</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -207,6 +207,6 @@ TimeSheet.prototype = {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_455a3ac1db462f00482906e2ca96195e</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-17 23:47:30</sys_updated_on>
+        <sys_updated_on>2019-01-14 18:00:50</sys_updated_on>
     </sys_script_include>
 </record_update>

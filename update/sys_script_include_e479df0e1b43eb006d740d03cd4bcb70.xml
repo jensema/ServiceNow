@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.Tests</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Tests</name>
+        <script><![CDATA[var Tests = Class.create();
+Tests.AccountTest = function() {
+	var user = "d3846b9e6f170100b85fcb512e3ee43f";
+	var arrayUtil = new global.ArrayUtil();
+	var account;
+	var categories = [];
+	var parentAccounts = new GlideRecord('x_dehp_time_track_accounts');
+	parentAccounts.addQuery('active=true^parent=NULL');
+	parentAccounts.query();
+	while (parentAccounts.next()) {
+		account = new Account(parentAccounts);
+		categories = arrayUtil.union(categories, account.getCategories(user, true));
+	}
+	categories.sort();
+	return categories;
+	
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-01-18 18:43:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e479df0e1b43eb006d740d03cd4bcb70</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Tests</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_e479df0e1b43eb006d740d03cd4bcb70</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-01-18 21:34:55</sys_updated_on>
+    </sys_script_include>
+</record_update>

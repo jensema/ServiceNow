@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Time Track M2m Accounts Users" max_length="40" name="x_dehp_time_track_m2m_accounts_users" type="collection">
         <element label="Accounts" max_length="32" name="accounts" reference="x_dehp_time_track_accounts" type="reference"/>
-        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" reference_qual="active=true^roles=x_dehp_time_track.user^EQ" reference_qual_condition="active=true^roles=x_dehp_time_track.user^EQ" type="reference"/>
         <index name="index">
             <element name="accounts"/>
         </index>

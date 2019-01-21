@@ -41,6 +41,7 @@
         <u_mandatory/>
         <u_read_only/>
         <u_visible/>
+        <ui_type>0</ui_type>
         <view/>
     </sys_ui_policy>
 </record_update>

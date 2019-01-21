@@ -15,47 +15,92 @@ Account.prototype = {
 		this.sysId = gr.sys_id;
 	},
 	
-	_getCategories: function(account) {
-		account = TimeUtils.verifyIsGlideRecord(account, 'x_dehp_time_track_accounts');
-		var categoryRecords = new GlideRecord('x_dehp_time_track_time_categories');
-		categoryRecords.addQuery('account', account.getValue('sys_id'));
-		categoryRecords.query();
-		categories = [];
-		while(categoryRecords.next()) {
-			categories.push(categoryRecords.getValue('sys_id'));
-		}
-		return categories;		
+	_getAccountUsers: function () {
+		var relatedUsers = new GlideRecord('x_dehp_time_track_m2m_accounts_users');
+		var relatedGroups = new GlideRecord('x_dehp_time_track_m2m_accounts_groups');
+		var foundUsers = [];
+		var arrayUtil = new global.ArrayUtil();
+		
+		relatedUsers.addQuery('accounts', this.sysId);
+		relatedUsers.addQuery('user.active', true);
+		relatedUsers.query();
+		while (relatedUsers.next())
+			foundUsers.push(relatedUsers.getValue('user'));
+		
+		relatedGroups.addQuery('accounts', this.sysId);
+		relatedGroups.addQuery('group.active', true);
+		relatedGroups.query();
+		while (relatedGroups.next())
+			foundUsers = arrayUtil.union(foundUsers, this._groupMembers(relatedGroups.group));
+		var length = foundUsers.length;
+		foundUsers = foundUsers.length > 0 ? foundUsers.join() : 'Not Found';
+		return foundUsers;
 	},
 	
-	getSubAccountsCategories: function(account) {
-		if(typeof account === 'undefined')
-			account = this.gr;
-		account = TimeUtils.verifyIsGlideRecord(account, 'x_dehp_time_track_accounts');
-		var categories = this._getCategories(account);
+	_groupMembers: function (group) {
+		var userIDs = [];
+		var groupMembers = new GlideRecord('sys_user_grmember');
+		groupMembers.addQuery('group', group);
+		groupMembers.addQuery('user.active', true);
+		groupMembers.query();
+		while (groupMembers.next())
+			userIDs.push(groupMembers.getValue('user'));
+		
+		return userIDs;
+	},
+	
+	// get user categories. If the user is found, return all categories on the accounts below it.
+	getCategories: function(user, is_task ,userFound) {
+		var allCategories = [];
+		var accountCategories = [];
 		var arrayUtil = new global.ArrayUtil();
-		var subAccount = new GlideRecord('x_dehp_time_track_accounts');
-		subAccount.addQuery('parent', account.getValue('sys_id'));
-		subAccount.addQuery('active', true);
-		subAccount.query();
-		while(subAccount.next()) {
-			var containsTasks = subAccount.type.contains_tasks;
-			var type = typeof containsTasks;
-			categories = arrayUtil.union(categories, this.getSubAccountsCategories(subAccount));
-			if(containsTasks) {				
-				categories = arrayUtil.union(categories, this._getCategories(subAccount));
+		var json = new global.JSON();
+		var catObj;
+		userFound = typeof userFound != 'boolean' ? false : userFound;
+		is_task = typeof is_task != 'boolean' ? true : is_task;
+		if (!userFound) {
+			var accountUsers = this._getAccountUsers();
+			if(accountUsers.indexOf(user) != -1)
+				userFound = true;
+		}
+		
+		// Iterate through children
+		var childAccounts = new GlideRecord('x_dehp_time_track_accounts');
+		childAccounts.addQuery('parent', this.sysId);
+		childAccounts.query();
+		while(childAccounts.next()) {
+			var account = new Account(childAccounts);
+			allCategories = arrayUtil.union(allCategories, account.getCategories(user, is_task, userFound));
+		}
+		
+		if(userFound) {
+			// Add our attached categories
+			var categories = new GlideRecord('x_dehp_time_track_time_categories');
+			categories.addQuery('account', this.sysId);
+			categories.addQuery('active=true^is_task=' + is_task);
+			categories.query();
+			while(categories.next()) {
+				catObj = {
+					'name' : categories.name + '',
+					'sys_id' : categories.sys_id + ''
+				};
+				// We need to encode as a JSON string. This will allow us to sort by name easier (using Array.sort()) later on,
+				// and also allow us to pass this properly to the UI Page forEach jelly loop, where it is decoded for display.
+				accountCategories.push(json.encode(catObj));
 			}
 		}
-		return arrayUtil.union(categories);
-	},	
-
-    type: 'Account'
-};]]></script>
+		return arrayUtil.union(allCategories, accountCategories);
+	},
+	
+	type: 'Account'
+};
+]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 20:46:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>5399b2c1db462f00482906e2ca9619e2</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>Account</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -63,6 +108,6 @@ Account.prototype = {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_5399b2c1db462f00482906e2ca9619e2</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-11-30 18:14:43</sys_updated_on>
+        <sys_updated_on>2019-01-18 19:52:34</sys_updated_on>
     </sys_script_include>
 </record_update>

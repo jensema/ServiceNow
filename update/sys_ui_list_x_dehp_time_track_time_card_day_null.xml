@@ -3,92 +3,122 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cost</element>
-            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">0b10f8cadb5e6300482906e2ca961906</list_id>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
-            <sys_id>c310f8cadb5e6300482906e2ca961907</sys_id>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>1c9235e51b476b006d740d03cd4bcb6e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>day</element>
-            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">0b10f8cadb5e6300482906e2ca961906</list_id>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
-            <sys_id>4b10f8cadb5e6300482906e2ca961907</sys_id>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>909235e51b476b006d740d03cd4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>day_of_week_function</element>
-            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">0b10f8cadb5e6300482906e2ca961906</list_id>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
-            <sys_id>cb10f8cadb5e6300482906e2ca961907</sys_id>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>149235e51b476b006d740d03cd4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>hours</element>
-            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">0b10f8cadb5e6300482906e2ca961906</list_id>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
-            <sys_id>4f10f8cadb5e6300482906e2ca961907</sys_id>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>949235e51b476b006d740d03cd4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>rate_card</element>
-            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">0b10f8cadb5e6300482906e2ca961906</list_id>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
-            <sys_id>cf10f8cadb5e6300482906e2ca961907</sys_id>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>189235e51b476b006d740d03cd4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>time_card</element>
-            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">0b10f8cadb5e6300482906e2ca961906</list_id>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
-            <sys_id>4310f8cadb5e6300482906e2ca961908</sys_id>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>989235e51b476b006d740d03cd4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>time_card.time_sheet</element>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>1c9235e51b476b006d740d03cd4bcb6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>time_card.time_sheet.user</element>
+            <list_id display_value="x_dehp_time_track_time_card_day" element="NULL" name="x_dehp_time_track_time_card_day" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">509235e51b476b006d740d03cd4bcb6e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
+            <sys_id>9c9235e51b476b006d740d03cd4bcb6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -102,10 +132,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-12-11 23:35:28</sys_created_on>
+            <sys_created_on>2019-01-16 21:55:56</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
-            <sys_id>0b10f8cadb5e6300482906e2ca961906</sys_id>
+            <sys_id>509235e51b476b006d740d03cd4bcb6e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_dehp_time_track_time_card_day</sys_name>
             <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
@@ -114,7 +144,7 @@
             <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
             <sys_update_name>sys_ui_list_x_dehp_time_track_time_card_day_null</sys_update_name>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-12-11 23:35:28</sys_updated_on>
+            <sys_updated_on>2019-01-16 21:55:56</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

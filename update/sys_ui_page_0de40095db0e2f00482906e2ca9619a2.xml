@@ -66,16 +66,39 @@ function destroyModal() {
 	(GlideModal.get()).destroy();
 }
 //@ sourceURL=MyInlineScript.js]]></client_script>
-        <description/>
+        <description>Display's the "Select a Category" dialog for the "Add Category" UI Action on the Time Sheet form.</description>
         <direct>false</direct>
         <endpoint>x_dehp_time_track_get_category.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
 <j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
 	<g2:evaluate>
-		var categories = new GlideRecord('x_dehp_time_track_time_categories');
-		categories.addQuery('is_task=false^active=true');
-		categories.orderBy('name');
-		categories.query();
+		var arrayUtil = new global.ArrayUtil();
+		var json = new global.JSON();
+		var categories = [];
+		var tasks = [];
+		var taskIDs = [];
+		var taskFilter = "active=true^sys_id=";
+		var account;
+		<!-- //pull the record from the calling URL -->
+		var currentRecordID = RP.getReferringURL().split('sys_id=')[1].split('&amp;')[0];
+		var timeSheet = new TimeSheet(currentRecordID);
+		var user = timeSheet.gr.user;
+		<!-- // Get all parent accounts -->
+		var parentAccounts = new GlideRecord('x_dehp_time_track_accounts');
+		parentAccounts.addQuery('active=true^parent=NULL');
+		parentAccounts.query();
+		<!-- // Loop through the accounts and merge all our returned categories -->
+		while(parentAccounts.next()) {
+			account = new Account(parentAccounts);
+			categories = arrayUtil.union(categories, account.getCategories(user, false));
+			tasks = arrayUtil.union(tasks, account.getCategories(user, true));
+		}
+		categories.sort();
+		tasks.sort();
+		for (var i = 0; i &lt; tasks.length; i++) {
+			taskIDs.push(json.decode(tasks[i]).sys_id);
+		}
+		taskFilter += taskIDs.join('^ORsys_id=')
 	</g2:evaluate>
 	<form>
 		<div class="form-horizontal">
@@ -87,26 +110,33 @@ function destroyModal() {
 				<div class="col-sm-9">
 					<select id="selectCategory" class="form-control select2" required="true" aria-required="true" name="selectCategory" onchange="dispalyTask();">
 						<option value="">${gs.getMessage('-- Make a Selection --')}</option>
-						<option value="selectTask" style="font-style: italic; font-weight: bold;">${gs.getMessage('Select a Feature...')}</option>
-						<j2:while test="$[categories.next()]">
-							<option value="$[categories.sys_id]">$[categories.name]</option>
-						</j2:while>
+						<j2:if test="$[tasks.length &gt; 0]">
+							<option value="selectTask" style="font-style: italic; font-weight: bold;">${gs.getMessage('Select a Feature...')}</option>
+						</j2:if>
+						<j2:forEach var="jvar_cat" items="$[categories]">
+							<g2:evaluate>
+								var cat = json.decode("$[jvar_cat]");
+							</g2:evaluate>
+							<option value="$[cat.sys_id]">$[cat.name]</option>
+						</j2:forEach>
 					</select>
 				</div>
 				<span class="col-sm-3"/><span id="error_msg_selectCategory" class="help-block col-sm-9"/>
 			</div>
-			<div id="category_select_task" class="form-group is-required" style="display:none">
-				<label for="categorySelectTask" class="control-label col-sm-3" >
-					<g:macro_invoke macro='x_dehp_time_track_required_marker'/>
-					${gs.getMessage("Select Feature")}
-				</label>
-				<div class="col-sm-9">
-					<g:macro_invoke macro="ui_reference" id="categoryTaskId" name="categoryTaskId"
-									table="x_dehp_time_track_time_categories" show_popup="true" show_lookup="true"
-									query="is_task=true^active=true"/>
+			<j2:if test="$[tasks.length &gt; 0]">
+				<div id="category_select_task" class="form-group is-required" style="display:none">
+					<label for="categorySelectTask" class="control-label col-sm-3" >
+						<g:macro_invoke macro='x_dehp_time_track_required_marker'/>
+						${gs.getMessage("Select Feature")}
+					</label>
+					<div class="col-sm-9">
+						<g2:macro_invoke macro="ui_reference" id="categoryTaskId" name="categoryTaskId"
+										table="x_dehp_time_track_time_categories" show_popup="true" show_lookup="true"
+										query="$[taskFilter]"/>
+					</div>
+					<span class="col-sm-3"/><span id="error_msg_selectTask" class="help-block col-sm-9"/>
 				</div>
-				<span class="col-sm-3"/><span id="error_msg_selectTask" class="help-block col-sm-9"/>
-			</div>
+			</j2:if>
 		</div>
 	</form>
 
@@ -126,7 +156,7 @@ function destroyModal() {
         <sys_created_on>2018-11-27 02:15:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0de40095db0e2f00482906e2ca9619a2</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>118</sys_mod_count>
         <sys_name>get_category</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -134,6 +164,6 @@ function destroyModal() {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_page_0de40095db0e2f00482906e2ca9619a2</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-01-10 18:29:04</sys_updated_on>
+        <sys_updated_on>2019-01-19 00:42:07</sys_updated_on>
     </sys_ui_page>
 </record_update>
