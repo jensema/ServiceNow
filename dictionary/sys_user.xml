@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="ref_ac_columns_search=true,global_search_config_handler=UserConfig,ref_ac_order_by=name,hasLabels=true,ref_ac_columns=email,display_image=photo,ref_auto_completer=AJAXTableCompleter,iterativeDelete=true,metadata_link_exempt=true" defaultsort="-1" dynamic_creation_script="dynamicUserCreation(current, value);" label="User" max_length="40" name="sys_user" text_index="true" type="collection">
+    <element attributes="ref_ac_columns_search=true,global_search_config_handler=UserConfig,all_tables.text_index_translations=true,ref_ac_order_by=name,hasLabels=true,ref_ac_columns=email,display_image=photo,ref_auto_completer=AJAXTableCompleter,iterativeDelete=true,metadata_link_exempt=true" defaultsort="-1" dynamic_creation_script="dynamicUserCreation(current, value);" label="User" max_length="40" name="sys_user" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Time sheet policy" max_length="32" name="x_dehp_time_track_time_sheet_policy" reference="x_dehp_time_track_time_sheet_policy" reference_floats="true" reference_qual="approver.roles=x_dehp_time_track.user^EQ" reference_qual_condition="approver.roles=x_dehp_time_track.user^EQ" type="reference"/>
     </element>
 </database>
