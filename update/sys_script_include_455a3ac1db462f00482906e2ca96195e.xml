@@ -14,15 +14,51 @@ TimeSheet.prototype = {
 	initialize : function (obj) {
 		this.gr = TimeUtils.verifyIsGlideRecord(obj, 'x_dehp_time_track_time_sheet');
 		this.sysId = this.gr.sys_id;
+		this.policy = TimeSheetPolicy.getFromUser(this.gr.user);
 	},
-	
-	allowEdit: function() {
+
+	_hasApprovalPermission : function () {
+		var isApprover = (this.getApprovers()).indexOf(gs.getUserID()) != -1;
+		var hasApproverRole = gs.hasRole('x_dehp_time_track.approver');
+		var hasAdminRole = gs.hasRole('x_dehp_time_track.admin');
+		return ((isApprover && hasApproverRole) || hasAdminRole);
+	},
+
+	canApprove : function () {
+		var canApproveState = this.gr.state == 'Submitted';
+		canApproveState = canApproveState && this._hasApprovalPermission();
+		return canApproveState;
+	},
+
+	canReject : function () {
+		var rejectionWeeks = parseInt(this.policy.gr.allow_rejection_weeks);
+		var canRejectState = this.gr.state == 'Submitted' || this.gr.state == "Processed";
+		canRejectState = canRejectState && this._hasApprovalPermission();
+		if (canRejectState && rejectionWeeks < 0) {
+			// If rejection weeks is negative, always allow rejection
+			canRejectState = true;
+		} else {
+			// always allow Admin to reject
+			if (canRejectState && gs.hasRole('x_dehp_time_track.admin'))
+				canRejectState = true;
+			else if (canRejectState) {
+				// Check to see if we can still reject.
+				var now = new GlideDateTime();
+				now.addWeeksLocalTime(rejectionWeeks * -1); // Make negative to subtract weeks
+				var approvalDue = this.gr.approval_due;
+				canRejectState = now < approvalDue;
+			}
+		}
+		return canRejectState;
+	},
+
+	allowEdit : function () {
 		var allow = this.gr.getValue('state') == 'Pending';
 		allow = allow || this.gr.getValue('state') == 'Rejected';
 		return allow;
 	},
-	
-	updateTime: function() {
+
+	updateTime : function () {
 		var costs = this.getCosts();
 		this.gr.expense_cost = costs.Expense;
 		this.gr.capital_cost = costs.Capital;
@@ -30,8 +66,8 @@ TimeSheet.prototype = {
 		this.gr.total_hours = costs.Hours;
 		this.gr.update();
 	},
-	
-	checkUnique: function() {
+
+	checkUnique : function () {
 		var gr = new GlideRecord('x_dehp_time_track_time_sheet');
 		gr.addQuery('week_starts_on', this.gr.getValue('week_starts_on'));
 		gr.addQuery('user', this.gr.getValue('user'));
@@ -39,18 +75,18 @@ TimeSheet.prototype = {
 		gr.query();
 		return !gr.next();
 	},
-	
-	getTimeCards: function() {
+
+	getTimeCards : function () {
 		var timeCardIDs = [];
 		var timeCards = new GlideRecord('x_dehp_time_track_time_card');
 		timeCards.addQuery('time_sheet', this.sysId);
 		timeCards.query();
-		while(timeCards.next())
+		while (timeCards.next())
 			timeCardIDs.push(new TimeCard(timeCards.sys_id));
 		return timeCardIDs;
 	},
-	
-	getPreviousTimeSheets : function(weeks){
+
+	getPreviousTimeSheets : function (weeks) {
 		var timeSheets = new GlideRecord('x_dehp_time_track_time_sheet');
 		timeSheets.addQuery('user', this.gr.getValue('user'));
 		timeSheets.addQuery('week_starts_on', '<', this.gr.week_starts_on);
@@ -58,20 +94,19 @@ TimeSheet.prototype = {
 		timeSheets.query();
 		weeks = parseInt(weeks);
 		var oldSheets = [];
-		while(weeks > 0 && timeSheets.next()) {
+		while (weeks > 0 && timeSheets.next()) {
 			oldSheets.push(new TimeSheet(timeSheets.sys_id));
 			weeks--;
 		}
 		return oldSheets;
 	},
-	
-	populateTimeCards: function() {
+
+	populateTimeCards : function () {
 		var timeCardCategories = [];
-		var policy = TimeSheetPolicy.getFromUser(this.gr.getValue('user'));
-		var oldSheets = this.getPreviousTimeSheets(policy.lookbackWeeks());
+		var oldSheets = this.getPreviousTimeSheets(this.policy.lookbackWeeks());
 		for (var i = 0; i < oldSheets.length; i++) {
 			var categories = oldSheets[i].getTimeCards();
-			for(var j = 0; j < categories.length; j++) {
+			for (var j = 0; j < categories.length; j++) {
 				timeCardCategories = TimeUtils.addUniqueValueToArray(timeCardCategories, categories[j].category);
 			}
 		}
@@ -80,8 +115,8 @@ TimeSheet.prototype = {
 			TimeCard.buildNew(this, timeCardCategories[n]);
 		}
 	},
-	
-	_getDueDate: function(daysAfter, time) {
+
+	_getDueDate : function (daysAfter, time) {
 		var dueDate = this.gr.week_starts_on;
 		dueDate = new GlideDateTime(this.gr.week_starts_on);
 		dueDate.addWeeksLocalTime(1);
@@ -91,115 +126,114 @@ TimeSheet.prototype = {
 		dueDate.add(gt);
 		return dueDate;
 	},
-	
-	getSubmissionDueDate: function() {
-		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
-		return this._getDueDate(policy.submissionDue(), policy.submissionTime());
+
+	getSubmissionDueDate : function () {
+		return this._getDueDate(this.policy.submissionDue(), this.policy.submissionTime());
 	},
-	
-	getApprovalDueDate: function() {
-		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
-		return this._getDueDate(policy.approvalDue(), policy.approvalTime());
+
+	getApprovalDueDate : function () {
+		return this._getDueDate(this.policy.approvalDue(), this.policy.approvalTime());
 	},
-	
-	cleanBlankCards: function() {
+
+	cleanBlankCards : function () {
 		var timeCards = new GlideRecord('x_dehp_time_track_time_card');
 		timeCards.addQuery('time_sheet', this.sysId);
 		timeCards.addEncodedQuery('total_hours=0^ORcategoryISEMPTY');
 		timeCards.query();
 		timeCards.deleteMultiple();
 	},
-	
-	totalHours: function () {
+
+	totalHours : function () {
 		return parseFloat(this.gr.getValue('total_hours')).toFixed(2);
 	},
-	
-	verifyHours: function() {
-		var policy = TimeSheetPolicy.getFromUser(this.gr.user);
+
+	verifyHours : function () {
 		var verified = true;
 		var totalHours = parseFloat(this.totalHours());
-		var maxHours = parseFloat(policy.maxHours());
-		var minHours = parseFloat(policy.minHours());
-		if(totalHours > maxHours) {
+		var maxHours = parseFloat(this.policy.maxHours());
+		var minHours = parseFloat(this.policy.minHours());
+		if (totalHours > maxHours) {
 			gs.addErrorMessage(gs.getMessage('excessive_hours', [totalHours, maxHours]));
 			verified = false;
 		}
-		if(totalHours < minHours) {
+		if (totalHours < minHours) {
 			gs.addErrorMessage(gs.getMessage('insufficient_hours', [totalHours, minHours]));
 			verified = false;
 		}
-		
+
 		return verified;
 	},
-	
-	_nextOrPrev: function(way) {
+
+	_nextOrPrev : function (way) {
 		// if the way is neither greater or less, it will return the current record
-		way = way=== '<' || way ==='>' ?  way: '==';
-		
+		way = way === '<' || way === '>' ? way : '==';
+
 		var timeSheets = new GlideRecord('x_dehp_time_track_time_sheet');
 		timeSheets.addQuery('week_starts_on', way, this.gr.week_starts_on);
 		timeSheets.addQuery('user', this.gr.user.sys_id);
 		timeSheets.orderByDesc('week_starts_on');
 		timeSheets.setLimit(1);
 		timeSheets.query();
-		if(timeSheets.next())
+		if (timeSheets.next())
 			return timeSheets;
 		return false;
 	},
-	
-	getPrev: function() {
+
+	getPrev : function () {
 		return this._nextOrPrev('<');
 	},
-	
-	getNext: function() {
+
+	getNext : function () {
 		return this._nextOrPrev('>');
 	},
-	
-	getCosts: function(code) {
+
+	getCosts : function (code) {
 		code = code === 'Capital' || code === 'Expense' ? code : undefined;
 		var dayCardsAgg = new GlideAggregate('x_dehp_time_track_time_card_day');
 		dayCardsAgg.groupBy('time_card.category.code');
 		dayCardsAgg.addAggregate('SUM', 'cost');
 		dayCardsAgg.addAggregate('SUM', 'hours');
 		dayCardsAgg.addQuery('time_card.time_sheet.sys_id', this.sysId);
-		if(typeof code !== 'undefined')
+		if (typeof code !== 'undefined')
 			dayCardsAgg.addQuery('time_card.category.code', code);
 		dayCardsAgg.query();
-		var returnVal = {'Capital': 0, 'Expense': 0, 'Hours' : 0};
-			while(dayCardsAgg.next()) {
-				var cost = dayCardsAgg.getAggregate('SUM', 'cost');
-				returnVal[dayCardsAgg.getValue('time_card.category.code')] = cost;
-				returnVal.Hours += parseFloat(dayCardsAgg.getAggregate('SUM', 'hours'));
-			}
-			return returnVal;
-		},
-		
-		getApprovers: function() {
-			var approvers = [];
-			var policy = TimeSheetPolicy.getFromUser(this.gr.user);
-			var approverType = policy.gr.getValue('time_approver');
-			if (approverType == 'other')
-				approvers = this._getAllApprovers(policy.gr.approver + '');
-			else if (approverType == 'user_manager')
-				approvers = this._getAllApprovers(this.gr.user.manager + '');
-			return approvers.join(',');
-		},
-		
-		_getAllApprovers: function(primaryApprover) {
-			var approvers = [primaryApprover];
-			approvers = new global.ArrayUtil().union(approvers, TimeUtils.getApprovalDelegates(primaryApprover));
-			return approvers;
-		},
-		
-		
-		type : 'TimeSheet'
-	};]]></script>
+		var returnVal = {
+			'Capital' : 0,
+			'Expense' : 0,
+			'Hours' : 0
+		};
+		while (dayCardsAgg.next()) {
+			var cost = dayCardsAgg.getAggregate('SUM', 'cost');
+			returnVal[dayCardsAgg.getValue('time_card.category.code')] = cost;
+			returnVal.Hours += parseFloat(dayCardsAgg.getAggregate('SUM', 'hours'));
+		}
+		return returnVal;
+	},
+
+	getApprovers : function () {
+		var approvers = [];
+		var approverType = this.policy.gr.getValue('time_approver');
+		if (approverType == 'other')
+			approvers = this._getAllApprovers(this.policy.gr.approver + '');
+		else if (approverType == 'user_manager')
+			approvers = this._getAllApprovers(this.gr.user.manager + '');
+		return approvers.join(',');
+	},
+
+	_getAllApprovers : function (primaryApprover) {
+		var approvers = [primaryApprover];
+		approvers = new global.ArrayUtil().union(approvers, TimeUtils.getApprovalDelegates(primaryApprover));
+		return approvers;
+	},
+
+	type : 'TimeSheet'
+};]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 20:49:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>455a3ac1db462f00482906e2ca96195e</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>TimeSheet</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -207,6 +241,6 @@ TimeSheet.prototype = {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_455a3ac1db462f00482906e2ca96195e</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-01-14 18:00:50</sys_updated_on>
+        <sys_updated_on>2019-01-23 20:57:38</sys_updated_on>
     </sys_script_include>
 </record_update>

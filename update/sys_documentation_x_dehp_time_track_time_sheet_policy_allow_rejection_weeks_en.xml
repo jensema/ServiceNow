@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="allow_rejection_weeks" label="Allow rejection for (weeks)" language="en" table="x_dehp_time_track_time_sheet_policy">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>allow_rejection_weeks</element>
+            <help/>
+            <hint>Allow an approver to reject a timesheet after processing up to the specified time in weeks. Entering a negative value will allow rejection indefinatly.</hint>
+            <label>Allow rejection for (weeks)</label>
+            <language>en</language>
+            <name>x_dehp_time_track_time_sheet_policy</name>
+            <plural>Allow rejection for (weeks)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-01-23 17:13:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>1d15fc3f1b032340a27f437ead4bcb28</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Allow rejection for (weeks)</sys_name>
+            <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+            <sys_update_name>sys_documentation_x_dehp_time_track_time_sheet_policy_allow_rejection_weeks_en</sys_update_name>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-01-23 17:17:50</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

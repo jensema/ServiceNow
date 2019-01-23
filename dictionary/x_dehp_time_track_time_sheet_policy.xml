@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" label="Time Sheet Policy" max_length="40" name="x_dehp_time_track_time_sheet_policy" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Allow blank time cards" max_length="40" name="allow_blank_time_cards" type="boolean"/>
+        <element default="2" hint="Allow an approver to reject a timesheet after processing up to the specified time in weeks. Entering a negative value will allow rejection indefinatly." label="Allow rejection for (weeks)" mandatory="true" max_length="40" name="allow_rejection_weeks" type="integer"/>
         <element attributes="edge_encryption_enabled=true" default="2" label="Approval Due (After Week)" mandatory="true" max_length="40" name="approval_due" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Approval Due Time" max_length="40" name="approval_due_time" type="glide_time"/>
         <element attributes="edge_encryption_enabled=true" label="Specific Approver" max_length="32" name="approver" reference="sys_user" reference_qual="active=true^roles=x_dehp_time_track.approver^EQ" reference_qual_condition="active=true^roles=x_dehp_time_track.approver^EQ" type="reference"/>

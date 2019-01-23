@@ -8,7 +8,7 @@
         <element label="Account Number" max_length="20" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Parent" max_length="32" name="parent" reference="x_dehp_time_track_accounts" reference_qual="active=true^type.contains_tasks=false^EQ" reference_qual_condition="active=true^type.contains_tasks=false^EQ" type="reference"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function() {&#10;&#9;var account = new Account(current);&#10;&#9;categories = account.getSubAccountsCategories();&#10;&#9;var costs = DayCard.getTaskCosts(categories);&#10;&#9;return parseFloat(costs.Expense) + parseFloat(costs.Capital);&#10;})();" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency" virtual="true"/>
-        <element attributes="edge_encryption_enabled=true" label="Type" max_length="32" name="type" reference="x_dehp_time_track_account_type" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Type" max_length="32" name="type" reference="x_dehp_time_track_account_type" reference_floats="true" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <index name="index">
             <element name="parent"/>
         </index>
