@@ -34,7 +34,7 @@ TimeSheet.prototype = {
 		var rejectionWeeks = parseInt(this.policy.gr.allow_rejection_weeks);
 		var canRejectState = this.gr.state == 'Submitted' || this.gr.state == "Processed";
 		canRejectState = canRejectState && this._hasApprovalPermission();
-		if (canRejectState && rejectionWeeks < 0) {
+		if (canRejectState && (rejectionWeeks < 0 || this.gr.state == 'Submitted')) {
 			// If rejection weeks is negative, always allow rejection
 			canRejectState = true;
 		} else {
@@ -233,7 +233,7 @@ TimeSheet.prototype = {
         <sys_created_on>2018-11-26 20:49:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>455a3ac1db462f00482906e2ca96195e</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>TimeSheet</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -241,6 +241,6 @@ TimeSheet.prototype = {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_455a3ac1db462f00482906e2ca96195e</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-01-23 20:57:38</sys_updated_on>
+        <sys_updated_on>2019-01-25 21:01:33</sys_updated_on>
     </sys_script_include>
 </record_update>
