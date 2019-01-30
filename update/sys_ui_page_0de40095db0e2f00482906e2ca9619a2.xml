@@ -12,10 +12,12 @@
 
 function dispalyTask() {
 	var fields = getFields();
-	if(fields.category.getValue() != 'selectTask')
-		fields.task.style.display = "none";
-	else
-		fields.task.style.display = "block";
+	if(fields.task) {
+		if(fields.category.getValue() != 'selectTask')
+			fields.task.style.display = "none";
+		else
+			fields.task.style.display = "block";
+	}
 }
 
 function addSelectedCategory() {
@@ -32,7 +34,8 @@ function addSelectedCategory() {
 function clearErrors() {
 	var fields = getFields();
 	fields.categoryError.innerHTML = '';
-	fields.taskError.innerHTML = '';
+	if(fields.taskError)
+		fields.taskError.innerHTML = '';
 }
 
 function checkRequiredFields() {
@@ -42,8 +45,9 @@ function checkRequiredFields() {
 		fields.categoryError.innerHTML = "Select a category.";
 		return false;
 	}
-	if(fields.task.style == 'block' && fields.task.getValue() == '') {
-		fields.taskError.innerHTML = "Select a task.";
+	if(fields.task && fields.task.style == 'block' && fields.task.getValue() == '') {
+		if(fields.taskError)
+			fields.taskError.innerHTML = "Select a task.";
 		return false;
 	}
 	return true;
@@ -156,7 +160,7 @@ function destroyModal() {
         <sys_created_on>2018-11-27 02:15:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0de40095db0e2f00482906e2ca9619a2</sys_id>
-        <sys_mod_count>118</sys_mod_count>
+        <sys_mod_count>121</sys_mod_count>
         <sys_name>get_category</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -164,6 +168,6 @@ function destroyModal() {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_page_0de40095db0e2f00482906e2ca9619a2</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-01-19 00:42:07</sys_updated_on>
+        <sys_updated_on>2019-01-30 19:34:08</sys_updated_on>
     </sys_ui_page>
 </record_update>
