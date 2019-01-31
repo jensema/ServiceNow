@@ -16,7 +16,7 @@
         <name/>
         <order>1250</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>x_dehp_time_track_list_my_processed.do</query>
+        <query>/x_dehp_time_track_time_sheet_list.do?sysparm_query=sys_idINjavascript%3Ax_dehp_time_track.DynamicFilters.myApprovalsByState('Processed')</query>
         <report/>
         <roles>x_dehp_time_track.admin,x_dehp_time_track.approver</roles>
         <survey/>
@@ -27,7 +27,7 @@
         <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_id>6b458f871b03af00a27f437ead4bcb5f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Processed</sys_name>
         <sys_overrides/>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
@@ -36,7 +36,7 @@
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_app_module_6b458f871b03af00a27f437ead4bcb5f</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-01-21 19:50:32</sys_updated_on>
+        <sys_updated_on>2019-01-31 21:04:38</sys_updated_on>
         <timeline_page/>
         <title>Processed</title>
         <uncancelable>false</uncancelable>
