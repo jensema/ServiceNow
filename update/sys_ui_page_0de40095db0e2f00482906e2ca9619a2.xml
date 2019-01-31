@@ -79,9 +79,6 @@ function destroyModal() {
 		var arrayUtil = new global.ArrayUtil();
 		var json = new global.JSON();
 		var categories = [];
-		var tasks = [];
-		var taskIDs = [];
-		var taskFilter = "active=true^sys_id=";
 		var account;
 		<!-- //pull the record from the calling URL -->
 		var currentRecordID = RP.getReferringURL().split('sys_id=')[1].split('&amp;')[0];
@@ -95,14 +92,8 @@ function destroyModal() {
 		while(parentAccounts.next()) {
 			account = new Account(parentAccounts);
 			categories = arrayUtil.union(categories, account.getCategories(user, false));
-			tasks = arrayUtil.union(tasks, account.getCategories(user, true));
 		}
 		categories.sort();
-		tasks.sort();
-		for (var i = 0; i &lt; tasks.length; i++) {
-			taskIDs.push(json.decode(tasks[i]).sys_id);
-		}
-		taskFilter += taskIDs.join('^ORsys_id=')
 	</g2:evaluate>
 	<form>
 		<div class="form-horizontal">
@@ -114,7 +105,7 @@ function destroyModal() {
 				<div class="col-sm-9">
 					<select id="selectCategory" class="form-control select2" required="true" aria-required="true" name="selectCategory" onchange="dispalyTask();">
 						<option value="">${gs.getMessage('-- Make a Selection --')}</option>
-						<j2:if test="$[tasks.length &gt; 0]">
+						<j2:if test="$[categories.length &gt; 0]">
 							<option value="selectTask" style="font-style: italic; font-weight: bold;">${gs.getMessage('Select a Feature...')}</option>
 						</j2:if>
 						<j2:forEach var="jvar_cat" items="$[categories]">
@@ -127,7 +118,7 @@ function destroyModal() {
 				</div>
 				<span class="col-sm-3"/><span id="error_msg_selectCategory" class="help-block col-sm-9"/>
 			</div>
-			<j2:if test="$[tasks.length &gt; 0]">
+			<j2:if test="$[categories.length &gt; 0]">
 				<div id="category_select_task" class="form-group is-required" style="display:none">
 					<label for="categorySelectTask" class="control-label col-sm-3" >
 						<g:macro_invoke macro='x_dehp_time_track_required_marker'/>
@@ -136,7 +127,7 @@ function destroyModal() {
 					<div class="col-sm-9">
 						<g2:macro_invoke macro="ui_reference" id="categoryTaskId" name="categoryTaskId"
 										table="x_dehp_time_track_time_categories" show_popup="true" show_lookup="true"
-										query="$[taskFilter]"/>
+										query="sys_idINjavascript:x_dehp_time_track.DynamicFilters.myTasks(\'$[user]\')"/>
 					</div>
 					<span class="col-sm-3"/><span id="error_msg_selectTask" class="help-block col-sm-9"/>
 				</div>
@@ -160,7 +151,7 @@ function destroyModal() {
         <sys_created_on>2018-11-27 02:15:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0de40095db0e2f00482906e2ca9619a2</sys_id>
-        <sys_mod_count>121</sys_mod_count>
+        <sys_mod_count>134</sys_mod_count>
         <sys_name>get_category</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -168,6 +159,6 @@ function destroyModal() {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_page_0de40095db0e2f00482906e2ca9619a2</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-01-30 19:34:08</sys_updated_on>
+        <sys_updated_on>2019-01-30 23:35:20</sys_updated_on>
     </sys_ui_page>
 </record_update>
