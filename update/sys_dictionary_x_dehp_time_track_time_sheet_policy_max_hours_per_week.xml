@@ -48,15 +48,17 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-11-26 22:03:39</sys_created_on>
-        <sys_id>913907630f932300a9a8cdbce1050ee2</sys_id>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6ae8e4dc1ba723006d740d03cd4bcbd4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Maximum hours per week</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_dictionary_x_dehp_time_track_time_sheet_policy_max_hours_per_week</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-02-04 19:38:23</sys_updated_on>
+        <sys_updated_on>2019-02-06 15:53:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

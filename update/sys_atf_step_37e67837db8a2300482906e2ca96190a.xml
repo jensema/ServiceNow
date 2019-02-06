@@ -3,7 +3,7 @@
         <active>true</active>
         <description>Confirm that at least the following modules are visible: Finance Records, All Time Sheets, Time Cards, Rate Cards, Accounts, Day Cards
 
-Confirm that at least the following modules are not visible: Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table, Current Time Sheet, Time Sheets, My Time Sheets, Time Sheet Approvals</description>
+Confirm that at least the following modules are not visible: Current Time Sheet, Time Sheets, My Time Sheets, Time Sheet Approvals, Submitted for Approval, Awaiting Submission, Processed, Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table</description>
         <display_name>Module Visibility</display_name>
         <inputs/>
         <order>29</order>
@@ -11,15 +11,17 @@ Confirm that at least the following modules are not visible: Time Categories, Ge
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 00:18:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>37e67837db8a2300482906e2ca96190a</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Module Visibility</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_37e67837db8a2300482906e2ca96190a</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:14:09</sys_updated_on>
+        <sys_updated_on>2019-02-06 21:33:20</sys_updated_on>
         <table/>
         <test display_value="Time Tracking Nav Module">465bacf3db4a2300482906e2ca961983</test>
         <timeout/>
@@ -75,10 +77,10 @@ Confirm that at least the following modules are not visible: Time Categories, Ge
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 00:18:57</sys_created_on>
         <sys_id>fbe67837db8a2300482906e2ca96190c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:14:09</sys_updated_on>
-        <value>7a35774ddbca2f00482906e2ca9619b2,5485ff0ddbca2f00482906e2ca961971,0195fb4ddbca2f00482906e2ca961966,23a53f4ddbca2f00482906e2ca9619e3,9fc5f38ddbca2f00482906e2ca961973,9606b74ddbca2f00482906e2ca9619d4,1d36b38ddbca2f00482906e2ca961972,d656f78ddbca2f00482906e2ca961913,06763b8ddbca2f00482906e2ca961997,29c96645db062f00482906e2ca9619ac,a40a2a45db062f00482906e2ca961940,c02a6a45db062f00482906e2ca9619d0,a6f12bc5dbc62f00482906e2ca961904</value>
+        <sys_updated_on>2019-02-06 21:33:20</sys_updated_on>
+        <value>29c96645db062f00482906e2ca9619ac,a40a2a45db062f00482906e2ca961940,c02a6a45db062f00482906e2ca9619d0,490aeab2dbdaa300aa0f7104399619f7,a6f12bc5dbc62f00482906e2ca961904,efa9e6b2dbdaa300aa0f710439961949,6b458f871b03af00a27f437ead4bcb5f,7a35774ddbca2f00482906e2ca9619b2,5485ff0ddbca2f00482906e2ca961971,0195fb4ddbca2f00482906e2ca961966,23a53f4ddbca2f00482906e2ca9619e3,9fc5f38ddbca2f00482906e2ca961973,9606b74ddbca2f00482906e2ca9619d4,1d36b38ddbca2f00482906e2ca961972,d656f78ddbca2f00482906e2ca961913,06763b8ddbca2f00482906e2ca961997</value>
         <variable display_value="">932d14a33756030064a52f3c8e41f120</variable>
     </sys_variable_value>
 </record_update>

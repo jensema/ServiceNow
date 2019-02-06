@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" calculation="answer = &quot;&quot;;" label="Time Sheet" max_length="40" name="x_dehp_time_track_time_sheet" type="collection">
+    <element audit="true" label="Time Sheet" max_length="40" name="x_dehp_time_track_time_sheet" type="collection">
         <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;var dueDate = timeSheet.getApprovalDueDate();&#10;&#9;return dueDate;&#10;&#10;})(current);" label="Approval Due" max_length="40" name="approval_due" read_only="true" type="glide_date_time" virtual="true"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getCapitalCost();&#10;})();" label="Capital Cost" max_length="20" name="capital_cost" read_only="true" type="currency"/>
-        <element calculation="answer = &quot;&quot;;" label="Comments" max_length="4000" name="comments" type="string"/>
+        <element label="Comments" max_length="4000" name="comments" type="string"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getExpenseCost();&#10;})();" label="Expense Cost" max_length="20" name="expense_cost" read_only="true" type="currency"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Friday" max_length="15" name="friday" read_only="true" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Monday" max_length="20" name="monday" read_only="true" type="decimal"/>
-        <element calculation="answer = &quot;&quot;;" label="Notes" max_length="4000" name="notes" type="journal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Saturday" max_length="20" name="saturday" read_only="true" type="decimal"/>
-        <element calculation="answer = &quot;&quot;;" choice="3" default="Pending" label="State" max_length="40" name="state" read_only="true" type="string">
+        <element attributes="edge_encryption_enabled=true" default="0" label="Friday" max_length="15" name="friday" read_only="true" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Monday" max_length="20" name="monday" read_only="true" type="decimal"/>
+        <element label="Notes" max_length="4000" name="notes" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Saturday" max_length="20" name="saturday" read_only="true" type="decimal"/>
+        <element choice="3" default="Pending" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="Pending"/>
                 <element inactive_on_update="false" label="Submitted" sequence="2" value="Submitted"/>
@@ -18,15 +18,15 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;var dueDate = timeSheet.getSubmissionDueDate();&#10;&#9;return dueDate;&#10;&#10;})(current);" label="Submission Due" max_length="40" name="submission_due" read_only="true" type="glide_date_time" virtual="true"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Sunday" max_length="15" name="sunday" read_only="true" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Thursday" max_length="15" name="thursday" read_only="true" type="decimal"/>
-        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Total Hours" max_length="15" name="total_hours" read_only="true" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Tuesday" max_length="15" name="tuesday" read_only="true" type="decimal"/>
-        <element label="Undetermined Cost" max_length="20" name="undetermined_cost" read_only="true" type="currency"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="roles=x_dehp_time_track.user^EQ" reference_qual_condition="roles=x_dehp_time_track.user^EQ" type="reference" use_dynamic_default="true"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Wednesday" max_length="15" name="wednesday" read_only="true" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" display="true" label="Week starts on" mandatory="true" max_length="40" name="week_starts_on" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Sunday" max_length="15" name="sunday" read_only="true" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Thursday" max_length="15" name="thursday" read_only="true" type="decimal"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Total Hours" max_length="15" name="total_hours" read_only="true" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Tuesday" max_length="15" name="tuesday" read_only="true" type="decimal"/>
+        <element calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;// Add your code here&#10;&#9;return '';  // return the calculated value&#10;&#10;})(current);" label="Undetermined Cost" max_length="20" name="undetermined_cost" read_only="true" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="roles=x_dehp_time_track.user^EQ" reference_qual_condition="roles=x_dehp_time_track.user^EQ" type="reference" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Wednesday" max_length="15" name="wednesday" read_only="true" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Week starts on" mandatory="true" max_length="40" name="week_starts_on" type="glide_date"/>
         <index name="index">
             <element name="user"/>
         </index>

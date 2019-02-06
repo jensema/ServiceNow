@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" calculation="answer = &quot;&quot;;" label="Time Card" max_length="40" name="x_dehp_time_track_time_card" type="collection">
+    <element audit="true" label="Time Card" max_length="40" name="x_dehp_time_track_time_card" type="collection">
         <element calculation="(function calculatedFieldValue(current) {&#10;&#9;var value = '';&#10;&#9;if(current.category.show_task == true) {&#10;&#9;&#9;value = current.task_feature.getDisplayValue();&#10;&#9;}&#10;&#9;else {&#10;&#9;&#9;//value += ' - ' + current.task_feature.getDisplayValue();&#10;&#9;&#9;value = current.category.getDisplayValue();&#10;&#9;}&#10;&#9;return value;  // return the calculated value&#10;&#10;})(current);" display="true" label="Name" max_length="100" name="card" read_only="true" type="string" virtual="true"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Category" mandatory="true" max_length="32" name="category" reference="x_dehp_time_track_time_categories" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Friday" max_length="20" name="fri" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Monday" max_length="20" name="mon" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Saturday" max_length="20" name="sat" type="decimal"/>
-        <element calculation="answer = &quot;&quot;;" choice="1" default="Pending" label="State" max_length="40" name="state" read_only="true" type="string">
+        <element attributes="edge_encryption_enabled=true" label="Category" mandatory="true" max_length="32" name="category" reference="x_dehp_time_track_time_categories" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Friday" max_length="20" name="fri" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Monday" max_length="20" name="mon" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Saturday" max_length="20" name="sat" type="decimal"/>
+        <element choice="1" default="Pending" label="State" max_length="40" name="state" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="Pending"/>
                 <element inactive_on_update="false" label="Submitted" sequence="2" value="Submitted"/>
@@ -14,13 +14,13 @@
                 <element inactive_on_update="false" label="Processed" sequence="10" value="Processed"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Sunday" max_length="20" name="sun" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Thursday" max_length="20" name="thur" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Time Sheet" max_length="32" name="time_sheet" read_only="true" reference="x_dehp_time_track_time_sheet" reference_cascade_rule="cascade" type="reference"/>
-        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Total hours" max_length="20" name="total_hours" read_only="true" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Tueday" max_length="20" name="tue" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Wednesday" max_length="20" name="wed" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Sunday" max_length="20" name="sun" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Thursday" max_length="20" name="thur" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Time Sheet" max_length="32" name="time_sheet" read_only="true" reference="x_dehp_time_track_time_sheet" reference_cascade_rule="cascade" type="reference"/>
+        <element attributes="omit_sys_original=true,edge_encryption_enabled=true" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Total hours" max_length="20" name="total_hours" read_only="true" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Tueday" max_length="20" name="tue" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Wednesday" max_length="20" name="wed" type="decimal"/>
         <index name="index">
             <element name="category"/>
         </index>

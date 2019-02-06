@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="c6f672880f132300a9a8cdbce1050ec2">88a4c81adbcaaf00aa0f71043996194c</list_id>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="d37327f3db52a3409ef89ac5db9619a2">88a4c81adbcaaf00aa0f71043996194c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>title</element>
-            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="c6f672880f132300a9a8cdbce1050ec2">88a4c81adbcaaf00aa0f71043996194c</list_id>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="d37327f3db52a3409ef89ac5db9619a2">88a4c81adbcaaf00aa0f71043996194c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>manager</element>
-            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="c6f672880f132300a9a8cdbce1050ec2">88a4c81adbcaaf00aa0f71043996194c</list_id>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="d37327f3db52a3409ef89ac5db9619a2">88a4c81adbcaaf00aa0f71043996194c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_user_is_a_contractor</element>
-            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="c6f672880f132300a9a8cdbce1050ec2">88a4c81adbcaaf00aa0f71043996194c</list_id>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="d37327f3db52a3409ef89ac5db9619a2">88a4c81adbcaaf00aa0f71043996194c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>x_dehp_time_track_time_sheet_policy</element>
-            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="c6f672880f132300a9a8cdbce1050ec2">88a4c81adbcaaf00aa0f71043996194c</list_id>
+            <list_id display_value="sys_user" element="NULL" name="sys_user" parent="NULL" relationship="NULL" sys_domain="global" view="d37327f3db52a3409ef89ac5db9619a2">88a4c81adbcaaf00aa0f71043996194c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -88,19 +88,20 @@
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-30 04:48:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
             <sys_id>88a4c81adbcaaf00aa0f71043996194c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>sys_user</sys_name>
             <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
             <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
             <sys_update_name>sys_ui_list_sys_user_RPT5ea24c96dbcaaf00aa0f7104399619c9</sys_update_name>
             <sys_updated_by>_ejense</sys_updated_by>
             <sys_updated_on>2018-11-30 04:48:16</sys_updated_on>
             <sys_user/>
-            <view display_value="Rpt5ea24c96dbcaaf00aa0f7104399619c9" name="RPT5ea24c96dbcaaf00aa0f7104399619c9">c6f672880f132300a9a8cdbce1050ec2</view>
+            <view display_value="Rpt5ea24c96dbcaaf00aa0f7104399619c9" name="RPT5ea24c96dbcaaf00aa0f7104399619c9">d37327f3db52a3409ef89ac5db9619a2</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

@@ -10,25 +10,27 @@
         <delete_access>false</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
-        <label>Time Tracking Feature Staging</label>
+        <label>Time tracking Feature Staging</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>u_time_tracking_feature_staging</name>
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Import Set Row" name="sys_import_set_row">74fcb87765022300aadb05e0fb3edfe9</super_class>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">711f0e536f100100027b9b9eae3ee461</super_class>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2019-02-04 19:38:01</sys_created_on>
-        <sys_id>703907630f932300a9a8cdbce1050e12</sys_id>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f2f863e5db3aaf400746fd831d961975</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Time Tracking Feature Staging</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
-        <sys_update_name>sys_db_object_703907630f932300a9a8cdbce1050e12</sys_update_name>
+        <sys_update_name>sys_db_object_f2f863e5db3aaf400746fd831d961975</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2019-02-04 19:38:01</sys_updated_on>
         <update_access>false</update_access>

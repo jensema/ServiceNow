@@ -3,11 +3,13 @@
         <sys_class_name>sys_ui_action_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-02-05 21:22:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>537ae4080fef2300a9a8cdbce1050e01</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Calculate Values.x_dehp_time_track.finance</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_ui_action display_value="Recalculate Totals">9c99e8c40fef2300a9a8cdbce1050ef1</sys_ui_action>
         <sys_update_name>sys_ui_action_role_537ae4080fef2300a9a8cdbce1050e01</sys_update_name>

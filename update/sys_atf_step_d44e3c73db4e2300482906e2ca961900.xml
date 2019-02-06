@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
-        <description>Confirm that at least the following modules are visible: Current Time Sheet, Time Sheets, My Time Sheets, Time Sheet Approvals, Finance Records, All Time Sheets, Time Cards, Rate Cards, Accounts, Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table, Day Cards</description>
+        <description>Confirm that at least the following modules are visible: Current Time Sheet, Time Sheets, My Time Sheets, Submitted for Approval, Finance Records, All Time Sheets, Time Cards, Rate Cards, Accounts, Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table, Day Cards, Time Sheet Approvals, Awaiting Submission, Processed</description>
         <display_name>Module Visibility</display_name>
         <inputs/>
         <order>35</order>
@@ -9,15 +9,17 @@
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 00:53:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>d44e3c73db4e2300482906e2ca961900</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Module Visibility</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_d44e3c73db4e2300482906e2ca961900</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:03:49</sys_updated_on>
+        <sys_updated_on>2019-02-06 21:38:22</sys_updated_on>
         <table/>
         <test display_value="Time Tracking Nav Module">465bacf3db4a2300482906e2ca961983</test>
         <timeout/>
@@ -73,10 +75,10 @@
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 00:53:21</sys_created_on>
         <sys_id>efce38b7db4e2300482906e2ca9619ec</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-11 22:03:49</sys_updated_on>
-        <value>29c96645db062f00482906e2ca9619ac,a40a2a45db062f00482906e2ca961940,c02a6a45db062f00482906e2ca9619d0,a6f12bc5dbc62f00482906e2ca961904,dce3bb0ddbca2f00482906e2ca9619e5,272d7782dbcaaf00aa0f7104399619a6,2434ff0ddbca2f00482906e2ca9619b4,85c4b74ddbca2f00482906e2ca96199f,6115bf0ddbca2f00482906e2ca961963,7a35774ddbca2f00482906e2ca9619b2,5485ff0ddbca2f00482906e2ca961971,0195fb4ddbca2f00482906e2ca961966,23a53f4ddbca2f00482906e2ca9619e3,9fc5f38ddbca2f00482906e2ca961973,9606b74ddbca2f00482906e2ca9619d4,1d36b38ddbca2f00482906e2ca961972,d656f78ddbca2f00482906e2ca961913,06763b8ddbca2f00482906e2ca961997,de29dc86db1e6300482906e2ca961998</value>
+        <sys_updated_on>2019-02-06 21:38:22</sys_updated_on>
+        <value>29c96645db062f00482906e2ca9619ac,a40a2a45db062f00482906e2ca961940,c02a6a45db062f00482906e2ca9619d0,a6f12bc5dbc62f00482906e2ca961904,dce3bb0ddbca2f00482906e2ca9619e5,272d7782dbcaaf00aa0f7104399619a6,2434ff0ddbca2f00482906e2ca9619b4,85c4b74ddbca2f00482906e2ca96199f,6115bf0ddbca2f00482906e2ca961963,7a35774ddbca2f00482906e2ca9619b2,5485ff0ddbca2f00482906e2ca961971,0195fb4ddbca2f00482906e2ca961966,23a53f4ddbca2f00482906e2ca9619e3,9fc5f38ddbca2f00482906e2ca961973,9606b74ddbca2f00482906e2ca9619d4,1d36b38ddbca2f00482906e2ca961972,d656f78ddbca2f00482906e2ca961913,06763b8ddbca2f00482906e2ca961997,de29dc86db1e6300482906e2ca961998,490aeab2dbdaa300aa0f7104399619f7,efa9e6b2dbdaa300aa0f710439961949,6b458f871b03af00a27f437ead4bcb5f</value>
         <variable display_value="">4a3319d73702030064a52f3c8e41f1a9</variable>
     </sys_variable_value>
 </record_update>
