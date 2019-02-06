@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Day Cards" max_length="40" name="x_dehp_time_track_time_card_day" sizeclass="7044" type="collection">
-        <element function_definition="glidefunction:multiply(rate_card.hourly_rate, hours)" function_field="true" label="Cost" max_length="20" name="cost" read_only="true" type="currency"/>
-        <element label="Day" max_length="40" name="day" read_only="true" type="glide_date"/>
-        <element choice="1" display="true" function_definition="glidefunction:dayofweek(day,'1')" function_field="true" label="Day of the Week" max_length="40" name="day_of_week_function" read_only="true" type="choice">
+    <element calculation="answer = &quot;&quot;;" label="Day Cards" max_length="40" name="x_dehp_time_track_time_card_day" sizeclass="7048" type="collection">
+        <element calculation="answer = &quot;&quot;;" function_definition="glidefunction:multiply(rate_card.hourly_rate, hours)" function_field="true" label="Cost" max_length="20" name="cost" read_only="true" type="currency"/>
+        <element calculation="answer = &quot;&quot;;" label="Day" max_length="40" name="day" read_only="true" type="glide_date"/>
+        <element calculation="answer = &quot;&quot;;" choice="1" display="true" function_definition="glidefunction:dayofweek(day,'1')" function_field="true" label="Day of the Week" max_length="40" name="day_of_week_function" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Monday" sequence="1" value="1"/>
                 <element inactive_on_update="false" label="Tuesday" sequence="2" value="2"/>
@@ -13,9 +13,9 @@
                 <element inactive_on_update="false" label="Sunday" sequence="7" value="7"/>
             </choice>
         </element>
-        <element label="Hours" max_length="20" name="hours" read_only="true" type="decimal"/>
-        <element label="Rate Card" max_length="32" name="rate_card" reference="x_dehp_time_track_rate_cards" type="reference"/>
-        <element label="Time Card" max_length="32" name="time_card" read_only="true" reference="x_dehp_time_track_time_card" reference_cascade_rule="cascade" type="reference"/>
+        <element calculation="answer = &quot;&quot;;" label="Hours" max_length="20" name="hours" read_only="true" type="decimal"/>
+        <element calculation="answer = &quot;&quot;;" label="Rate Card" max_length="32" name="rate_card" reference="x_dehp_time_track_rate_cards" type="reference"/>
+        <element calculation="answer = &quot;&quot;;" label="Time Card" max_length="32" name="time_card" read_only="true" reference="x_dehp_time_track_time_card" reference_cascade_rule="cascade" type="reference"/>
         <index name="index">
             <element name="time_card"/>
         </index>

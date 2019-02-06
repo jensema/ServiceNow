@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Update any existing categoires that nave a "Null" value Charge Code to "Undetermined" charge code</description>
+        <flush_cache>false</flush_cache>
+        <name>Update Null Charge Code Categories</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>false</run_once>
+        <script><![CDATA[var categories = new GlideRecord('x_dehp_time_track_time_categories');
+categories.addEncodedQuery('code=NULL');
+categories.query();
+
+while (categories.next()) {
+	categories.code = 'Undetermined';
+	categories.update();
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-04 21:53:23</sys_created_on>
+        <sys_id>81e7a36b0fd32300a9a8cdbce1050e5a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Update Null Charge Code Categories</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_fix_81e7a36b0fd32300a9a8cdbce1050e5a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-04 21:55:58</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

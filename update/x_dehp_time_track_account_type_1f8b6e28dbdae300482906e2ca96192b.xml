@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_dehp_time_track_account_type">
+    <x_dehp_time_track_account_type action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <contains_tasks>true</contains_tasks>
+        <name>Operational Expenses</name>
+        <sys_class_name>x_dehp_time_track_account_type</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-07 16:44:13</sys_created_on>
+        <sys_id>1f8b6e28dbdae300482906e2ca96192b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Operational Expenses</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>x_dehp_time_track_account_type_1f8b6e28dbdae300482906e2ca96192b</sys_update_name>
+        <sys_updated_by>_bvanna</sys_updated_by>
+        <sys_updated_on>2018-12-18 21:47:25</sys_updated_on>
+    </x_dehp_time_track_account_type>
+</record_update>

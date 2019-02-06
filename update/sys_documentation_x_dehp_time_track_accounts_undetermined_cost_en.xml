@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="undetermined_cost" label="Undetermined Cost" language="en" table="x_dehp_time_track_accounts">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>undetermined_cost</element>
+            <help/>
+            <hint/>
+            <label>Undetermined Cost</label>
+            <language>en</language>
+            <name>x_dehp_time_track_accounts</name>
+            <plural>Undetermined Costs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:27:18</sys_created_on>
+            <sys_id>e8ff27ef0fd32300a9a8cdbce1050ec0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Undetermined Cost</sys_name>
+            <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+            <sys_update_name>sys_documentation_x_dehp_time_track_accounts_undetermined_cost_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:27:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

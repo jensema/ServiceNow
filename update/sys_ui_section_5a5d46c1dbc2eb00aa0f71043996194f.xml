@@ -3,182 +3,196 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>display_name</element>
             <position>0</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>33eff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>a62e6b6f0fd32300a9a8cdbce1050e9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
             <position>1</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>b3eff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>2a2e6b6f0fd32300a9a8cdbce1050e9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>2</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>37eff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>aa2e6b6f0fd32300a9a8cdbce1050e9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>3</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>b7eff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>2e2e6b6f0fd32300a9a8cdbce1050e9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>type</element>
             <position>4</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>3beff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>ae2e6b6f0fd32300a9a8cdbce1050e9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>type.contains_tasks</element>
             <position>5</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>bbeff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>222e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>6</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>3feff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>a22e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
             <position>7</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>bfeff21edb82ef00aa0f7104399619cc</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>262e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>parent</element>
             <position>8</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>33eff21edb82ef00aa0f7104399619cd</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>a62e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>expense_cost</element>
-            <position>9</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>b3eff21edb82ef00aa0f7104399619cd</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>capital_cost</element>
-            <position>10</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>37eff21edb82ef00aa0f7104399619cd</sys_id>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>2a2e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>expense_cost</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>aa2e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>undetermined_cost</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>2e2e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>total_cost</element>
-            <position>11</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>b7eff21edb82ef00aa0f7104399619cd</sys_id>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>ae2e6b6f0fd32300a9a8cdbce1050e9b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>12</position>
-            <sys_created_by>_ejense</sys_created_by>
-            <sys_created_on>2018-11-30 18:26:38</sys_created_on>
-            <sys_id>3beff21edb82ef00aa0f7104399619cd</sys_id>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-02-04 22:19:31</sys_created_on>
+            <sys_id>222e6b6f0fd32300a9a8cdbce1050e9c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_accounts" sys_domain="global" view="Default view">5a5d46c1dbc2eb00aa0f71043996194f</sys_ui_section>
-            <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2018-11-30 18:26:38</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-02-04 22:19:31</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -190,15 +204,14 @@
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2018-11-26 17:33:13</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>5a5d46c1dbc2eb00aa0f71043996194f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_dehp_time_track_accounts</sys_name>
             <sys_overrides/>
             <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
             <sys_update_name>sys_ui_section_5a5d46c1dbc2eb00aa0f71043996194f</sys_update_name>
             <sys_updated_by>_ejense</sys_updated_by>

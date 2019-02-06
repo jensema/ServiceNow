@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Time Sheet Policy" max_length="40" name="x_dehp_time_track_time_sheet_policy" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="Allow blank time cards" max_length="40" name="allow_blank_time_cards" type="boolean"/>
-        <element default="2" hint="Allow an approver to reject a timesheet after processing up to the specified time in weeks. Entering a negative value will allow rejection indefinatly." label="Allow rejection for (weeks)" mandatory="true" max_length="40" name="allow_rejection_weeks" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" default="2" label="Approval Due (After Week)" mandatory="true" max_length="40" name="approval_due" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" label="Approval Due Time" max_length="40" name="approval_due_time" type="glide_time"/>
-        <element attributes="edge_encryption_enabled=true" label="Specific Approver" max_length="32" name="approver" reference="sys_user" reference_qual="active=true^roles=x_dehp_time_track.approver^EQ" reference_qual_condition="active=true^roles=x_dehp_time_track.approver^EQ" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" default="true" label="Auto create time sheets every week" max_length="40" name="auto_generate_time_cards" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" label="Default Policy" max_length="40" name="is_default" read_only="true" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="Auto Fill Time Card Lookback" max_length="40" name="lookback" type="integer">
+    <element audit="true" calculation="answer = &quot;&quot;;" label="Time Sheet Policy" max_length="40" name="x_dehp_time_track_time_sheet_policy" type="collection">
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Allow blank time cards" max_length="40" name="allow_blank_time_cards" type="boolean"/>
+        <element calculation="answer = &quot;&quot;;" default="2" hint="Allow an approver to reject a timesheet after processing up to the specified time in weeks. Entering a negative value will allow rejection indefinatly." label="Allow rejection for (weeks)" mandatory="true" max_length="40" name="allow_rejection_weeks" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="2" label="Approval Due (After Week)" mandatory="true" max_length="40" name="approval_due" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Approval Due Time" max_length="40" name="approval_due_time" type="glide_time"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Specific Approver" max_length="32" name="approver" reference="sys_user" reference_qual="active=true^roles=x_dehp_time_track.approver^EQ" reference_qual_condition="active=true^roles=x_dehp_time_track.approver^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="true" label="Auto create time sheets every week" max_length="40" name="auto_generate_time_cards" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Default Policy" max_length="40" name="is_default" read_only="true" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" choice="3" default="1" label="Auto Fill Time Card Lookback" max_length="40" name="lookback" type="integer">
             <choice>
                 <element inactive_on_update="false" label="1" sequence="1" value="1"/>
                 <element inactive_on_update="false" label="2" sequence="2" value="2"/>
@@ -19,10 +19,10 @@
                 <element inactive_on_update="false" label="8" sequence="8" value="8"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" default="168" label="Maximum hours per week" mandatory="true" max_length="20" name="max_hours_per_week" type="decimal"/>
-        <element attributes="edge_encryption_enabled=true" default="0" label="Minimum hours per week" mandatory="true" max_length="20" name="minimum_hours_per_week" type="decimal"/>
-        <element display="true" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="Weeks Ahead to Create" max_length="40" name="populate_weeks" type="integer">
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="168" label="Maximum hours per week" mandatory="true" max_length="20" name="max_hours_per_week" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="0" label="Minimum hours per week" mandatory="true" max_length="20" name="minimum_hours_per_week" type="decimal"/>
+        <element calculation="answer = &quot;&quot;;" display="true" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" choice="3" default="1" label="Weeks Ahead to Create" max_length="40" name="populate_weeks" type="integer">
             <choice>
                 <element inactive_on_update="false" label="1" sequence="1" value="1"/>
                 <element inactive_on_update="false" label="2" sequence="2" value="2"/>
@@ -34,16 +34,16 @@
                 <element inactive_on_update="false" label="8" sequence="8" value="8"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" default="1" label="Submission Due (After Week)" mandatory="true" max_length="40" name="submission_due" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" label="Submission Due Time" max_length="40" name="submission_due_time" type="glide_time"/>
-        <element choice="1" label="Time approver" mandatory="true" max_length="40" name="time_approver" type="string">
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" default="1" label="Submission Due (After Week)" mandatory="true" max_length="40" name="submission_due" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" label="Submission Due Time" max_length="40" name="submission_due_time" type="glide_time"/>
+        <element calculation="answer = &quot;&quot;;" choice="1" label="Time approver" mandatory="true" max_length="40" name="time_approver" type="string">
             <choice>
                 <element inactive_on_update="false" label="Auto" sequence="1" value="auto"/>
                 <element inactive_on_update="false" label="User Manager" sequence="2" value="user_manager"/>
                 <element inactive_on_update="false" label="Specific Person" sequence="3" value="other"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="Week starts on" max_length="40" name="week_starts_on" type="choice">
+        <element attributes="edge_encryption_enabled=true" calculation="answer = &quot;&quot;;" choice="3" default="1" label="Week starts on" max_length="40" name="week_starts_on" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Monday" sequence="1" value="1"/>
                 <element inactive_on_update="false" label="Tuesday" sequence="2" value="2"/>

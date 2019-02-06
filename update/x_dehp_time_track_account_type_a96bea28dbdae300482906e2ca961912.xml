@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_dehp_time_track_account_type">
+    <x_dehp_time_track_account_type action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <contains_tasks>true</contains_tasks>
+        <name>Epic Expenses</name>
+        <sys_class_name>x_dehp_time_track_account_type</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-07 16:43:52</sys_created_on>
+        <sys_id>a96bea28dbdae300482906e2ca961912</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Epic Expenses</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>x_dehp_time_track_account_type_a96bea28dbdae300482906e2ca961912</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-07 16:43:52</sys_updated_on>
+    </x_dehp_time_track_account_type>
+</record_update>

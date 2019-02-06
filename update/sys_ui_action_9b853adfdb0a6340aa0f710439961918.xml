@@ -45,15 +45,14 @@ function showResults(response) {
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-03 20:17:50</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>9b853adfdb0a6340aa0f710439961918</sys_id>
         <sys_mod_count>9</sys_mod_count>
         <sys_name>Recalculate Totals</sys_name>
         <sys_overrides/>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_ui_action_9b853adfdb0a6340aa0f710439961918</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
