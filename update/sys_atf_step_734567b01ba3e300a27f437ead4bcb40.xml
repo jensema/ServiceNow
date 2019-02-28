@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Confirm that at least the following modules are visible: Current Time Sheet</description>
+        <display_name>Module Visibility</display_name>
+        <inputs/>
+        <order>7</order>
+        <step_config display_value="Module Visibility">f7cfc1973702030064a52f3c8e41f1d3</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-08 18:53:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>734567b01ba3e300a27f437ead4bcb40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Module Visibility</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_734567b01ba3e300a27f437ead4bcb40</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-08 18:53:22</sys_updated_on>
+        <table/>
+        <test display_value="Time Track Record Build">2dc682d01bab6300a27f437ead4bcb27</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=734567b01ba3e300a27f437ead4bcb40"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>734567b01ba3e300a27f437ead4bcb40</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-08 18:53:22</sys_created_on>
+        <sys_id>0a55ef701ba3e300a27f437ead4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-08 18:53:22</sys_updated_on>
+        <value>at_least_modules_visible</value>
+        <variable display_value="">90749dd73702030064a52f3c8e41f12d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>734567b01ba3e300a27f437ead4bcb40</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-08 18:53:22</sys_created_on>
+        <sys_id>4255ef701ba3e300a27f437ead4bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-08 18:53:22</sys_updated_on>
+        <value>29c96645db062f00482906e2ca9619ac</value>
+        <variable display_value="">4a3319d73702030064a52f3c8e41f1a9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>734567b01ba3e300a27f437ead4bcb40</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-08 18:53:22</sys_created_on>
+        <sys_id>8e55ef701ba3e300a27f437ead4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-08 18:53:22</sys_updated_on>
+        <value/>
+        <variable display_value="">932d14a33756030064a52f3c8e41f120</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>734567b01ba3e300a27f437ead4bcb40</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-08 18:53:22</sys_created_on>
+        <sys_id>ca55ef701ba3e300a27f437ead4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-08 18:53:22</sys_updated_on>
+        <value>at_least_modules_not_visible</value>
+        <variable display_value="">8570e0e33756030064a52f3c8e41f16c</variable>
+    </sys_variable_value>
+</record_update>

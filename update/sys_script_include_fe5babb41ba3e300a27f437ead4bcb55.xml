@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.AutomatedTesting</api_name>
+        <client_callable>false</client_callable>
+        <description>Used by the automated testing step "Build Time Sheet Test Accounts".&#13;
+&#13;
+See the testing step for specific details on records created.</description>
+        <name>AutomatedTesting</name>
+        <script><![CDATA[var AutomatedTesting = Class.create();
+AutomatedTesting.getUsers = function (userPolicy) {
+	var createUser = function (userSetup) {
+		var roleRecord = new GlideRecord('sys_user_role');
+		var userRecord = new GlideRecord('sys_user');
+		userRecord.initialize();
+		userRecord.user_name = userSetup.ad;
+		userRecord.first_name = userSetup.firstName;
+		userRecord.last_name = userSetup.lastName;
+		userRecord.manager = typeof userSetup.manager == 'undefined' ? '' : userSetup.manager;
+		userRecord.x_dehp_time_track_time_sheet_policy = typeof userSetup.policy == 'undefined' ? '' : userSetup.policy;
+		userRecord.insert();
+
+		// Set up the roles passed
+		if (typeof userSetup.role != 'undefined') {
+			roleRecord.get('name', userSetup.role);
+			if (roleRecord.isValidRecord()) {
+				var userRole = new GlideRecord('sys_user_has_role');
+				userRole.initialize();
+				userRole.role = roleRecord.sys_id;
+				userRole.user = userRecord.sys_id;
+				userRole.update();
+			}
+		}
+		return userRecord.sys_id;
+	};
+	var userIDs = {};
+	userIDs.u_admin = gs.getUserID();
+	userIDs.u_manager = createUser({
+			ad : 'timeSheetTestUserManager',
+			firstName : 'TimeSheet',
+			lastName : 'Manager',
+			role : 'x_dehp_time_track.approver'
+		});
+	userIDs.u_user = createUser({
+			ad : 'timeSheetTest',
+			firstName : 'TimeSheet',
+			lastName : 'Test',
+			role : 'x_dehp_time_track.user',
+			policy : userPolicy
+		});
+	userIDs.u_timeadmin = createUser({
+			ad : 'timeSheetAdmin',
+			firstName : 'TimeSheet',
+			lastName : 'Admin',
+			role : 'x_dehp_time_track.admin'
+		});
+	userIDs.u_financeuser = createUser({
+			ad : 'timeSheetFinance',
+			firstName : 'TimeSheet',
+			lastName : 'Finance',
+			role : 'x_dehp_time_track.finance'
+		});
+	return userIDs;
+};
+
+AutomatedTesting.getAccountTypes = function () {
+	var createType = function (name, contains_tasks) {
+		type = new GlideRecord('x_dehp_time_track_account_type');
+		type.initialize();
+		type.name = name;
+		type.contains_tasks = contains_tasks;
+		type.insert();
+		return type.sys_id;
+	};
+	var types = {};
+	types.u_type_with = createType('Test(With Tasks)', true);
+	types.u_type_without = createType('Test(Without Tasks)', false);
+	return types;
+};
+
+AutomatedTesting.getAccounts = function (types) {
+	var createAccount = function (accountSetup) {
+		var account = new GlideRecord('x_dehp_time_track_accounts');
+		account.name = accountSetup.name;
+		account.number = accountSetup.number;
+		account.type = accountSetup.type;
+		account.parent = typeof accountSetup.parent == 'undefined' ? '' : accountSetup.parent;
+		account.insert();
+		return account.sys_id;
+	};
+	var accounts = {};
+	accounts.u_account_100 = createAccount({
+			name : 'Top Account',
+			number : '100',
+			type : types.u_type_without,
+		});
+	accounts.u_account_110 = createAccount({
+			name : 'Sub Account',
+			number : '110',
+			type : types.u_type_without,
+			parent : accounts.u_account_100
+		});
+	accounts.u_account_111 = createAccount({
+			name : 'Tasks 1',
+			number : '111',
+			type : types.u_type_with,
+			parent : accounts.u_account_110
+		});
+	accounts.u_account_112 = createAccount({
+			name : 'Tasks 2',
+			number : '112',
+			type : types.u_type_with,
+			parent : accounts.u_account_110
+		});
+	accounts.u_account_113 = createAccount({
+			name : 'Tasks 3',
+			number : '113',
+			type : types.u_type_with,
+			parent : accounts.u_account_110
+		});
+	accounts.u_account_120 = createAccount({
+			name : 'Sub With Tasks',
+			number : '120',
+			type : types.u_type_with,
+			parent : accounts.u_account_100
+		});
+	return accounts;
+};
+
+AutomatedTesting.getPolicy = function () {
+	var policy = new GlideRecord('x_dehp_time_track_time_sheet_policy');
+	policy.initialize();
+	policy.name = 'Testing Policy';
+	policy.auto_generate_time_cards = false;
+	policy.lookback = 3;
+	policy.time_approver = 'user_manager';
+	policy.submission_due_time = '12:00:00';
+	policy.approval_due_time = '12:00:00';
+	policy.max_hours_per_week = 40;
+	policy.minimum_hours_per_week = 20;
+	policy.insert();
+	return policy.sys_id;
+};
+
+AutomatedTesting.getTasks = function() {
+	var createTask= function (number, desc) {
+		var task = new GlideRecord('x_dehp_time_track_project_tasks');
+		task.initialize();
+		task.number = number;
+		task.short_description = desc;
+		task.update();
+		return task.sys_id;
+	};
+	var tasks = {};
+	tasks.u_task1 = createTask('THX-1138', 'External Capital Feature');
+	tasks.u_task2 = createTask('TK-421', 'External Expense Feature');
+	tasks.u_task3 = createTask('FN-2187', 'External Undetermined Feature');
+	return tasks;
+};
+
+AutomatedTesting.getCategories = function (accounts, tasks) {
+	var createCategory = function(taskOrName, code, account) {
+		var category = new GlideRecord('x_dehp_time_track_time_categories');
+		category.initialize();
+		var task = new GlideRecord('task');
+		task.get(taskOrName);
+		if(task.isValidRecord()) {
+			category.task = task.sys_id;
+			category.is_task = true;
+		} else {
+			category.name = taskOrName;
+		}
+		category.account = account;
+		category.code = code;
+		category.update();
+		return category.sys_id;
+	};
+	var cats = {};
+	// General Accounts
+	cats.u_cat_general_111 = createCategory('General 111', 'Expense', accounts.u_account_111);
+	cats.u_cat_stuff_112 = createCategory('Stuff 112', 'Expense', accounts.u_account_112);	
+	cats.u_cat_general_120 = createCategory('General 120', 'Expense', accounts.u_account_120);
+	cats.u_cat_stuff__120 = createCategory('Stuff 120', 'Expense', accounts.u_account_120);
+	
+	// Task Accounts
+	cats.u_cat_task_capital = createCategory(tasks.u_task1, 'Capital', accounts.u_account_111);
+	cats.u_cat_task_expense = createCategory(tasks.u_task2, 'Expense', accounts.u_account_112);
+	cats.u_cat_task_undetermined = createCategory(tasks.u_task3, 'Undetermined', accounts.u_account_113);
+	return cats;
+};
+
+AutomatedTesting.getRateCard = function(user) {
+	var rateCard = new GlideRecord('x_dehp_time_track_rate_cards');
+	rateCard.initialize();
+	rateCard.name = 'Test Rate';
+	rateCard.type = 'Employee';
+	rateCard.start_date = '2018-12-01';
+	rateCard.update();
+	var rateUserLink = new GlideRecord('x_dehp_time_track_m2m_users_rate_cards');
+	rateUserLink.initialize();
+	rateUserLink.rate_cards = rateCard.sys_id;
+	rateUserLink.user = user;
+	rateUserLink.update();
+	
+	return rateCard.sys_id;
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-08 19:22:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fe5babb41ba3e300a27f437ead4bcb55</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>AutomatedTesting</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_fe5babb41ba3e300a27f437ead4bcb55</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-18 16:17:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

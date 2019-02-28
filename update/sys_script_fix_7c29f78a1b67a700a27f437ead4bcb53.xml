@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Finds all time sheets with Undetermined time categories, and recalculates the values within them.</description>
+        <flush_cache>false</flush_cache>
+        <name>Recalculate Undetermined TIme Sheets</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var timesheet;
+var timeSheetIDs = [];
+var dayCards = new GlideRecord('x_dehp_time_track_time_card_day');
+dayCards.addEncodedQuery('time_card.category.codeNOT INCapital,Expense');
+dayCards.query();
+
+while(dayCards.next())
+	timeSheetIDs.push(dayCards.time_card.time_sheet + '');
+
+var arrayUtil = new global.ArrayUtil();
+var uniqueID = new global.ArrayUtil().unique(timeSheetIDs);
+gs.info("Fix script 'Recalculate Undetermined Time Sheets' recalculating the following " + uniqueID.length + " Time Sheet values: \n\n" + timeSheetIDs.join(' \n'));
+
+uniqueID.forEach(function(timeSheetID) {
+	timesheet = new TimeSheet(timeSheetID);
+	timesheet.updateTime();
+});]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-12 17:33:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7c29f78a1b67a700a27f437ead4bcb53</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Recalculate Undetermined TIme Sheets</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_fix_7c29f78a1b67a700a27f437ead4bcb53</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-19 22:00:52</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

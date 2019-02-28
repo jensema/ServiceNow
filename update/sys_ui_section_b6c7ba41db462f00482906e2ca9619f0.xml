@@ -2,222 +2,250 @@
     <sys_ui_section caption="" section_id="b6c7ba41db462f00482906e2ca9619f0" sys_domain="global" table="x_dehp_time_track_time_sheet" version="3" view="">
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>a34ba0480fef2300a9a8cdbce1050e88</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>ea51437d1b6b6700a27f437ead4bcb3c</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <text>${x_dehp_time_track.TimeSheetUtil.weekStartHint()}</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
             <position>0</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>ab4ba0480fef2300a9a8cdbce1050e88</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>e251437d1b6b6700a27f437ead4bcb3d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>week_starts_on</element>
             <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>2f4ba0480fef2300a9a8cdbce1050e88</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>6a51437d1b6b6700a27f437ead4bcb3d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>a34ba0480fef2300a9a8cdbce1050e88</element>
+            <element>ea51437d1b6b6700a27f437ead4bcb3c</element>
             <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>af4ba0480fef2300a9a8cdbce1050e88</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>ea51437d1b6b6700a27f437ead4bcb3d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>total_hours</element>
             <position>3</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>234ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>6e51437d1b6b6700a27f437ead4bcb3d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>capital_cost</element>
             <position>4</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>a34ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>ee51437d1b6b6700a27f437ead4bcb3d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>expense_cost</element>
             <position>5</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>274ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>6251437d1b6b6700a27f437ead4bcb3e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>undetermined_cost</element>
             <position>6</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>a74ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>e251437d1b6b6700a27f437ead4bcb3e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>total_cost</element>
             <position>7</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>2b4ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>6651437d1b6b6700a27f437ead4bcb3e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>ab4ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>e651437d1b6b6700a27f437ead4bcb3e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>user</element>
             <position>9</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>2f4ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>6a51437d1b6b6700a27f437ead4bcb3e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
             <position>10</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>af4ba0480fef2300a9a8cdbce1050e89</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>ea51437d1b6b6700a27f437ead4bcb3e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>submission_due</element>
             <position>11</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>234ba0480fef2300a9a8cdbce1050e8a</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>2251477d1b6b6700a27f437ead4bcb60</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>approval_due</element>
             <position>12</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>a34ba0480fef2300a9a8cdbce1050e8a</sys_id>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>a251477d1b6b6700a27f437ead4bcb60</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>submitted_on_time</element>
+            <position>13</position>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>2651477d1b6b6700a27f437ead4bcb60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approved_on_time</element>
+            <position>14</position>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>a651477d1b6b6700a27f437ead4bcb60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>13</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>274ba0480fef2300a9a8cdbce1050e8a</sys_id>
+            <position>15</position>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>2a51477d1b6b6700a27f437ead4bcb60</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>notes</element>
-            <position>14</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-02-05 21:25:07</sys_created_on>
-            <sys_id>a74ba0480fef2300a9a8cdbce1050e8a</sys_id>
+            <position>16</position>
+            <sys_created_by>_ejense</sys_created_by>
+            <sys_created_on>2019-02-11 18:50:03</sys_created_on>
+            <sys_id>aa51477d1b6b6700a27f437ead4bcb60</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_dehp_time_track_time_sheet" sys_domain="global" view="Default view">b6c7ba41db462f00482906e2ca9619f0</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-02-05 21:25:07</sys_updated_on>
+            <sys_updated_by>_ejense</sys_updated_by>
+            <sys_updated_on>2019-02-11 18:50:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

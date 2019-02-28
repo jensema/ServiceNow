@@ -29,7 +29,7 @@ Confirm the record was successfully inserted</description>
         <sys_updated_by>_ejense</sys_updated_by>
         <sys_updated_on>2018-12-12 18:54:30</sys_updated_on>
         <table>sys_user</table>
-        <test display_value="Time Sheet - Base Record Creation">6af96412db526300aa0f71043996199d</test>
+        <test display_value="Base Record Setup (Use for other tests)">6af96412db526300aa0f71043996199d</test>
         <timeout/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=66f9ec12db526300aa0f710439961932"/>

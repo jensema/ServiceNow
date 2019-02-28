@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" label="Time Sheet" max_length="40" name="x_dehp_time_track_time_sheet" type="collection">
         <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;var dueDate = timeSheet.getApprovalDueDate();&#10;&#9;return dueDate;&#10;&#10;})(current);" label="Approval Due" max_length="40" name="approval_due" read_only="true" type="glide_date_time" virtual="true"/>
+        <element label="Approved on Time" max_length="40" name="approved_on_time" read_only="true" type="boolean"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getCapitalCost();&#10;})();" label="Capital Cost" max_length="20" name="capital_cost" read_only="true" type="currency"/>
         <element label="Comments" max_length="4000" name="comments" type="string"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" calculation="answer = (function () {&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;return timeSheet.getExpenseCost();&#10;})();" label="Expense Cost" max_length="20" name="expense_cost" read_only="true" type="currency"/>
@@ -18,6 +19,7 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;var dueDate = timeSheet.getSubmissionDueDate();&#10;&#9;return dueDate;&#10;&#10;})(current);" label="Submission Due" max_length="40" name="submission_due" read_only="true" type="glide_date_time" virtual="true"/>
+        <element label="Submitted On Time" max_length="40" name="submitted_on_time" read_only="true" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Sunday" max_length="15" name="sunday" read_only="true" type="decimal"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Thursday" max_length="15" name="thursday" read_only="true" type="decimal"/>
         <element attributes="omit_sys_original=true,edge_encryption_enabled=true" label="Total Cost" max_length="20" name="total_cost" read_only="true" type="currency"/>

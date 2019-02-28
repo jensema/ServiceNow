@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
     <sys_atf_test action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <description>-- Create Users --&#13;
 1	Get current admin user&#13;
 2	Create "TimeSheet Manager" user&#13;
@@ -64,22 +64,22 @@
 -- Create Rate Card --&#13;
 27	Create Rate Card, start date Dec 1, 2018, Rate of 19.99&#13;
 28	Link rate card to "TimeSheet Test" user (step 3)</description>
-        <name>Time Sheet - Base Record Creation</name>
+        <name>Base Record Setup (Use for other tests)</name>
         <remember/>
         <sys_class_name>sys_atf_test</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-12 17:47:09</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>6af96412db526300aa0f71043996199d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Time Sheet - Base Record Creation</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Base Record Setup (Use for other tests)</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_test_6af96412db526300aa0f71043996199d</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-12 22:00:03</sys_updated_on>
+        <sys_updated_on>2019-02-06 22:22:10</sys_updated_on>
     </sys_atf_test>
     <sys_variable_value action="delete_multiple" query="document_key=6af96412db526300aa0f71043996199d"/>
 </record_update>

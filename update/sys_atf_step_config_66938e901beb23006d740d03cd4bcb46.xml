@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step_config">
+    <sys_atf_step_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <batch_order_constraint/>
+        <category display_value="Server">317c4dc20b202200a8d7a12cf6673aa8</category>
+        <class_name/>
+        <class_type>script</class_type>
+        <description_generator><![CDATA[function generateDescription() {
+    // the global variable 'step' represents the current glide record
+    var description = "Build accounts and records required for testing Time Tracking.";
+	return description;
+}
+ generateDescription();
+]]></description_generator>
+        <html_description><![CDATA[<p>Return the following items:</p>
+<p><strong>Users</strong></p>
+<ul style="list-style-position: inside;">
+<li>Current Admin User</li>
+<li>Standard Time User</li>
+<li>User's manager with approval role</li>
+<li>Finance user</li>
+<li>Time Admin User</li>
+</ul>
+<p><strong>Time Sheet Policy</strong></p>
+<ul style="list-style-position: inside;">
+<li>No blank cards</li>
+<li>No auto create</li>
+<li>Lookback 3 weeks</li>
+<li>Approver is manager</li>
+<li>Week starts Monday</li>
+<li>Submission Due 1 day after at noon</li>
+<li>Approval due 2 days after week at noon</li>
+<li>Requires between 20 and 40 hours per week</li>
+</ul>
+<p><strong>Account Types</strong></p>
+<ul style="list-style-position: inside;">
+<li>Test (with Tasks), Allow Tasks</li>
+<li>Test (without Tasks), no tasks</li>
+</ul>
+<p><strong>Accounts</strong></p>
+<ul style="list-style-position: inside;">
+<li>100 - Top Account
+<ul>
+<li>110 - Sub Account
+<ul>
+<li>111 - Tasks 1</li>
+<li>112 - Tasks 2</li>
+<li>113 - Tasks 3</li>
+</ul>
+</li>
+<li>120 - Sub With Tasks</li>
+</ul>
+</li>
+</ul>
+<p><strong>Tasks</strong></p>
+<ul style="list-style-position: inside;">
+<li>External Task, Number = TK-421, Short Description = External Expense Feature</li>
+<li>External Task, Number = THX-1138, Short Description = External Capital Feature</li>
+<li>External Task, Number = FN-2187, Short Description = External Undetermined Feature</li>
+</ul>
+<p><strong>General Time Categories (Links to Expense Only)</strong></p>
+<ul style="list-style-position: inside;">
+<li>General 120 (Account: 120 - Sub With Tasks)</li>
+<li>Stuff 120 (Account: 120 - Sub With Tasks)</li>
+<li>General 111 (Account: 111 - Tasks 1)</li>
+<li>Stuff 112 (Account: 112 - Tasks 2)</li>
+</ul>
+<p><strong>Create Time Task Categories (Links to Expense, Capital, and Undetermined)</strong></p>
+<ul style="list-style-position: inside;">
+<li>Task THX-1138 (Account: 111 - Tasks 1, Code: Capital)</li>
+<li>Task TK-321 (Account: 112 - Tasks 2, Code: Expense)</li>
+<li>Task FN-2187 (Account: 113 - Tasks 3, Code: Undetermined)</li>
+</ul>
+<p><strong>Create Rate Card</strong></p>
+<ul style="list-style-position: inside;">
+<li>Start Date: Dec 1, 2018</li>
+<li>Rate: 19.99</li>
+<li>Linked to "TimeSheet Test User</li>
+</ul>]]></html_description>
+        <icon>icon-article-document</icon>
+        <inputs/>
+        <name>Time Tracking Record Setup</name>
+        <order>100</order>
+        <outputs/>
+        <step_env display_value="Server - Independent">6c2bcea1870312009dccc9ded0e3ecca</step_env>
+        <step_execution_generator><![CDATA[(function executeStep(inputs, outputs, stepResult, timeout) {
+	results = '';
+	
+	var userPolicy = x_dehp_time_track.AutomatedTesting.getPolicy();
+	outputs.u_policy = userPolicy;
+	results += "Created User Policy";
+	stepResult.setOutputMessage(results);
+		
+	var userAccounts = x_dehp_time_track.AutomatedTesting.getUsers(userPolicy);
+	outputs.u_admin = gs.getUserID();
+	outputs.u_manager = userAccounts.u_manager;
+	outputs.u_user = userAccounts.u_user;
+	outputs.u_timeadmin = userAccounts.u_timeadmin;
+	outputs.u_financeuser = userAccounts.u_financeuser;	
+	results += "\nUsers created.";
+	stepResult.setOutputMessage(results);
+	
+	var accountTypes = x_dehp_time_track.AutomatedTesting.getAccountTypes();
+	outputs.u_type_with = accountTypes.u_type_with;
+	outputs.u_type_without = accountTypes.u_type_without;
+	results += "\nAccount Types created.";
+	stepResult.setOutputMessage(results);
+	
+	var accounts = x_dehp_time_track.AutomatedTesting.getAccounts(accountTypes);
+	outputs.u_account_100 = accounts.u_account_100;
+	outputs.u_account_110 = accounts.u_account_110;
+	outputs.u_account_111 = accounts.u_account_111;
+	outputs.u_account_112 = accounts.u_account_112;
+	outputs.u_account_113 = accounts.u_account_113;
+	outputs.u_account_120 = accounts.u_account_120;
+	results +="\nAccounts created.";
+	stepResult.setOutputMessage(results);
+		
+	var tasks = x_dehp_time_track.AutomatedTesting.getTasks();
+	outputs.u_task1 = tasks.u_task1;
+	outputs.u_task2 = tasks.u_task2;
+	outputs.u_task3 = tasks.u_task3;
+	results +="\nTasks created.";
+	stepResult.setOutputMessage(results);
+	
+	var cats = x_dehp_time_track.AutomatedTesting.getCategories(accounts, tasks);
+	outputs.u_cat_general_111 = cats.u_cat_general_111;
+	outputs.u_cat_stuff_112 = cats.u_cat_stuff_112;
+	outputs.u_cat_general_120 = cats.u_cat_general_120;
+	outputs.u_cat_stuff__120  = cats.u_cat_stuff__120;
+
+	outputs.u_cat_task_capital = cats.u_cat_task_capital;
+	outputs.u_cat_task_expense = cats.u_cat_task_expense;
+	outputs.u_cat_task_undetermined = cats.u_cat_task_undetermined;
+	results +="\nCategories created.";
+	stepResult.setOutputMessage(results);
+	
+	var rateCard = x_dehp_time_track.AutomatedTesting.getRateCard(userAccounts.u_user);
+	outputs.u_rate_card = rateCard;
+	stepResult.setSuccess();
+}(inputs, outputs, stepResult, timeout));]]></step_execution_generator>
+        <sys_class_name>sys_atf_step_config</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-02-06 22:31:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>66938e901beb23006d740d03cd4bcb46</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>Time Tracking Record Setup</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_config_66938e901beb23006d740d03cd4bcb46</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-18 14:58:24</sys_updated_on>
+        <template_reminder>This builds the base records needed for testing the Time Tracking application</template_reminder>
+        <type display_value="Test Step" name="sys_atf_step">eccaa48b37420300d914a9c2b3990eef</type>
+        <wizard_redirect/>
+    </sys_atf_step_config>
+    <sys_variable_value action="delete_multiple" query="document_key=66938e901beb23006d740d03cd4bcb46"/>
+</record_update>
