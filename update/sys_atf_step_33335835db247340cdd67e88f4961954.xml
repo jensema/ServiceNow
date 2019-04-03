@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Insert a record into 'x_dehp_time_track_time_card' with the following values:
+Category = {{Step 1: Time Tracking Record Setup.Category: Task - Capital}}
+and Time Sheet = {{Step 3: Record Insert.Record}}
+and Monday = 8
+Confirm the record was successfully inserted</description>
+        <display_name>Record Insert</display_name>
+        <inputs/>
+        <inputs/>
+        <order>4</order>
+        <step_config display_value="Record Insert">14872288df60220062fe6c7a4df26319</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>33335835db247340cdd67e88f4961954</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Record Insert</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_33335835db247340cdd67e88f4961954</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:18:29</sys_updated_on>
+        <table>x_dehp_time_track_time_card</table>
+        <test display_value="Time - Check Rate Card">13f29fa9db207340cdd67e88f49619da</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=33335835db247340cdd67e88f4961954"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33335835db247340cdd67e88f4961954</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>38a35c35db247340cdd67e88f496196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <value>category={{step['b23353e9db207340cdd67e88f49619f5'].u_cat_task_capital}}^time_sheet={{step['eca190f1db247340cdd67e88f4961952'].record_id}}^mon=8^EQ</value>
+        <variable display_value="">dd54cf535320220002c6435723dc34fd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33335835db247340cdd67e88f4961954</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>74a35c35db247340cdd67e88f496196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <value>x_dehp_time_track_time_card</value>
+        <variable display_value="">90144b535320220002c6435723dc3488</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33335835db247340cdd67e88f4961954</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>b0a35c35db247340cdd67e88f496196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">e6e3c7535320220002c6435723dc3496</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>33335835db247340cdd67e88f4961954</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>bca35c35db247340cdd67e88f496196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <value>record_successfully_inserted</value>
+        <variable display_value="">9024a37f671003007ba405225685efe5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=33335835db247340cdd67e88f4961954"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>33335835db247340cdd67e88f4961954</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>b4a35c35db247340cdd67e88f496196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>33335835db247340cdd67e88f4961954</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>3ca35c35db247340cdd67e88f496196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value>category={{step['b23353e9db207340cdd67e88f49619f5'].u_cat_task_capital}}^time_sheet={{step['eca190f1db247340cdd67e88f4961952'].record_id}}^mon=8^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>33335835db247340cdd67e88f4961954</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:13:52</sys_created_on>
+        <sys_id>78a35c35db247340cdd67e88f496196c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:13:52</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

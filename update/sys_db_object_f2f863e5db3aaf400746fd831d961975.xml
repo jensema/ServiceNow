@@ -10,7 +10,7 @@
         <delete_access>false</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
-        <label>Time tracking Feature Staging</label>
+        <label>Time Tracking Feature Staging</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>u_time_tracking_feature_staging</name>
         <number_ref/>

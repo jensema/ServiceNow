@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Category Monthly Cost Metrics" max_length="40" name="x_dehp_time_track_account_cost_metrics" type="collection">
+        <element label="Category" max_length="32" name="category" reference="x_dehp_time_track_time_categories" reference_cascade_rule="delete" type="reference"/>
+        <element label="Cost" max_length="20" name="cost" type="currency"/>
+        <element choice="1" choice_field="type" choice_table="x_dehp_time_track_rate_cards" label="Employee Type" max_length="40" name="employee_type" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Month" max_length="40" name="month" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Jan" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Feb" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="Mar" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="Apr" sequence="4" value="4"/>
+                <element inactive_on_update="false" label="May" sequence="5" value="5"/>
+                <element inactive_on_update="false" label="Jun" sequence="6" value="6"/>
+                <element inactive_on_update="false" label="Jul" sequence="7" value="7"/>
+                <element inactive_on_update="false" label="Aug" sequence="8" value="8"/>
+                <element inactive_on_update="false" label="Sep" sequence="9" value="9"/>
+                <element inactive_on_update="false" label="Oct" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="Nov" sequence="11" value="11"/>
+                <element inactive_on_update="false" label="Dec" sequence="12" value="12"/>
+            </choice>
+        </element>
+        <element label="Year" max_length="4" name="year" read_only="true" type="string"/>
+        <index name="index">
+            <element name="category"/>
+        </index>
+    </element>
+</database>

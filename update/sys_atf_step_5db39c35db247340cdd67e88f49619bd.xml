@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Validate there is at least one record in 'x_dehp_time_track_time_card_day' matching query:
+Day on 2018-12-31
+and Time Card = {{Step 4: Record Insert.Record}}
+With a failure timeout of 5 Seconds</description>
+        <display_name>Record Query</display_name>
+        <inputs/>
+        <inputs/>
+        <order>6</order>
+        <step_config display_value="Record Query">0270b8005f30220012b44adb7f46666a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:15:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5db39c35db247340cdd67e88f49619bd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Record Query</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_5db39c35db247340cdd67e88f49619bd</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:18:29</sys_updated_on>
+        <table>x_dehp_time_track_time_card_day</table>
+        <test display_value="Time - Check Rate Card">13f29fa9db207340cdd67e88f49619da</test>
+        <timeout>1970-01-01 00:00:05</timeout>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=5db39c35db247340cdd67e88f49619bd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5db39c35db247340cdd67e88f49619bd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:15:18</sys_created_on>
+        <sys_id>02f31c35db247340cdd67e88f4961916</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:15:18</sys_updated_on>
+        <value>records_match_query</value>
+        <variable display_value="">dd091e22675003007ba405225685ef69</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5db39c35db247340cdd67e88f49619bd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:15:18</sys_created_on>
+        <sys_id>06f31c35db247340cdd67e88f4961916</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:15:18</sys_updated_on>
+        <value>x_dehp_time_track_time_card_day</value>
+        <variable display_value="">6fe5f8405f30220012b44adb7f4666e4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>5db39c35db247340cdd67e88f49619bd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:15:18</sys_created_on>
+        <sys_id>c6f31c35db247340cdd67e88f4961916</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:15:18</sys_updated_on>
+        <value>dayON2018-12-31@javascript:gs.dateGenerate('2018-12-31','start')@javascript:gs.dateGenerate('2018-12-31','end')^time_card={{step['33335835db247340cdd67e88f4961954'].record_id}}^EQ</value>
+        <variable display_value="">cf167c405f30220012b44adb7f46660d</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5db39c35db247340cdd67e88f49619bd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>5db39c35db247340cdd67e88f49619bd</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:15:18</sys_created_on>
+        <sys_id>8ef31c35db247340cdd67e88f4961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:15:18</sys_updated_on>
+        <table>var__m_atf_input_variable_0270b8005f30220012b44adb7f46666a</table>
+        <value>dayON2018-12-31@javascript:gs.dateGenerate('2018-12-31','start')@javascript:gs.dateGenerate('2018-12-31','end')^time_card={{step['33335835db247340cdd67e88f4961954'].record_id}}^EQ</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5db39c35db247340cdd67e88f49619bd</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-01 23:15:18</sys_created_on>
+        <sys_id>caf31c35db247340cdd67e88f4961915</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 23:15:18</sys_updated_on>
+        <table>var__m_atf_input_variable_0270b8005f30220012b44adb7f46666a</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dehp_time_track.Reporting</api_name>
+        <client_callable>false</client_callable>
+        <description>Tools for building reports</description>
+        <name>Reporting</name>
+        <script><![CDATA[var Reporting = Class.create();
+
+Reporting.rebuildAllEpicReportItems = function () {
+	// Clear all existing records.
+	var costMetrics = new GlideRecord('x_dehp_time_track_account_cost_metrics');
+	costMetrics.query();
+	costMetrics.deleteMultiple();
+	// find oldest day card
+	var dayCards = new GlideRecord('x_dehp_time_track_time_card_day');
+	dayCards.orderBy('day');
+	dayCards.query();
+	if (dayCards.next()) {
+		var monthsAgo = TimeUtils.getMonthsAgo(dayCards.day);		
+		// loop through all months up to now and rebuild the cost data.
+		for (; monthsAgo >= 0; monthsAgo--) {
+			Reporting.buildMonthlyCostData(monthsAgo);
+		}
+	}
+};
+
+Reporting.updateMonthlyCostData = function (month, year, type, category, cost) {
+	var costMetrics = new GlideRecord('x_dehp_time_track_account_cost_metrics');
+	costMetrics.addQuery('month', month);
+	costMetrics.addQuery('year', year);
+	costMetrics.addQuery('employee_type', type);
+	costMetrics.addQuery('category', category);
+	costMetrics.query();
+	// Update the existing record if it exists
+	if(costMetrics.next()){
+		if(parseFloat(costMetrics.cost).toFixed(2) != cost) {
+			costMetrics.setValue('cost', cost);
+			costMetrics.update();
+		}
+	}
+	// otherwise create a new record
+	else {
+		costMetrics.initialize();
+		costMetrics.setValue('month', month);
+		costMetrics.setValue('year', year);
+		costMetrics.setValue('employee_type', type);
+		costMetrics.setValue('category', category);
+		costMetrics.setValue('cost', cost);
+		costMetrics.update();
+	}
+};
+// Get an aggregate of processed day card totals for a month. This is sent as the number of months ago the month was. 
+// This aggregate is split to category and type, and the cost is summed.
+Reporting.buildMonthlyCostData = function (monthsAgo, categories) {
+	var agg = new GlideAggregate('x_dehp_time_track_time_card_day');
+	var start = gs.monthsAgoStart(monthsAgo);
+	var end = gs.monthsAgoStart(monthsAgo - 1);
+	agg.addQuery('day', '>=', start);
+	agg.addQuery('day', '<', end);
+	agg.addQuery('time_card.time_sheet.state', 'Processed');
+	if(Array.isArray(categories)){ 
+		// build an encoded query from the categories array to search only for those categories.
+		var encQuery = 'time_card.category=';
+		encQuery += categories.join('^ORtime_card.category=');
+		agg.addEncodedQuery(encQuery);
+	}		
+	agg.groupBy('time_card.category');
+	agg.groupBy('rate_card.type');
+	agg.addAggregate('SUM', 'cost');
+	agg.query();
+	var aggQuery = agg.getEncodedQuery();
+	while (agg.next()) {
+		var month = parseInt(start.substr(5,2)).toFixed(0);
+		var year = parseInt(start.substr(0,4)).toFixed(0);
+		var type = agg.getValue('rate_card.type');
+		var category = agg.getValue('time_card.category');
+		var cost = parseFloat(agg.getAggregate('SUM', 'cost')).toFixed(2);
+		Reporting.updateMonthlyCostData(month, year, type, category, cost);
+	}
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-03-26 13:41:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d7079363db98bb006655b2a2ba9619e6</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>Reporting</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_include_d7079363db98bb006655b2a2ba9619e6</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-01 22:37:06</sys_updated_on>
+    </sys_script_include>
+</record_update>
