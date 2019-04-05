@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="u_user" label="User: Standard User" language="en" table="var__m_atf_output_variable_66938e901beb23006d740d03cd4bcb46">
+    <sys_documentation element="u_user" label="User: Standard Time User" language="en" table="var__m_atf_output_variable_66938e901beb23006d740d03cd4bcb46">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>u_user</element>
             <help/>
             <hint/>
-            <label>User: Standard User</label>
+            <label>User: Standard Time User</label>
             <language>en</language>
             <name>var__m_atf_output_variable_66938e901beb23006d740d03cd4bcb46</name>
-            <plural>User: Standard User</plural>
+            <plural>User: Standard Time User</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>_ejense</sys_created_by>
             <sys_created_on>2019-02-08 16:14:18</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>c0f0cf341b23e300a27f437ead4bcb1e</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_name>User: Standard User</sys_name>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>User: Standard Time User</sys_name>
             <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
             <sys_update_name>sys_documentation_var__m_atf_output_variable_66938e901beb23006d740d03cd4bcb46_u_user_en</sys_update_name>
             <sys_updated_by>_ejense</sys_updated_by>
-            <sys_updated_on>2019-02-13 18:37:13</sys_updated_on>
+            <sys_updated_on>2019-04-05 19:52:59</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Delete record '{{Step 7: Record Insert.Record}}' and confirm record was deleted</description>
+        <display_name>Record Delete</display_name>
+        <inputs/>
+        <inputs/>
+        <order>10</order>
+        <step_config display_value="Record Delete">8df72288df60220062fe6c7a4df2636d</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9a01b776db20f7406655b2a2ba961949</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Record Delete</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_9a01b776db20f7406655b2a2ba961949</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 18:52:56</sys_updated_on>
+        <table>x_dehp_time_track_time_card</table>
+        <test display_value="Time - Time Card Deletion">9bcc23fedbecb7406655b2a2ba961947</test>
+        <timeout/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=9a01b776db20f7406655b2a2ba961949"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>9a01b776db20f7406655b2a2ba961949</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>3b11f776db20f7406655b2a2ba96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:55:28</sys_updated_on>
+        <value>record_successfully_deleted</value>
+        <variable display_value="">c7e483f3671003007ba405225685effb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>9a01b776db20f7406655b2a2ba961949</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>7311f776db20f7406655b2a2ba96193d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:56:19</sys_updated_on>
+        <value>x_dehp_time_track_time_card</value>
+        <variable display_value="">3d6d8b935320220002c6435723dc349c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>9a01b776db20f7406655b2a2ba961949</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>bf11f776db20f7406655b2a2ba96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:55:28</sys_updated_on>
+        <value>1</value>
+        <variable display_value="">d13d0b935320220002c6435723dc34c8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>9a01b776db20f7406655b2a2ba961949</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>fb11f776db20f7406655b2a2ba96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:55:28</sys_updated_on>
+        <value/>
+        <variable display_value="">8f7d0f935320220002c6435723dc3471</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9a01b776db20f7406655b2a2ba961949"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>9a01b776db20f7406655b2a2ba961949</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>f311f776db20f7406655b2a2ba96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:55:28</sys_updated_on>
+        <table>var__m_atf_input_variable_8df72288df60220062fe6c7a4df2636d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_id</field>
+        <id>9a01b776db20f7406655b2a2ba961949</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>3311f776db20f7406655b2a2ba96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:55:28</sys_updated_on>
+        <table>var__m_atf_input_variable_8df72288df60220062fe6c7a4df2636d</table>
+        <value>{{step['328f2ff2db20f7406655b2a2ba961914'].record_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>9a01b776db20f7406655b2a2ba961949</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:55:28</sys_created_on>
+        <sys_id>b711f776db20f7406655b2a2ba96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 17:55:28</sys_updated_on>
+        <table>var__m_atf_input_variable_8df72288df60220062fe6c7a4df2636d</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

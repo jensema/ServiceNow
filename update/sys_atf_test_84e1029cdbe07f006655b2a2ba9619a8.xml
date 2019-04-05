@@ -4,22 +4,22 @@
         <description>Create a timesheet for the week starting Dec 31, 2018. Add records for the week, and submit.&#13;
 &#13;
 This should create values in the 'Category Monthly Cost Metrics' table that we can check for. Because we start at the end of the month, we should have values for both December and January.</description>
-        <name>Time Sheet Monthly Cost Metrics Validation</name>
+        <name>Time - Monthly Cost Metrics Validation</name>
         <remember/>
         <sys_class_name>sys_atf_test</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2019-03-28 15:28:16</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>84e1029cdbe07f006655b2a2ba9619a8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Time Sheet Monthly Cost Metrics Validation</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Time - Monthly Cost Metrics Validation</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_test_84e1029cdbe07f006655b2a2ba9619a8</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-03-28 16:02:48</sys_updated_on>
+        <sys_updated_on>2019-04-05 19:43:49</sys_updated_on>
     </sys_atf_test>
     <sys_variable_value action="delete_multiple" query="document_key=84e1029cdbe07f006655b2a2ba9619a8"/>
 </record_update>

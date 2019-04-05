@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
-        <description>Delete record '{{Step 19: Record Insert.Record}}' and confirm record was deleted</description>
+        <description>Delete record '{{Step 20: Record Insert.Record}}' and confirm record was deleted</description>
         <display_name>Record Delete</display_name>
         <inputs/>
         <inputs/>
-        <order>25</order>
+        <order>26</order>
         <step_config display_value="Record Delete">8df72288df60220062fe6c7a4df2636d</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 00:14:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>b3d53cb3db8a2300482906e2ca9619eb</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Record Delete</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -20,7 +20,7 @@
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_b3d53cb3db8a2300482906e2ca9619eb</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-05 01:33:48</sys_updated_on>
+        <sys_updated_on>2019-04-05 19:45:28</sys_updated_on>
         <table>sys_user_has_role</table>
         <test display_value="Time Tracking Nav Module">465bacf3db4a2300482906e2ca961983</test>
         <timeout/>

@@ -17,6 +17,7 @@
 <ul style="list-style-position: inside;">
 <li>Current Admin User</li>
 <li>Standard Time User</li>
+<li>Standard Non-Rolled user</li>
 <li>User's manager with approval role</li>
 <li>Finance user</li>
 <li>Time Admin User</li>
@@ -97,6 +98,7 @@
 	outputs.u_user = userAccounts.u_user;
 	outputs.u_timeadmin = userAccounts.u_timeadmin;
 	outputs.u_financeuser = userAccounts.u_financeuser;	
+	outputs.u_user_no_role = userAccounts.u_user_no_role;
 	results += "\nUsers created.";
 	stepResult.setOutputMessage(results);
 	
@@ -144,7 +146,7 @@
         <sys_created_on>2019-02-06 22:31:53</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>66938e901beb23006d740d03cd4bcb46</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Time Tracking Record Setup</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -152,7 +154,7 @@
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_config_66938e901beb23006d740d03cd4bcb46</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-02-18 14:58:24</sys_updated_on>
+        <sys_updated_on>2019-04-05 20:06:59</sys_updated_on>
         <template_reminder>This builds the base records needed for testing the Time Tracking application</template_reminder>
         <type display_value="Test Step" name="sys_atf_step">eccaa48b37420300d914a9c2b3990eef</type>
         <wizard_redirect/>

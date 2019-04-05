@@ -21,7 +21,7 @@
         <sys_updated_by>_ejense</sys_updated_by>
         <sys_updated_on>2019-04-01 23:01:08</sys_updated_on>
         <table>x_dehp_time_track_time_sheet</table>
-        <test display_value="Time Sheet Monthly Cost Metrics Validation">84e1029cdbe07f006655b2a2ba9619a8</test>
+        <test display_value="Time - Monthly Cost Metrics Validation">84e1029cdbe07f006655b2a2ba9619a8</test>
         <timeout/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=4b278ad0db247f006655b2a2ba9619c2"/>

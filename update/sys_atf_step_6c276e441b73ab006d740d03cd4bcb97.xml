@@ -22,7 +22,7 @@
         <sys_updated_by>_ejense</sys_updated_by>
         <sys_updated_on>2019-02-18 16:41:49</sys_updated_on>
         <table>x_dehp_time_track_accounts</table>
-        <test display_value="Time Track Record Build">2dc682d01bab6300a27f437ead4bcb27</test>
+        <test display_value="Time - Validate Record Build Test Action">2dc682d01bab6300a27f437ead4bcb27</test>
         <timeout/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=6c276e441b73ab006d740d03cd4bcb97"/>

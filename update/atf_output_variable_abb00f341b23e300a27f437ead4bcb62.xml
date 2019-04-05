@@ -9,7 +9,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>User: Standard User</column_label>
+        <column_label>User: Standard Time User</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -30,7 +30,7 @@
         <help/>
         <hint/>
         <internal_type display_value="">document_id</internal_type>
-        <label>User: Standard User</label>
+        <label>User: Standard Time User</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <model display_value="Time Tracking Record Setup">66938e901beb23006d740d03cd4bcb46</model>
@@ -57,15 +57,15 @@
         <sys_created_on>2019-02-08 16:14:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>abb00f341b23e300a27f437ead4bcb62</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>User: Standard User</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>User: Standard Time User</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>atf_output_variable_abb00f341b23e300a27f437ead4bcb62</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-02-13 18:37:13</sys_updated_on>
+        <sys_updated_on>2019-04-05 19:52:59</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

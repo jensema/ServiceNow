@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Regression test for checking the deleting a time card updates the time sheet totals properly.&#13;
+&#13;
+There was a bug where we were not updating values properly when a time card was deleted. This validates that if you delete a time card, hours are updated properly.</description>
+        <name>Time - Time Card Deletion</name>
+        <remember/>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 17:37:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9bcc23fedbecb7406655b2a2ba961947</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Time - Time Card Deletion</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_test_9bcc23fedbecb7406655b2a2ba961947</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 19:43:23</sys_updated_on>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=9bcc23fedbecb7406655b2a2ba961947"/>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order/>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 19:22:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>bf05c40fdb60f7406655b2a2ba96199c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>3a3b2cf3db4a2300482906e2ca961987</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_bf05c40fdb60f7406655b2a2ba96199c</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-05 19:44:27</sys_updated_on>
+        <test display_value="Time - Monthly Cost Metrics Validation">84e1029cdbe07f006655b2a2ba9619a8</test>
+        <test_suite display_value="Time Tracking Suite">3a3b2cf3db4a2300482906e2ca961987</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>
