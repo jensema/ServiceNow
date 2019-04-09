@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Time Card" max_length="40" name="x_dehp_time_track_time_card" sizeclass="11472" type="collection">
+    <element audit="true" label="Time Card" max_length="40" name="x_dehp_time_track_time_card" sizeclass="15559" type="collection">
         <element calculation="(function calculatedFieldValue(current) {&#10;&#9;var value = '';&#10;&#9;if(current.category.show_task == true) {&#10;&#9;&#9;value = current.task_feature.getDisplayValue();&#10;&#9;}&#10;&#9;else {&#10;&#9;&#9;//value += ' - ' + current.task_feature.getDisplayValue();&#10;&#9;&#9;value = current.category.getDisplayValue();&#10;&#9;}&#10;&#9;return value;  // return the calculated value&#10;&#10;})(current);" display="true" label="Name" max_length="100" name="card" read_only="true" type="string" virtual="true"/>
         <element attributes="edge_encryption_enabled=true" label="Category" mandatory="true" max_length="32" name="category" reference="x_dehp_time_track_time_categories" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Friday" max_length="20" name="fri" type="decimal"/>

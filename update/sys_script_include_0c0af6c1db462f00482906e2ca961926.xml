@@ -35,20 +35,21 @@ TimeCard.prototype = {
 	},
 	buildDay : function (dayOfWeek) {
 		try {
-		var dayCard = this.findDay(dayOfWeek);
-		if (!(dayCard instanceof GlideRecord)) {
-			var gdt = new GlideDateTime(this.gr.time_sheet.week_starts_on);
-			// Need an offset for the start of the week.
-			var weekStartsOn = gdt.getDayOfWeekUTC();
-			gdt.addDaysLocalTime(this.getDayOffset(weekStartsOn,dayOfWeek));
-			dayCard = new GlideRecord('x_dehp_time_track_time_card_day');
-			dayCard.initialize();
-			dayCard.time_card = this.sysId;
-			dayCard.day = gdt;
-			dayCard.insert();
-		}
-		return dayCard;
+			var dayCard = this.findDay(dayOfWeek);
+			if (!(dayCard instanceof GlideRecord)) {
+				var gdt = new GlideDateTime(this.gr.time_sheet.week_starts_on);
+				// Need an offset for the start of the week.
+				var weekStartsOn = gdt.getDayOfWeekUTC();
+				gdt.addDaysLocalTime(this.getDayOffset(weekStartsOn,dayOfWeek));
+				dayCard = new GlideRecord('x_dehp_time_track_time_card_day');
+				dayCard.initialize();
+				dayCard.time_card = this.sysId;
+				dayCard.day = gdt;
+				dayCard.rate_card = this.findRateCard(gdt);
+				dayCard.insert();
 			}
+			return dayCard;
+		}
 		catch(e) {
 			gs.error('Error when running buildDay function in TimeCard object. Error is:\n{0}', e);
 		}
@@ -117,6 +118,28 @@ TimeCard.prototype = {
 		var gr = TimeCardUtils.getTimeCardRecord(this.gr.time_sheet, this.category);
 		return gr ? gr.sys_id == this.sysId : true;
 	},
+	findRateCard: function(gdt) {
+		var userRates = new GlideRecord('x_dehp_time_track_m2m_users_rate_cards');
+		var query = 'user=' + this.gr.time_sheet.user.sys_id;
+		query += '^rate_cards.start_date<=' + gdt;
+		query += '^rate_cards.end_date>=' + gdt;
+		query += '^ORrate_cards.end_dateISEMPTY';
+		userRates.addEncodedQuery(query);
+		userRates.query();
+		if (userRates.next()) {
+			return userRates.rate_cards;
+		}
+		return this.getDefaultRateCard();		
+	},
+	getDefaultRateCard: function () {
+		var rateCard = new GlideRecord('x_dehp_time_track_rate_cards');
+		rateCard.addQuery('default_rate', true);
+		rateCard.query();
+		if (rateCard.next()) {
+			return rateCard.sys_id;
+		}
+		return '';
+	},	
 	type : 'TimeCard'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -124,7 +147,7 @@ TimeCard.prototype = {
         <sys_created_on>2018-11-26 20:48:37</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>0c0af6c1db462f00482906e2ca961926</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>TimeCard</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy>read</sys_policy>
@@ -132,6 +155,6 @@ TimeCard.prototype = {
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_script_include_0c0af6c1db462f00482906e2ca961926</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2018-12-06 18:47:53</sys_updated_on>
+        <sys_updated_on>2019-04-09 19:54:27</sys_updated_on>
     </sys_script_include>
 </record_update>
