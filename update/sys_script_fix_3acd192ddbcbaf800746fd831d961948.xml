@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Checks all day cards and updates them if there is an incorrect rate card.</description>
+        <flush_cache>false</flush_cache>
+        <name>Fix Day Cards</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[gs.info("Starting Day Card Fix Script...");
+try {
+	var current = new GlideRecord('x_dehp_time_track_time_card_day');
+	current.query();
+	var output = "Fix Script Results:";
+	while(current.next()) {
+		var dayCard = new DayCard(current);
+		var rateCard = dayCard.findRateCard();
+		if (current.rate_card != rateCard)
+			output += "\nFix Rate Card: " + current.getDisplayValue('rate_card') + "\tNew Rate Card: " + rateCard;
+			current.rate_card = rateCard;
+			current.update();
+	}
+	gs.info(output);
+}
+catch (e) {
+	gs.error('Fix script failed:\n' + e);
+}
+gs.info("Day Card Fix Script Completed.");]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-01-16 20:25:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3acd192ddbcbaf800746fd831d961948</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Fix Day Cards</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_fix_3acd192ddbcbaf800746fd831d961948</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-12 15:01:20</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

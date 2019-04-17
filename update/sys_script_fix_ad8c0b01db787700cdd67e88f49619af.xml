@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Forces a recalculation all existing time cards</description>
+        <flush_cache>false</flush_cache>
+        <name>Recalculate all Time Cards</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[gs.info("Starting recalculate on all time cards");
+var timeCards = new GlideRecord('x_dehp_time_track_time_card');
+timeCards.query();
+while(timeCards.next()) {
+	
+	var timecard = new TimeCard(timeCards);
+	timecard.updateDayCards();
+	var totalCost = timecard.getTotalCost();
+	timeCards.total_cost = totalCost;
+	timeCards.update();
+}
+gs.info("Time Card Recalculation complete");]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-12 15:03:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ad8c0b01db787700cdd67e88f49619af</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Recalculate all Time Cards</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_script_fix_ad8c0b01db787700cdd67e88f49619af</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-12 15:07:29</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

@@ -39,7 +39,7 @@
         <exp_report_attrs>true</exp_report_attrs>
         <field>time_card.category.code</field>
         <field_list>number,u_requester,u_category,short_description,priority,state,assignment_group,assigned_to</field_list>
-        <filter table="x_dehp_time_track_time_card_day">time_card.category.account=99f4d8d4dbaa6300482906e2ca961999<item display_table="x_dehp_time_track_accounts" display_value="3327 - Expansion: St Louis - Commercial (IND, SG, LG)" endquery="false" field="time_card.category.account" goto="false" newquery="false" operator="=" or="false" value="99f4d8d4dbaa6300482906e2ca961999"/>
+        <filter table="x_dehp_time_track_time_card_day">time_card.category.account=99f4d8d4dbaa6300482906e2ca961999<item endquery="false" field="time_card.category.account" goto="false" newquery="false" operator="=" or="false" value="99f4d8d4dbaa6300482906e2ca961999"/>
         </filter>
         <from/>
         <funnel_neck_percent>30</funnel_neck_percent>

@@ -5,69 +5,53 @@
 &#13;
 -- Create Users --&#13;
 1.	Set up standard test records &#13;
-2.	-- Get Current User sys_id&#13;
-3.	Create new user named "TimeSheet Test"&#13;
-4.	Select any user without a role (Deactivated)&#13;
-5.	Impersonate TimeSheet Test (No current roles)&#13;
 &#13;
 -- Test User without roles --&#13;
-6.	Verify Time Tracking Application Menu is not visible.&#13;
-7.	Verify All Time Tracking modules are not visible&#13;
+2.	Impersonate User without Role&#13;
+3.	Verify Time Tracking Application Menu is not visible.&#13;
+4.	Verify All Time Tracking modules are not visible&#13;
 &#13;
 -- Test user With User Role --&#13;
-8.	Impersonate initiating Admin&#13;
-9.	Add Time Tracking User role to "TimeSheet Test"&#13;
-10.	Impersonate TimeSheet Test (User Role)&#13;
-11.	Confirm Time Tracking application is visible&#13;
-12.	Confirm Proper Modules are visible: &#13;
+5.	Impersonate TimeSheet Test (User Role)&#13;
+6.	Confirm Time Tracking application is visible&#13;
+7.	Confirm Proper Modules are visible: &#13;
 &#13;
 -- Test user with Approver role -- &#13;
-13.	Impersonate initiating Admin&#13;
-14.	Remove User Role from TimeSheet Test&#13;
-15.	Add Approver role to TimeSheet Test&#13;
-16.	Impersonate TimeSheet Test (Admin Role)&#13;
-17.	Confirm Time Tracking Application is visible&#13;
-18.	Confirm Appropriate Modules are visible.&#13;
+8.	Impersonate TimeSheet Manager user&#13;
+9.	Confirm Time Tracking Application is visible&#13;
+10.	Confirm Appropriate Modules are visible.&#13;
 &#13;
 -- Test user with Approver and User roles --&#13;
-19.	Impersonate initiating Admin&#13;
-20.	Add User Role to TimeSheet Test (User and Approver)&#13;
-21.	Impersonate TimeSheet Test (User And Approver Role)&#13;
-22.	Confirm Time Tracking Application is visible&#13;
-23.	Confirm Appropriate Modules are visible.&#13;
+11.	Add User role to manager user&#13;
+12.	Impersonate initiating Admin&#13;
+13.	Confirm Time Tracking Application is visible&#13;
+14.	Confirm Appropriate Modules are visible.&#13;
 &#13;
 -- Test user with Finance Role --&#13;
-24.	Impersonate initiating Admin&#13;
-25.	Remove Approver Role&#13;
-26.	Remove User Role&#13;
-27.	Add Finance Role&#13;
-28.	Impersonate TimeSheet Test (Finance)&#13;
-29.	Confirm Time Tracking Application is visible&#13;
-30.	Confirm Appropriate Modules are visible.&#13;
+15.	Impersonate TimeSheet Finance user&#13;
+16.	Confirm Time Tracking Application is visible&#13;
+17.	Confirm Appropriate Modules are visible.&#13;
 &#13;
 -- Test Admin Role -- &#13;
-31.	Impersonate initiating Admin&#13;
-32.	Remove Finance Role&#13;
-33.	Add Time Sheet Admin role to TimeSheet Test&#13;
-34.	Impersonate TimeSheet Test&#13;
+34.	Impersonate TimeSheet Admin User&#13;
 35.	Confirm Time Tracking Application is visible&#13;
 36.	Confirm All Modules are visible.</description>
-        <name>Time Tracking Nav Module</name>
+        <name>Time - Validate Nav Module</name>
         <remember/>
         <sys_class_name>sys_atf_test</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-04 23:28:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>465bacf3db4a2300482906e2ca961983</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Time Tracking Nav Module</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Time - Validate Nav Module</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_test_465bacf3db4a2300482906e2ca961983</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-04-05 19:52:03</sys_updated_on>
+        <sys_updated_on>2019-04-09 21:12:50</sys_updated_on>
     </sys_atf_test>
     <sys_variable_value action="delete_multiple" query="document_key=465bacf3db4a2300482906e2ca961983"/>
 </record_update>

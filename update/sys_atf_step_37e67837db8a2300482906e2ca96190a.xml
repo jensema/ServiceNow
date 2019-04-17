@@ -6,14 +6,14 @@
 Confirm that at least the following modules are not visible: Current Time Sheet, Time Sheets, My Time Sheets, Time Sheet Approvals, Submitted for Approval, Awaiting Submission, Processed, Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table</description>
         <display_name>Module Visibility</display_name>
         <inputs/>
-        <order>30</order>
+        <order>17</order>
         <step_config display_value="Module Visibility">f7cfc1973702030064a52f3c8e41f1d3</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
         <sys_created_on>2018-12-05 00:18:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>37e67837db8a2300482906e2ca96190a</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>Module Visibility</sys_name>
         <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
         <sys_policy/>
@@ -21,9 +21,9 @@ Confirm that at least the following modules are not visible: Current Time Sheet,
         <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
         <sys_update_name>sys_atf_step_37e67837db8a2300482906e2ca96190a</sys_update_name>
         <sys_updated_by>_ejense</sys_updated_by>
-        <sys_updated_on>2019-04-05 19:45:26</sys_updated_on>
+        <sys_updated_on>2019-04-09 21:07:31</sys_updated_on>
         <table/>
-        <test display_value="Time Tracking Nav Module">465bacf3db4a2300482906e2ca961983</test>
+        <test display_value="Time - Validate Nav Module">465bacf3db4a2300482906e2ca961983</test>
         <timeout/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=37e67837db8a2300482906e2ca96190a"/>
