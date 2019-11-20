@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Insert a record into 'x_dehp_time_track_accounts' with the following values:
 Account Number = 110
 and Active = true
@@ -11,7 +12,10 @@ Confirm the record was successfully inserted</description>
         <display_name>Record Insert</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>13</order>
+        <snapshot/>
         <step_config display_value="Record Insert">14872288df60220062fe6c7a4df26319</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -30,6 +34,7 @@ Confirm the record was successfully inserted</description>
         <table>x_dehp_time_track_accounts</table>
         <test display_value="Time Sheet Testing">1b4bc323db06a340aa0f71043996198e</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=1519e13fdb026300482906e2ca9619bf"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

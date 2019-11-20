@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Set the values on the form as follows:
 Monday = 1.5
 and Tueday = 2.5</description>
         <display_name>Set Field Values</display_name>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>58</order>
+        <snapshot/>
         <step_config display_value="Set Field Values">fcae4a935332120028bc29cac2dc340e</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -25,6 +29,7 @@ and Tueday = 2.5</description>
         <table>x_dehp_time_track_time_card</table>
         <test display_value="Time Sheet Testing">1b4bc323db06a340aa0f71043996198e</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=179fd55cdb9ee340aa0f7104399619cf"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

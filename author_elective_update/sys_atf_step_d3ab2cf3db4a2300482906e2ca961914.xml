@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Confirm that at least the following application menus are not visible: Time Tracking</description>
+        <display_name>Application Menu Visibility</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>-27</order>
+        <snapshot/>
+        <step_config display_value="Application Menu Visibility">6228cf753752030064a52f3c8e41f1a8</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:30:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d3ab2cf3db4a2300482906e2ca961914</sys_id>
+        <sys_mod_count>80</sys_mod_count>
+        <sys_name>Application Menu Visibility</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_d3ab2cf3db4a2300482906e2ca961914</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:46</sys_updated_on>
+        <table/>
+        <test display_value="">465bacf3db4a2300482906e2ca961983</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=d3ab2cf3db4a2300482906e2ca961914"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d3ab2cf3db4a2300482906e2ca961914</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:30:30</sys_created_on>
+        <sys_id>02db68f3db4a2300482906e2ca9619e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 23:30:30</sys_updated_on>
+        <value/>
+        <variable display_value="">e9994bb53752030064a52f3c8e41f1a9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d3ab2cf3db4a2300482906e2ca961914</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:30:30</sys_created_on>
+        <sys_id>0edb2437db4a2300482906e2ca9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 23:30:30</sys_updated_on>
+        <value>at_least_applications_visible</value>
+        <variable display_value="">746a8fb53752030064a52f3c8e41f14c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d3ab2cf3db4a2300482906e2ca961914</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:30:30</sys_created_on>
+        <sys_id>4edb68f3db4a2300482906e2ca9619e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 23:30:30</sys_updated_on>
+        <value>97c58a0ddb82eb00aa0f7104399619e4</value>
+        <variable display_value="">1b52683573220300c79260bdfaf6a763</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d3ab2cf3db4a2300482906e2ca961914</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:30:30</sys_created_on>
+        <sys_id>cedb2437db4a2300482906e2ca9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-04 23:30:30</sys_updated_on>
+        <value>at_least_applications_not_visible</value>
+        <variable display_value="">abc1e03573220300c79260bdfaf6a7f0</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_step_d3ab2cf3db4a2300482906e2ca961914</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Confirm that at least the following application menus are not visible: Time Tracking</description><display_name>Application Menu Visibility</display_name><inputs/><mugshots_cache_json/><notes/><order>-27</order><snapshot/><step_config display_value="Application Menu Visibility">6228cf753752030064a52f3c8e41f1a8</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:30:30</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>d3ab2cf3db4a2300482906e2ca961914</sys_id><sys_mod_count>80</sys_mod_count><sys_name>Application Menu Visibility</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_step_d3ab2cf3db4a2300482906e2ca961914</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:08:46</sys_updated_on><table/><test display_value="">465bacf3db4a2300482906e2ca961983</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=d3ab2cf3db4a2300482906e2ca961914"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d3ab2cf3db4a2300482906e2ca961914</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:30:30</sys_created_on><sys_id>02db68f3db4a2300482906e2ca9619e9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-04 23:30:30</sys_updated_on><value/><variable display_value="">e9994bb53752030064a52f3c8e41f1a9</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d3ab2cf3db4a2300482906e2ca961914</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:30:30</sys_created_on><sys_id>0edb2437db4a2300482906e2ca9619be</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-04 23:30:30</sys_updated_on><value>at_least_applications_visible</value><variable display_value="">746a8fb53752030064a52f3c8e41f14c</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d3ab2cf3db4a2300482906e2ca961914</document_key><order>400</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:30:30</sys_created_on><sys_id>4edb68f3db4a2300482906e2ca9619e8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-04 23:30:30</sys_updated_on><value>97c58a0ddb82eb00aa0f7104399619e4</value><variable display_value="">1b52683573220300c79260bdfaf6a763</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d3ab2cf3db4a2300482906e2ca961914</document_key><order>300</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:30:30</sys_created_on><sys_id>cedb2437db4a2300482906e2ca9619be</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-04 23:30:30</sys_updated_on><value>at_least_applications_not_visible</value><variable display_value="">abc1e03573220300c79260bdfaf6a7f0</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-1720888832</payload_hash>
+        <record_name>Application Menu Visibility</record_name>
+        <reverted_from/>
+        <source>cf866f7bdb52a3409ef89ac5db961948</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:46</sys_created_on>
+        <sys_id>59b3afacdb1584901ab71230399619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e8a6e7b1c0000001</sys_recorded_at>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:46</sys_updated_on>
+        <type>Test Step</type>
+        <u_link>[code]&lt;a title="sys_atf_step_d3ab2cf3db4a2300482906e2ca961914" class="linked" href="sys_atf_step.do?sys_id=d3ab2cf3db4a2300482906e2ca961914"&gt;sys_atf_step_d3ab2cf3db4a2300482906e2ca961914&lt;/a&gt;[/code]</u_link>
+        <update_guid>11b3afac3c15849085970c248b0bfbfc</update_guid>
+        <update_guid_history>11b3afac3c15849085970c248b0bfbfc:-1720888832,45b3afac7015849001fbd73d930938af:-1017522271,3cb3afac311584905d190fee2bd8ce36:-314155710,e8b36fac871584905df6eedf47fef8ea:389210851,94b36facb015849091d4eac524f00a79:1092577412,7ba32facf015849092971f0b9a85facf:1795943973,5fa32facb81584902b490cf09f6d443e:-1795656762,76a3ebac0b1584902aec20b7d84caa88:-1092290201,22a3abacca158490e085348e8eac869b:1496872253,75a36baca61584909604cae41ab0bf6f:-2094728482,45a32bac44158490aa335fa1f7747a30:-1391361921,68a3e7ac04158490f2283457994ffb8e:-687995360,04a3a7acae158490b9bfd39446ee2282:15371201,4f9367ac01158490e6acdf30807910b9:718737762,9a9367ac1c158490c68570294bc4f30b:1422104323,2d9327ac9415849021a93c9e9a037e1f:2125470884,f493a3acc0158490fac8c0e78f0f57c3:-1466129851,d38323ac8d158490e6df458ef4ee60d9:-762763290,ce83af6c0215849007f50abf7ac15fca:-81276274,7c836f6c69158490ed1ac62e881fb968:622090287,bb732f6c50158490fd46e61ae897af27:1325456848,a673ab6c57158490d8581916cc5eb6b6:2028823409,15736b6cbd158490770a9a6c1afb9251:-1562777326,ff63e76ca4158490613e030ea051c55c:-859410765,aa63276c9e1584905f30745f3c0149d8:-156044204,8d63a36c1e158490fb87f0667dd7f0f9:547322357,5353636c8b158490b58e960b38342f09:1250688918,27436f2c71158490bec3e44b5175ef65:-910318782,e543eb2c11158490c51161b6216f0530:-1613685343,ad23e72c0b158490f1bfb8c072d4b0dd:-1158826029,e123e72c5615849074bedfb81818f3dc:-1308330896</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>1ab0d7cedf5f4a8687e81b19b44ea2e4</sys_id>
+        <sys_metadata>d3ab2cf3db4a2300482906e2ca961914</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Application Menu Visibility</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_step_d3ab2cf3db4a2300482906e2ca961914</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_d3ab2cf3db4a2300482906e2ca961914">59b3afacdb1584901ab71230399619fc</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

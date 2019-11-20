@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Validate there is at least one record in 'x_dehp_time_track_account_cost_metrics' matching query:
 Category = {{Step 1: Time Tracking Record Setup.Category: Task - Capital}}
 and Year = 2019
@@ -9,7 +10,10 @@ With a failure timeout of 5 Seconds</description>
         <display_name>Record Query</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>18</order>
+        <snapshot/>
         <step_config display_value="Record Query">0270b8005f30220012b44adb7f46666a</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -28,6 +32,7 @@ With a failure timeout of 5 Seconds</description>
         <table>x_dehp_time_track_account_cost_metrics</table>
         <test display_value="Time - Monthly Cost Metrics Validation">84e1029cdbe07f006655b2a2ba9619a8</test>
         <timeout>1970-01-01 00:00:05</timeout>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=972fccfddbe07340cdd67e88f49619aa"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

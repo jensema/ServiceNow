@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Validate there are not any records in 'sys_user_has_role' matching query:
 User = {{Step 1: Build Time Sheet Test Accounts.User: Standard User (No Role)}}
 With a failure timeout of 5 Seconds</description>
         <display_name>Record Query</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>22</order>
+        <snapshot/>
         <step_config display_value="Record Query">0270b8005f30220012b44adb7f46666a</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -26,6 +30,7 @@ With a failure timeout of 5 Seconds</description>
         <table>sys_user_has_role</table>
         <test display_value="Time - Validate Record Build Test Action">2dc682d01bab6300a27f437ead4bcb27</test>
         <timeout>1970-01-01 00:00:05</timeout>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=8d5ec00bdba0f7406655b2a2ba961953"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

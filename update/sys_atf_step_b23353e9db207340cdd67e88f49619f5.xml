@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Build accounts and records required for testing Time Tracking.</description>
         <display_name>Time Tracking Record Setup</display_name>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>1</order>
+        <snapshot/>
         <step_config display_value="Time Tracking Record Setup">66938e901beb23006d740d03cd4bcb46</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -23,6 +27,7 @@
         <table/>
         <test display_value="Time - Check Rate Card">13f29fa9db207340cdd67e88f49619da</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=b23353e9db207340cdd67e88f49619f5"/>
 </record_update>

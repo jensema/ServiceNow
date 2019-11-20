@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
     <sys_atf_test action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Regression test for checking the deleting a time card updates the time sheet totals properly.&#13;
 &#13;
 There was a bug where we were not updating values properly when a time card was deleted. This validates that if you delete a time card, hours are updated properly.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
         <name>Time - Time Card Deletion</name>
+        <parameters/>
         <remember/>
         <sys_class_name>sys_atf_test</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>

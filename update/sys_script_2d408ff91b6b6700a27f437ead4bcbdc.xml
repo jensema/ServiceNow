@@ -19,7 +19,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_dehp_time_track_time_sheet">stateCHANGESTOProcessed^approval_due&gt;javascript:gs.beginningOfLastMinute()^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Processed"/>
+        <filter_condition table="x_dehp_time_track_time_sheet">stateCHANGESTOProcessed^approval_due&gt;javascript:gs.beginningOfLastMinute()^EQ<item display_value="Processed" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Processed"/>
             <item endquery="false" field="approval_due" goto="false" newquery="false" operator="&gt;" or="false" value="javascript:gs.beginningOfLastMinute()"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>

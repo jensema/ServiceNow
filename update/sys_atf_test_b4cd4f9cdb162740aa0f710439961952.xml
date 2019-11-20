@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
     <sys_atf_test action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Verify the External Task form works as expected&#13;
 - Create a task&#13;
 - verify task display name updates appropriatly.&#13;
 </description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
         <name>Time - Project Form Testing</name>
+        <parameters/>
         <remember/>
         <sys_class_name>sys_atf_test</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>

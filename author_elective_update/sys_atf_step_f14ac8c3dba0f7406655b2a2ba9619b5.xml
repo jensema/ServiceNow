@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Build accounts and records required for testing Time Tracking.</description>
+        <display_name>Time Tracking Record Setup</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>-35</order>
+        <snapshot/>
+        <step_config display_value="Time Tracking Record Setup">66938e901beb23006d740d03cd4bcb46</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-04-05 19:45:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f14ac8c3dba0f7406655b2a2ba9619b5</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_name>Time Tracking Record Setup</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:48</sys_updated_on>
+        <table/>
+        <test display_value="">465bacf3db4a2300482906e2ca961983</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=f14ac8c3dba0f7406655b2a2ba9619b5"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Build accounts and records required for testing Time Tracking.</description><display_name>Time Tracking Record Setup</display_name><inputs/><mugshots_cache_json/><notes/><order>-35</order><snapshot/><step_config display_value="Time Tracking Record Setup">66938e901beb23006d740d03cd4bcb46</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2019-04-05 19:45:25</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>f14ac8c3dba0f7406655b2a2ba9619b5</sys_id><sys_mod_count>72</sys_mod_count><sys_name>Time Tracking Record Setup</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:08:48</sys_updated_on><table/><test display_value="">465bacf3db4a2300482906e2ca961983</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=f14ac8c3dba0f7406655b2a2ba9619b5"/></record_update>]]></payload>
+        <payload_hash>-1852272862</payload_hash>
+        <record_name>Time Tracking Record Setup</record_name>
+        <reverted_from/>
+        <source>cf866f7bdb52a3409ef89ac5db961948</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:48</sys_created_on>
+        <sys_id>fdb3efacdb1584901ab71230399619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e8a6e83b80000001</sys_recorded_at>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:48</sys_updated_on>
+        <type>Test Step</type>
+        <u_link>[code]&lt;a title="sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5" class="linked" href="sys_atf_step.do?sys_id=f14ac8c3dba0f7406655b2a2ba9619b5"&gt;sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5&lt;/a&gt;[/code]</u_link>
+        <update_guid>b5b3efac0215849083ac9d3359f4daa5</update_guid>
+        <update_guid_history>b5b3efac0215849083ac9d3359f4daa5:-1852272862,f1b3efacc1158490ce8ee12f2776e09a:-320855839,65b3efac5d1584907acc1b1d2927f170:1210561184,e5b3efac4f15849084fc0e160fa1354c:-1552989089,1db3efac171584901610ca2e86655029:-21572066,d9b3efac571584909311b9925b7dce0c:1509844957,59b3afac64158490ac8674765eed4cf6:841281095,81b3afacb9158490b114960521e75278:-1922269178,74b3afac9e158490d550a5484253ef31:-390852155,6cb36fac2c158490b468a04d79df37d8:1140564868,1cb36faca1158490ee0df4f70ad38b35:-1622985405,b3a32facbe1584900e0f48d8310a78ca:-91568382,97a32facd61584902739117a2bd79939:1439848641,3ea3ebacb2158490d0e2b704abb12f76:-1323701632,eaa3abaca8158490d5fa4396374c847c:207715391,bda36baccc158490e05f43c8a9cfe669:1739132414,8da32bace3158490381cb9d1fccf032a:1070568552,e4a3e7acbf158490df657859edee9284:-1692981721,b393a7ac30158490c1a6d88b86e43078:-161564698,cb9367acf015849022436073d01547af:1369852325,5e9367acaa158490adb0f6600675cb01:-1393697948,a99327acd91584904f8dafc11d8c1515:137719075,6493a3ac411584900d097c140a332fb9:1669136098,9b8323ac25158490794c845018bb38c2:-1094414175,4e83af6cda158490f92dfaa6bf8952c0:437002848,f8836f6ca515849072726b8b2d03be5e:1968419871,7f732f6c8f15849079d35e609054f01d:950358087,2673ab6c561584906b8da6b2f2c11dac:-1813192186,d9736b6c1f1584903ba5949538a4b43a:-281775163,ff63e76c77158490101bc86d5a131f39:1249641860,5263276cc61584901083be5897f313c2:-1513908413,4163a36c6c1584907a1cc49b234e2af0:17508610,df53236ce51584906484d874dfd5a7fe:1548925633,d153ef2cd5158490fbf25983d186e565:-1214624640,93436f2c78158490eee4f927b8da6d3c:316792383,9143eb2cc1158490bd70477932498f20:2091840835</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>200a7548501746ea882094619f87e229</sys_id>
+        <sys_metadata>f14ac8c3dba0f7406655b2a2ba9619b5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Time Tracking Record Setup</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_f14ac8c3dba0f7406655b2a2ba9619b5">fdb3efacdb1584901ab71230399619a5</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

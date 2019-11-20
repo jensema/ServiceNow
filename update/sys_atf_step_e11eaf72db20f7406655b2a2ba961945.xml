@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Update a record in 'x_dehp_time_track_time_card' with the following values:
 Monday = 4
 Confirm the record was successfully updated</description>
         <display_name>Record Update</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>5</order>
+        <snapshot/>
         <step_config display_value="Record Update">17a72288df60220062fe6c7a4df26397</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -26,6 +30,7 @@ Confirm the record was successfully updated</description>
         <table>x_dehp_time_track_time_card</table>
         <test display_value="Time - Time Card Deletion">9bcc23fedbecb7406655b2a2ba961947</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=e11eaf72db20f7406655b2a2ba961945"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

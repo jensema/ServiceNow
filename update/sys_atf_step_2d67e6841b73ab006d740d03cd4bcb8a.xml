@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Open the 'Accounts' form with id '{{Step 1: Build Time Sheet Test Accounts.Account: 120}}'</description>
         <display_name>Open an Existing Record</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>19</order>
+        <snapshot/>
         <step_config display_value="Open an Existing Record">5f2e0e535332120028bc29cac2dc34d3</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -24,6 +28,7 @@
         <table>x_dehp_time_track_accounts</table>
         <test display_value="Time - Validate Record Build Test Action">2dc682d01bab6300a27f437ead4bcb27</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=2d67e6841b73ab006d740d03cd4bcb8a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

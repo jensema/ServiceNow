@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_dehp_time_track_rate_cards">type=Contractor^EQ<item endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="Contractor"/>
+        <conditions table="x_dehp_time_track_rate_cards">type=Contractor^EQ<item display_value="Contractor" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="Contractor"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -43,7 +43,7 @@
         <u_mandatory/>
         <u_read_only/>
         <u_visible/>
-        <ui_type/>
+        <ui_type>0</ui_type>
         <view/>
     </sys_ui_policy>
 </record_update>

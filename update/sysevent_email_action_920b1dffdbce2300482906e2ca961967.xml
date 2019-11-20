@@ -7,7 +7,7 @@
         <affected_field_on_event/>
         <category display_value="Time Tracking" name="Time Tracking">edcec49ddb0e2f00482906e2ca961937</category>
         <collection>x_dehp_time_track_time_sheet</collection>
-        <condition table="x_dehp_time_track_time_sheet">stateCHANGESTORejected^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Rejected"/>
+        <condition table="x_dehp_time_track_time_sheet">stateCHANGESTORejected^EQ<item display_value="Rejected" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Rejected"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>

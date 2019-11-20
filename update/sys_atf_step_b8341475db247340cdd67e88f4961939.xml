@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>false</active>
+        <copied_from/>
         <description>Open the 'Day Cards' form with id '{{Step 6: Record Query.First record}}'</description>
         <display_name>Open an Existing Record</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>7</order>
+        <snapshot/>
         <step_config display_value="Open an Existing Record">5f2e0e535332120028bc29cac2dc34d3</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -24,6 +28,7 @@
         <table>x_dehp_time_track_time_card_day</table>
         <test display_value="Time - Check Rate Card">13f29fa9db207340cdd67e88f49619da</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=b8341475db247340cdd67e88f4961939"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

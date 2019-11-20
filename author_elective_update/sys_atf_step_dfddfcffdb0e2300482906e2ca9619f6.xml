@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Insert a record into 'sys_user_has_role' with the following values:
+Role = x_dehp_time_track.admin
+and State = Active
+and User = {{invalid step_id=73ada477db4a2300482906e2ca96198f.}}
+Confirm the record was successfully inserted
+
+Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</description>
+        <display_name>Record Insert</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="Record Insert">14872288df60220062fe6c7a4df26319</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dfddfcffdb0e2300482906e2ca9619f6</sys_id>
+        <sys_mod_count>88</sys_mod_count>
+        <sys_name>Record Insert</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:47</sys_updated_on>
+        <table>sys_user_has_role</table>
+        <test display_value="">465bacf3db4a2300482906e2ca961983</test>
+        <timeout/>
+        <warning_message>Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</warning_message>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=dfddfcffdb0e2300482906e2ca9619f6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:14</sys_created_on>
+        <sys_id>1bddfcffdb0e2300482906e2ca9619f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:49:14</sys_updated_on>
+        <value>role=46d5ca0ddb82eb00aa0f7104399619b7^state=active^user={{step['73ada477db4a2300482906e2ca96198f'].record_id}}^EQ</value>
+        <variable display_value="">dd54cf535320220002c6435723dc34fd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:14</sys_created_on>
+        <sys_id>57ddfcffdb0e2300482906e2ca9619f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:49:14</sys_updated_on>
+        <value>sys_user_has_role</value>
+        <variable display_value="">90144b535320220002c6435723dc3488</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:14</sys_created_on>
+        <sys_id>93ddfcffdb0e2300482906e2ca9619f9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:00:27</sys_updated_on>
+        <value>0</value>
+        <variable display_value="">e6e3c7535320220002c6435723dc3496</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:14</sys_created_on>
+        <sys_id>9fddfcffdb0e2300482906e2ca9619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:49:14</sys_updated_on>
+        <value>record_successfully_inserted</value>
+        <variable display_value="">9024a37f671003007ba405225685efe5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dfddfcffdb0e2300482906e2ca9619f6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>dfddfcffdb0e2300482906e2ca9619f6</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:00:27</sys_created_on>
+        <sys_id>93c1a7a8db1584901ab71230399619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:00:27</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>dfddfcffdb0e2300482906e2ca9619f6</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:14</sys_created_on>
+        <sys_id>9fddfcffdb0e2300482906e2ca9619f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:49:14</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value>role=46d5ca0ddb82eb00aa0f7104399619b7^state=active^user={{step['73ada477db4a2300482906e2ca96198f'].record_id}}^EQ</value>
+    </sys_element_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Insert a record into 'sys_user_has_role' with the following values:
+Role = x_dehp_time_track.admin
+and State = Active
+and User = {{invalid step_id=73ada477db4a2300482906e2ca96198f.}}
+Confirm the record was successfully inserted
+
+Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</description><display_name>Record Insert</display_name><inputs/><inputs/><mugshots_cache_json/><notes/><order>1</order><snapshot/><step_config display_value="Record Insert">14872288df60220062fe6c7a4df26319</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:14</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>dfddfcffdb0e2300482906e2ca9619f6</sys_id><sys_mod_count>88</sys_mod_count><sys_name>Record Insert</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:08:47</sys_updated_on><table>sys_user_has_role</table><test display_value="">465bacf3db4a2300482906e2ca961983</test><timeout/><warning_message>Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</warning_message></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=dfddfcffdb0e2300482906e2ca9619f6"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key><order>400</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:14</sys_created_on><sys_id>1bddfcffdb0e2300482906e2ca9619f9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:49:14</sys_updated_on><value>role=46d5ca0ddb82eb00aa0f7104399619b7^state=active^user={{step['73ada477db4a2300482906e2ca96198f'].record_id}}^EQ</value><variable display_value="">dd54cf535320220002c6435723dc34fd</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:14</sys_created_on><sys_id>57ddfcffdb0e2300482906e2ca9619f9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:49:14</sys_updated_on><value>sys_user_has_role</value><variable display_value="">90144b535320220002c6435723dc3488</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:14</sys_created_on><sys_id>93ddfcffdb0e2300482906e2ca9619f9</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:00:27</sys_updated_on><value>0</value><variable display_value="">e6e3c7535320220002c6435723dc3496</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>dfddfcffdb0e2300482906e2ca9619f6</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:14</sys_created_on><sys_id>9fddfcffdb0e2300482906e2ca9619f8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:49:14</sys_updated_on><value>record_successfully_inserted</value><variable display_value="">9024a37f671003007ba405225685efe5</variable></sys_variable_value><sys_element_mapping action="delete_multiple" query="id=dfddfcffdb0e2300482906e2ca9619f6"/><sys_element_mapping action="INSERT_OR_UPDATE"><field>enforce_security</field><id>dfddfcffdb0e2300482906e2ca9619f6</id><sys_created_by>_ejense</sys_created_by><sys_created_on>2019-11-20 20:00:27</sys_created_on><sys_id>93c1a7a8db1584901ab71230399619f0</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:00:27</sys_updated_on><table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table><value/></sys_element_mapping><sys_element_mapping action="INSERT_OR_UPDATE"><field>field_values</field><id>dfddfcffdb0e2300482906e2ca9619f6</id><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:14</sys_created_on><sys_id>9fddfcffdb0e2300482906e2ca9619f9</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:49:14</sys_updated_on><table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table><value>role=46d5ca0ddb82eb00aa0f7104399619b7^state=active^user={{step['73ada477db4a2300482906e2ca96198f'].record_id}}^EQ</value></sys_element_mapping></record_update>]]></payload>
+        <payload_hash>-969969517</payload_hash>
+        <record_name>Record Insert</record_name>
+        <reverted_from/>
+        <source>cf866f7bdb52a3409ef89ac5db961948</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:48</sys_created_on>
+        <sys_id>21b3efacdb1584901ab7123039961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e8a6e80840000001</sys_recorded_at>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:48</sys_updated_on>
+        <type>Test Step</type>
+        <u_link>[code]&lt;a title="sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6" class="linked" href="sys_atf_step.do?sys_id=dfddfcffdb0e2300482906e2ca9619f6"&gt;sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6&lt;/a&gt;[/code]</u_link>
+        <update_guid>e5b3efaccf1584908f911a8860252864</update_guid>
+        <update_guid_history>e5b3efaccf1584908f911a8860252864:-969969517,a9b3efac511584909c3868a4ab885340:-1127343438,11b3afacec15849099ba2bcae42db6d9:-1284717359,49b3afac9615849029371ac6cb3aec66:-1442091280,acb3afac181584901448b7c34ec2ab1f:-1599465201,9cb36faca6158490bca26ddbede79dc1:-1756839122,0cb36fac6b15849008a14873c881a111:-1914213043,3ba32fac821584902979a2c0bd8bfc94:-2071586964,0ba32fac3e15849002209c27d5c55d0a:2066006411,32a3ebacd61584903b77d585bff95a3b:-2142230843,5ea3abac8b1584907c095dc0b26c2f3a:1995362532,e5a32bacb515849008ae74379a8545d0:1837988611,70a3e7ac04158490951e0b483ed691fe:1680614690,d4a3e7ac5d158490ecb31fb0b0b4003a:1523240769,ab93a7ac31158490f75508d60a7f1e34:1365866848,7a9367ac0c1584901e7bafc923ce1b79:1208492927,4e9327ac7c158490abca4fa61f799b99:1051119006,9193e3ac87158490dcbcd37a84789bb3:893745085,5493a3ace1158490a3e908370539f713:736371164,fa8323acce158490cd33f66866729111:1569112198,ad83af6c1c158490a2475fb17c6b0c4d:-2110790669,dc832f6cd4158490bc642c844ffbb7f3:-1666040239,9773eb6c2a158490ac60299bc5f8b280:-1221289809,de73ab6c47158490c746a9c9de422c28:-1122061466,34732b6c791584902679cd84b576aad0:-1279435387,9b63a76cbd15849018ead6621b690639:-1436809308,f963276c22158490c0c820f4545ec615:-1594183229,d863a36cbb1584908bd63fd416f4f242:-1751557150,b253236c501584902d5dd75150fc618a:-1908931071,2853af2ce61584901b5d3dec1ccf64cf:-1076190037,f2432f2c23158490bcc3496449acfd9b:-1835688309,5fc1a7a89615849009d68ea662d4c7f1:-427028994,1bc1a7a87115849083f49b93f13a88ef:830745146</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>28dcea31b0a34823976d42a3e1e558c1</sys_id>
+        <sys_metadata>dfddfcffdb0e2300482906e2ca9619f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record Insert</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_dfddfcffdb0e2300482906e2ca9619f6">21b3efacdb1584901ab7123039961965</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

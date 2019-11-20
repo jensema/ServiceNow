@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Confirm that at least the following modules are visible: Current Time Sheet</description>
         <display_name>Module Visibility</display_name>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>7</order>
+        <snapshot/>
         <step_config display_value="Module Visibility">f7cfc1973702030064a52f3c8e41f1d3</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -23,6 +27,7 @@
         <table/>
         <test display_value="Time - Validate Record Build Test Action">2dc682d01bab6300a27f437ead4bcb27</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=734567b01ba3e300a27f437ead4bcb40"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

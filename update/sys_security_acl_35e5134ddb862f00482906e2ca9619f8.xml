@@ -3,7 +3,7 @@
         <active>true</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
-        <condition table="x_dehp_time_track_time_card">time_sheet.stateINPending,Rejected^EQ<item endquery="false" field="time_sheet.state" goto="false" newquery="false" operator="IN" or="false" value="Pending,Rejected"/>
+        <condition table="x_dehp_time_track_time_card">time_sheet.stateINPending,Rejected^EQ<item display_value="Pending,Rejected" endquery="false" field="time_sheet.state" goto="false" newquery="false" operator="IN" or="false" value="Pending,Rejected"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <description>Default access control on x_dehp_time_track_time_card</description>

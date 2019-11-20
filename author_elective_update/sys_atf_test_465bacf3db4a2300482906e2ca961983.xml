@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Test the navigation module for all user roles.&#13;
+&#13;
+-- Create Users --&#13;
+1.	Set up standard test records &#13;
+&#13;
+-- Test User without roles --&#13;
+2.	Impersonate User without Role&#13;
+3.	Verify Time Tracking Application Menu is not visible.&#13;
+4.	Verify All Time Tracking modules are not visible&#13;
+&#13;
+-- Test user With User Role --&#13;
+5.	Impersonate TimeSheet Test (User Role)&#13;
+6.	Confirm Time Tracking application is visible&#13;
+7.	Confirm Proper Modules are visible: &#13;
+&#13;
+-- Test user with Approver role -- &#13;
+8.	Impersonate TimeSheet Manager user&#13;
+9.	Confirm Time Tracking Application is visible&#13;
+10.	Confirm Appropriate Modules are visible.&#13;
+&#13;
+-- Test user with Approver and User roles --&#13;
+11.	Add User role to manager user&#13;
+12.	Impersonate initiating Admin&#13;
+13.	Confirm Time Tracking Application is visible&#13;
+14.	Confirm Appropriate Modules are visible.&#13;
+&#13;
+-- Test user with Finance Role --&#13;
+15.	Impersonate TimeSheet Finance user&#13;
+16.	Confirm Time Tracking Application is visible&#13;
+17.	Confirm Appropriate Modules are visible.&#13;
+&#13;
+-- Test Admin Role -- &#13;
+34.	Impersonate TimeSheet Admin User&#13;
+35.	Confirm Time Tracking Application is visible&#13;
+36.	Confirm All Modules are visible.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <name>Time - Validate Nav Module</name>
+        <parameters/>
+        <remember/>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:28:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>465bacf3db4a2300482906e2ca961983</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Time - Validate Nav Module</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_test_465bacf3db4a2300482906e2ca961983</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-09 21:12:50</sys_updated_on>
+    </sys_atf_test>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_test_465bacf3db4a2300482906e2ca961983</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test"><sys_atf_test action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Test the navigation module for all user roles.&#13;
+&#13;
+-- Create Users --&#13;
+1.	Set up standard test records &#13;
+&#13;
+-- Test User without roles --&#13;
+2.	Impersonate User without Role&#13;
+3.	Verify Time Tracking Application Menu is not visible.&#13;
+4.	Verify All Time Tracking modules are not visible&#13;
+&#13;
+-- Test user With User Role --&#13;
+5.	Impersonate TimeSheet Test (User Role)&#13;
+6.	Confirm Time Tracking application is visible&#13;
+7.	Confirm Proper Modules are visible: &#13;
+&#13;
+-- Test user with Approver role -- &#13;
+8.	Impersonate TimeSheet Manager user&#13;
+9.	Confirm Time Tracking Application is visible&#13;
+10.	Confirm Appropriate Modules are visible.&#13;
+&#13;
+-- Test user with Approver and User roles --&#13;
+11.	Add User role to manager user&#13;
+12.	Impersonate initiating Admin&#13;
+13.	Confirm Time Tracking Application is visible&#13;
+14.	Confirm Appropriate Modules are visible.&#13;
+&#13;
+-- Test user with Finance Role --&#13;
+15.	Impersonate TimeSheet Finance user&#13;
+16.	Confirm Time Tracking Application is visible&#13;
+17.	Confirm Appropriate Modules are visible.&#13;
+&#13;
+-- Test Admin Role -- &#13;
+34.	Impersonate TimeSheet Admin User&#13;
+35.	Confirm Time Tracking Application is visible&#13;
+36.	Confirm All Modules are visible.</description><enable_parameterized_testing>false</enable_parameterized_testing><name>Time - Validate Nav Module</name><parameters/><remember/><sys_class_name>sys_atf_test</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:28:46</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>465bacf3db4a2300482906e2ca961983</sys_id><sys_mod_count>9</sys_mod_count><sys_name>Time - Validate Nav Module</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_test_465bacf3db4a2300482906e2ca961983</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-04-09 21:12:50</sys_updated_on></sys_atf_test></record_update>]]></payload>
+        <payload_hash>-1564273554</payload_hash>
+        <record_name>Time - Validate Nav Module</record_name>
+        <reverted_from/>
+        <source>aaa25433db2000101ab71230399619cb</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2019-10-24 00:28:37</sys_created_on>
+        <sys_id>c1432b2cdb1584901ab7123039961988</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>16dfb2a4f080000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Test</type>
+        <u_link>[code]&lt;a title="sys_atf_test_465bacf3db4a2300482906e2ca961983" class="linked" href="sys_atf_test.do?sys_id=465bacf3db4a2300482906e2ca961983"&gt;sys_atf_test_465bacf3db4a2300482906e2ca961983&lt;/a&gt;[/code]</u_link>
+        <update_guid>81432b2c531584901f2fd2911accfe88</update_guid>
+        <update_guid_history>81432b2c531584901f2fd2911accfe88:-1564273554</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_test">sys_atf_test</sys_db_object>
+        <sys_id>1f47c5652aa7463d96f8182d2f3b3899</sys_id>
+        <sys_metadata>465bacf3db4a2300482906e2ca961983</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Time - Validate Nav Module</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_test_465bacf3db4a2300482906e2ca961983</sys_update_name>
+        <sys_update_version display_value="sys_atf_test_465bacf3db4a2300482906e2ca961983">c1432b2cdb1584901ab7123039961988</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

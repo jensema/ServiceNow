@@ -20,7 +20,7 @@
         <description/>
         <execute_function>false</execute_function>
         <filter_condition table="x_dehp_time_track_time_sheet">submission_dueRELATIVELE@minute@ago@0^stateINPending,Rejected^submission_dueISNOTEMPTY^EQ<item endquery="false" field="submission_due" goto="false" newquery="false" operator="RELATIVE" or="false" value="LE@minute@ago@0"/>
-            <item endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="Pending,Rejected"/>
+            <item display_value="Pending,Rejected" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="Pending,Rejected"/>
             <item endquery="false" field="submission_due" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>

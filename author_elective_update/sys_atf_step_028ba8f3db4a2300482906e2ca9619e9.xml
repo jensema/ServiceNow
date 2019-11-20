@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>false</active>
+        <copied_from/>
+        <description>Select a user without a role.</description>
+        <display_name>Select User Without Role</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="Select User Without Role">3e1681eddbd61300518901a3ca961995</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-04 23:29:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>028ba8f3db4a2300482906e2ca9619e9</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Select User Without Role</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_028ba8f3db4a2300482906e2ca9619e9</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:06:52</sys_updated_on>
+        <table/>
+        <test display_value="">465bacf3db4a2300482906e2ca961983</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=028ba8f3db4a2300482906e2ca9619e9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_step_028ba8f3db4a2300482906e2ca9619e9</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>false</active><copied_from/><description>Select a user without a role.</description><display_name>Select User Without Role</display_name><inputs/><mugshots_cache_json/><notes/><order>1</order><snapshot/><step_config display_value="Select User Without Role">3e1681eddbd61300518901a3ca961995</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-04 23:29:18</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>028ba8f3db4a2300482906e2ca9619e9</sys_id><sys_mod_count>17</sys_mod_count><sys_name>Select User Without Role</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_step_028ba8f3db4a2300482906e2ca9619e9</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:06:52</sys_updated_on><table/><test display_value="">465bacf3db4a2300482906e2ca961983</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=028ba8f3db4a2300482906e2ca9619e9"/></record_update>]]></payload>
+        <payload_hash>320054221</payload_hash>
+        <record_name>Select User Without Role</record_name>
+        <reverted_from/>
+        <source>cf866f7bdb52a3409ef89ac5db961948</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:06:52</sys_created_on>
+        <sys_id>5943eb2cdb1584901ab7123039961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e8a6cbd410000001</sys_recorded_at>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:06:52</sys_updated_on>
+        <type>Test Step</type>
+        <u_link>[code]&lt;a title="sys_atf_step_028ba8f3db4a2300482906e2ca9619e9" class="linked" href="sys_atf_step.do?sys_id=028ba8f3db4a2300482906e2ca9619e9"&gt;sys_atf_step_028ba8f3db4a2300482906e2ca9619e9&lt;/a&gt;[/code]</u_link>
+        <update_guid>1143eb2c5b1584904c3ce28a24976c25</update_guid>
+        <update_guid_history>1143eb2c5b1584904c3ce28a24976c25:320054221,a123a72c7c1584900a8a4de95fb250b9:883923931</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:07:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>16f2aebeb36845248412c8a9a1336304</sys_id>
+        <sys_metadata>028ba8f3db4a2300482906e2ca9619e9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Select User Without Role</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_step_028ba8f3db4a2300482906e2ca9619e9</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_028ba8f3db4a2300482906e2ca9619e9">5943eb2cdb1584901ab7123039961925</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:07:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

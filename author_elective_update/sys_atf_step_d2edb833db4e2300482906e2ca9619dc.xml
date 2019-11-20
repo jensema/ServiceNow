@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Impersonate the user: {{Step -28: Time Tracking Record Setup.User: Time Admin}}</description>
+        <display_name>Impersonate</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>-11</order>
+        <snapshot/>
+        <step_config display_value="Impersonate">071ee5b253331200040729cac2dc348d</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d2edb833db4e2300482906e2ca9619dc</sys_id>
+        <sys_mod_count>133</sys_mod_count>
+        <sys_name>Impersonate</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_d2edb833db4e2300482906e2ca9619dc</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:45</sys_updated_on>
+        <table/>
+        <test display_value="">465bacf3db4a2300482906e2ca961983</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=d2edb833db4e2300482906e2ca9619dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d2edb833db4e2300482906e2ca9619dc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:34</sys_created_on>
+        <sys_id>14fdb0ffdb0e2300482906e2ca96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:49:34</sys_updated_on>
+        <value/>
+        <variable display_value="">586e2c4253e0220002c6435723dc3415</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d2edb833db4e2300482906e2ca9619dc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>user</field>
+        <id>d2edb833db4e2300482906e2ca9619dc</id>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:49:34</sys_created_on>
+        <sys_id>90fdb0ffdb0e2300482906e2ca96197b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-04-09 21:09:01</sys_updated_on>
+        <table>var__m_atf_input_variable_071ee5b253331200040729cac2dc348d</table>
+        <value>{{step['f14ac8c3dba0f7406655b2a2ba9619b5'].u_timeadmin}}</value>
+    </sys_element_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_step_d2edb833db4e2300482906e2ca9619dc</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Impersonate the user: {{Step -28: Time Tracking Record Setup.User: Time Admin}}</description><display_name>Impersonate</display_name><inputs/><inputs/><mugshots_cache_json/><notes/><order>-11</order><snapshot/><step_config display_value="Impersonate">071ee5b253331200040729cac2dc348d</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:34</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>d2edb833db4e2300482906e2ca9619dc</sys_id><sys_mod_count>133</sys_mod_count><sys_name>Impersonate</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_step_d2edb833db4e2300482906e2ca9619dc</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:08:45</sys_updated_on><table/><test display_value="">465bacf3db4a2300482906e2ca961983</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=d2edb833db4e2300482906e2ca9619dc"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d2edb833db4e2300482906e2ca9619dc</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:34</sys_created_on><sys_id>14fdb0ffdb0e2300482906e2ca96197b</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:49:34</sys_updated_on><value/><variable display_value="">586e2c4253e0220002c6435723dc3415</variable></sys_variable_value><sys_element_mapping action="delete_multiple" query="id=d2edb833db4e2300482906e2ca9619dc"/><sys_element_mapping action="INSERT_OR_UPDATE"><field>user</field><id>d2edb833db4e2300482906e2ca9619dc</id><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:49:34</sys_created_on><sys_id>90fdb0ffdb0e2300482906e2ca96197b</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-04-09 21:09:01</sys_updated_on><table>var__m_atf_input_variable_071ee5b253331200040729cac2dc348d</table><value>{{step['f14ac8c3dba0f7406655b2a2ba9619b5'].u_timeadmin}}</value></sys_element_mapping></record_update>]]></payload>
+        <payload_hash>-1820732931</payload_hash>
+        <record_name>Impersonate</record_name>
+        <reverted_from/>
+        <source>cf866f7bdb52a3409ef89ac5db961948</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:45</sys_created_on>
+        <sys_id>81b3afacdb1584901ab71230399619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e8a6e77ec0000001</sys_recorded_at>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:45</sys_updated_on>
+        <type>Test Step</type>
+        <u_link>[code]&lt;a title="sys_atf_step_d2edb833db4e2300482906e2ca9619dc" class="linked" href="sys_atf_step.do?sys_id=d2edb833db4e2300482906e2ca9619dc"&gt;sys_atf_step_d2edb833db4e2300482906e2ca9619dc&lt;/a&gt;[/code]</u_link>
+        <update_guid>49b3afac5115849037169ea7301d4ebb</update_guid>
+        <update_guid_history>49b3afac5115849037169ea7301d4ebb:-1820732931,f4b3afac2515849022df13321e48984f:-1482525219,64b36fac4f1584900966694d2dfa9dfc:1535491334,50b36faca2158490eb82719119ba12ab:358307848,08b32fac5e1584909e231ba7a8ed44ee:-818875638,27a32fac541584905311e1285cf20571:-1996059124,4fa3ebace3158490d11258639b96a4da:1121724686,b6a3abaca5158490b854eb87445d3ded:-55458800,06a36bac34158490e324bc3c273ad4ce:-1232642286,5da32bacd0158490131f46f128e24c82:368934985,70a3e7ac9b15849003902002f9fb94c8:-808248501,8ca3a7acc81584900ca4ab9b3317e3e0:1093841882,1393a7ac391584901e92f989c35b4a0c:-290758472,2a9367acf1158490abf8a6df08897344:-1675358826,f19327acf7158490e963b5cb8d9f2a71:1235008116,4193e3ac20158490549020ac05c68c7e:-149592238,b78363acd5158490a240b0f801dbf9a0:-1534192592,ae83ef6c7b1584908bd4e9018d07c5a4:1376174350,15836f6c65158490392b0632138c68d4:-8426004,40832f6c9b158490328c8635403c34ac:-443036807,8773eb6cc615849016406bcf1c84e151:-1827637161,71736b6c1f158490a0eeb032ee5d5ae1:-471213876,28732b6c6e1584907df3bf380e40196f:1379657996,c763676c4a1584909e199a4d3dcdb5cc:-1064437428,2963e36c1d158490f57062b6cd5285a8:786434444,0463a36c051584904381a12d7ed11407:-1657660980,1a53236c5f1584902b4dd917b7448130:193210892,1053af2c7a15849067700a19befb0695:2044082764,12432f2c34158490b8cc559dc36fd439:281090861,16432f2cf51584902654a108f40a0737:-1129153578</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>72cb9eb427f64c07bab8a505627be121</sys_id>
+        <sys_metadata>d2edb833db4e2300482906e2ca9619dc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Impersonate</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_step_d2edb833db4e2300482906e2ca9619dc</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_d2edb833db4e2300482906e2ca9619dc">81b3afacdb1584901ab71230399619bc</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

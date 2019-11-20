@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Open the 'Time Sheet' form with id '{{Step 40: Submit a Form.Record}}'</description>
         <display_name>Open an Existing Record</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>78</order>
+        <snapshot/>
         <step_config display_value="Open an Existing Record">5f2e0e535332120028bc29cac2dc34d3</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -24,6 +28,7 @@
         <table>x_dehp_time_track_time_sheet</table>
         <test display_value="Time Sheet Testing">1b4bc323db06a340aa0f71043996198e</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=0af3e298db922740aa0f71043996190f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

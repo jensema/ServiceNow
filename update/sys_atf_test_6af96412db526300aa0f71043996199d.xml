@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <copied_from/>
+        <description>-- Create Users --&#13;
+1	Get current admin user&#13;
+2	Create "TimeSheet Manager" user&#13;
+3	Create "TimeSheet Test" user with manager from 2&#13;
+4	Create "TimeSheet Admin" user&#13;
+5	Create "TimeSheet Finance" user&#13;
+6	Add "TimeSheet Manager" to 'x_dehp_time_track.approver' role&#13;
+7	Add "TimeSheet Test" user to 'x_dehp_time_track.user' role&#13;
+8	Add "TimeSheet Admin" user to 'x_dehp_time_track.admin' role&#13;
+9	Add "TimeSheet Finance" to 'x_dehp_time_track.finance' role&#13;
+&#13;
+-- Create Time Sheet Policy --&#13;
+10	Create Testing Policy&#13;
+		- No blank cards, no auto create, lookback 3 weeks, approver is manager, week starts Monday&#13;
+			Submission Due 1 day after at noon, approval due 2 days after week at noon&#13;
+			Requires between 20 and 40 hours per week&#13;
+11	Add "TimeSheet Test" user to new policy&#13;
+&#13;
+-- Build Account Types --&#13;
+12	Create "Test (With Tasks)" account type, and allow tasks&#13;
+13	Create "Test (Without Tasks)" account type, do not allow tasks&#13;
+&#13;
+-- Build Accounts with the following structure --&#13;
+14	100 - Top Account&#13;
+15		110 - Sub Account&#13;
+16			111 - Tasks 1&#13;
+17			112	- Tasks 2&#13;
+18		120 - Sub With Tasks&#13;
+&#13;
+-- Create External Tasks -- &#13;
+19	Create External Task, Number = TK-421, Short Description = External Expense Feature&#13;
+20	Create External Task, Number = THX-1138, Short Description = External Capital Feature&#13;
+&#13;
+-- Create General Time Categories --&#13;
+	-- (Link to Feature/Task = false) --&#13;
+	-- (Charge Code = Expense) --&#13;
+21	Create Time Category&#13;
+		Name = General 120&#13;
+		Account = Step 18: (120 - Sub With Tasks)&#13;
+22	Create Time Category&#13;
+		Name = Stuff 120&#13;
+		Account = Step 18: (120 - Sub With Tasks)&#13;
+23	Create Time Category&#13;
+		Name = General 111&#13;
+		Account = Step 16: (111 - Tasks 1)&#13;
+24	Create Time Category&#13;
+		Name = Stuff 112&#13;
+		Account = Step 17: (112	- Tasks 2)&#13;
+&#13;
+-- Create Task Time Categories --&#13;
+	-- (Link to Feature/Task = true) --&#13;
+25	Create Time Cateogry&#13;
+		Account = Step 17: (112	- Tasks 2)&#13;
+		Task = Step 20: (THX-1138)&#13;
+		Charge Code = Capital&#13;
+26	Create Time Cateogry&#13;
+		Account = Step 17: (112	- Tasks 2)&#13;
+		Task = Step 19: (TK-421)&#13;
+		Charge Code = Expense&#13;
+		&#13;
+-- Create Rate Card --&#13;
+27	Create Rate Card, start date Dec 1, 2018, Rate of 19.99&#13;
+28	Link rate card to "TimeSheet Test" user (step 3)</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <name>Base Record Setup (Use for other tests)</name>
+        <parameters/>
+        <remember/>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-12 17:47:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6af96412db526300aa0f71043996199d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Base Record Setup (Use for other tests)</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_test_6af96412db526300aa0f71043996199d</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-06 22:22:10</sys_updated_on>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=6af96412db526300aa0f71043996199d"/>
+</record_update>

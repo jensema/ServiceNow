@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Insert a record into 'x_dehp_time_track_time_sheet' with the following values:
 Week starts on = 2018-12-31
 and User = {{Step 1: Time Tracking Record Setup.User: Standard User}}
@@ -8,7 +9,10 @@ Confirm the record was successfully inserted</description>
         <display_name>Record Insert</display_name>
         <inputs/>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>3</order>
+        <snapshot/>
         <step_config display_value="Record Insert">14872288df60220062fe6c7a4df26319</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -27,6 +31,7 @@ Confirm the record was successfully inserted</description>
         <table>x_dehp_time_track_time_sheet</table>
         <test display_value="Time - Monthly Cost Metrics Validation">84e1029cdbe07f006655b2a2ba9619a8</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=88b40a10db247f006655b2a2ba96199e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

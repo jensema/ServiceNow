@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Click UI Action 'Submit Timesheet' on 'Time Sheet' form.</description>
         <display_name>Click a UI Action</display_name>
         <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
         <order>9</order>
+        <snapshot/>
         <step_config display_value="Click a UI Action">0f4a128297202200abe4bb7503ac4af0</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
@@ -23,6 +27,7 @@
         <table>x_dehp_time_track_time_sheet</table>
         <test display_value="Time - Monthly Cost Metrics Validation">84e1029cdbe07f006655b2a2ba9619a8</test>
         <timeout/>
+        <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=4b278ad0db247f006655b2a2ba9619c2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

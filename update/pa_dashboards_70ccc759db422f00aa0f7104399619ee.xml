@@ -11,7 +11,7 @@
         <name>Time Sheet Administration</name>
         <no_tabs>false</no_tabs>
         <order/>
-        <owner display_value="Eric Jensema - Admin Account">b06f3f4e6fed150081d61f3e5d3ee4e6</owner>
+        <owner/>
         <restrict_to_roles>x_dehp_time_track.admin</restrict_to_roles>
         <role_override>true</role_override>
         <roles/>

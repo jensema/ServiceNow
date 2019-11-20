@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Confirm that at least the following modules are visible: Current Time Sheet, Time Sheets, My Time Sheets, Submitted for Approval, Finance Records, All Time Sheets, Time Cards, Rate Cards, Accounts, Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table, Day Cards, Time Sheet Approvals, Awaiting Submission, Processed</description>
+        <display_name>Module Visibility</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>0</order>
+        <snapshot/>
+        <step_config display_value="Module Visibility">f7cfc1973702030064a52f3c8e41f1d3</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:53:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d44e3c73db4e2300482906e2ca961900</sys_id>
+        <sys_mod_count>88</sys_mod_count>
+        <sys_name>Module Visibility</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_update_name>sys_atf_step_d44e3c73db4e2300482906e2ca961900</sys_update_name>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:33</sys_updated_on>
+        <table/>
+        <test display_value="">465bacf3db4a2300482906e2ca961983</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=d44e3c73db4e2300482906e2ca961900"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d44e3c73db4e2300482906e2ca961900</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:53:21</sys_created_on>
+        <sys_id>2fce38b7db4e2300482906e2ca9619ec</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-11 22:03:49</sys_updated_on>
+        <value/>
+        <variable display_value="">932d14a33756030064a52f3c8e41f120</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d44e3c73db4e2300482906e2ca961900</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:53:21</sys_created_on>
+        <sys_id>6bce38b7db4e2300482906e2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:53:21</sys_updated_on>
+        <value>at_least_modules_not_visible</value>
+        <variable display_value="">8570e0e33756030064a52f3c8e41f16c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d44e3c73db4e2300482906e2ca961900</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:53:21</sys_created_on>
+        <sys_id>a7ce38b7db4e2300482906e2ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2018-12-05 00:53:21</sys_updated_on>
+        <value>at_least_modules_visible</value>
+        <variable display_value="">90749dd73702030064a52f3c8e41f12d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d44e3c73db4e2300482906e2ca961900</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2018-12-05 00:53:21</sys_created_on>
+        <sys_id>efce38b7db4e2300482906e2ca9619ec</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-02-06 21:38:22</sys_updated_on>
+        <value>29c96645db062f00482906e2ca9619ac,a40a2a45db062f00482906e2ca961940,c02a6a45db062f00482906e2ca9619d0,a6f12bc5dbc62f00482906e2ca961904,dce3bb0ddbca2f00482906e2ca9619e5,272d7782dbcaaf00aa0f7104399619a6,2434ff0ddbca2f00482906e2ca9619b4,85c4b74ddbca2f00482906e2ca96199f,6115bf0ddbca2f00482906e2ca961963,7a35774ddbca2f00482906e2ca9619b2,5485ff0ddbca2f00482906e2ca961971,0195fb4ddbca2f00482906e2ca961966,23a53f4ddbca2f00482906e2ca9619e3,9fc5f38ddbca2f00482906e2ca961973,9606b74ddbca2f00482906e2ca9619d4,1d36b38ddbca2f00482906e2ca961972,d656f78ddbca2f00482906e2ca961913,06763b8ddbca2f00482906e2ca961997,de29dc86db1e6300482906e2ca961998,490aeab2dbdaa300aa0f7104399619f7,efa9e6b2dbdaa300aa0f710439961949,6b458f871b03af00a27f437ead4bcb5f</value>
+        <variable display_value="">4a3319d73702030064a52f3c8e41f1a9</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</application>
+        <comments/>
+        <file_path/>
+        <instance_id>f10ec21309588d806999ba291c5ee6ac</instance_id>
+        <instance_name>dhpdev</instance_name>
+        <name>sys_atf_step_d44e3c73db4e2300482906e2ca961900</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Confirm that at least the following modules are visible: Current Time Sheet, Time Sheets, My Time Sheets, Submitted for Approval, Finance Records, All Time Sheets, Time Cards, Rate Cards, Accounts, Time Categories, General, Tasks and Features, Disabled, Admin, Admin Dashboard, Account Types, Policies, External Feature Table, Day Cards, Time Sheet Approvals, Awaiting Submission, Processed</description><display_name>Module Visibility</display_name><inputs/><mugshots_cache_json/><notes/><order>0</order><snapshot/><step_config display_value="Module Visibility">f7cfc1973702030064a52f3c8e41f1d3</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:53:21</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>d44e3c73db4e2300482906e2ca961900</sys_id><sys_mod_count>88</sys_mod_count><sys_name>Module Visibility</sys_name><sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope><sys_update_name>sys_atf_step_d44e3c73db4e2300482906e2ca961900</sys_update_name><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-11-20 20:08:33</sys_updated_on><table/><test display_value="">465bacf3db4a2300482906e2ca961983</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=d44e3c73db4e2300482906e2ca961900"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d44e3c73db4e2300482906e2ca961900</document_key><order>400</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:53:21</sys_created_on><sys_id>2fce38b7db4e2300482906e2ca9619ec</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-11 22:03:49</sys_updated_on><value/><variable display_value="">932d14a33756030064a52f3c8e41f120</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d44e3c73db4e2300482906e2ca961900</document_key><order>300</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:53:21</sys_created_on><sys_id>6bce38b7db4e2300482906e2ca9619ec</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:53:21</sys_updated_on><value>at_least_modules_not_visible</value><variable display_value="">8570e0e33756030064a52f3c8e41f16c</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d44e3c73db4e2300482906e2ca961900</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:53:21</sys_created_on><sys_id>a7ce38b7db4e2300482906e2ca9619ec</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2018-12-05 00:53:21</sys_updated_on><value>at_least_modules_visible</value><variable display_value="">90749dd73702030064a52f3c8e41f12d</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d44e3c73db4e2300482906e2ca961900</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>_ejense</sys_created_by><sys_created_on>2018-12-05 00:53:21</sys_created_on><sys_id>efce38b7db4e2300482906e2ca9619ec</sys_id><sys_mod_count>2</sys_mod_count><sys_updated_by>_ejense</sys_updated_by><sys_updated_on>2019-02-06 21:38:22</sys_updated_on><value>29c96645db062f00482906e2ca9619ac,a40a2a45db062f00482906e2ca961940,c02a6a45db062f00482906e2ca9619d0,a6f12bc5dbc62f00482906e2ca961904,dce3bb0ddbca2f00482906e2ca9619e5,272d7782dbcaaf00aa0f7104399619a6,2434ff0ddbca2f00482906e2ca9619b4,85c4b74ddbca2f00482906e2ca96199f,6115bf0ddbca2f00482906e2ca961963,7a35774ddbca2f00482906e2ca9619b2,5485ff0ddbca2f00482906e2ca961971,0195fb4ddbca2f00482906e2ca961966,23a53f4ddbca2f00482906e2ca9619e3,9fc5f38ddbca2f00482906e2ca961973,9606b74ddbca2f00482906e2ca9619d4,1d36b38ddbca2f00482906e2ca961972,d656f78ddbca2f00482906e2ca961913,06763b8ddbca2f00482906e2ca961997,de29dc86db1e6300482906e2ca961998,490aeab2dbdaa300aa0f7104399619f7,efa9e6b2dbdaa300aa0f710439961949,6b458f871b03af00a27f437ead4bcb5f</value><variable display_value="">4a3319d73702030064a52f3c8e41f1a9</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>-328322314</payload_hash>
+        <record_name>Module Visibility</record_name>
+        <reverted_from/>
+        <source>cf866f7bdb52a3409ef89ac5db961948</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:33</sys_created_on>
+        <sys_id>06a3abacdb1584901ab712303996191e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e8a6e48c00000001</sys_recorded_at>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:33</sys_updated_on>
+        <type>Test Step</type>
+        <u_link>[code]&lt;a title="sys_atf_step_d44e3c73db4e2300482906e2ca961900" class="linked" href="sys_atf_step.do?sys_id=d44e3c73db4e2300482906e2ca961900"&gt;sys_atf_step_d44e3c73db4e2300482906e2ca961900&lt;/a&gt;[/code]</u_link>
+        <update_guid>caa3abac8d1584903302fc0d979f8d1d</update_guid>
+        <update_guid_history>caa3abac8d1584903302fc0d979f8d1d:-328322314,78a3e7ac25158490e071dab4d15757da:1128541623,94a3e7acd0158490bcfad7d294b53d23:-1709561736,d793a7ac7b158490c4ecf6d9b4a5d917:-252697799,ee9367ac6015849041012257bb580b4f:1204166138,b99327ac9315849027ac8605281b5c7c:-1633937221,0993e3ac36158490822271246e606b89:-177073284,378363ac1a1584907a18136bf16b03b8:1279790653,3e83ef6c271584903f9a0dd1bbb3a3bc:-1558312706,a1836f6c441584901b529bf6a79320ec:-101448769,08832f6ce51584908dbaa03b126f53b7:1831981931,4f73eb6c8a15849006311e080653505c:-1006121428,0a736b6c3b158490c1ceb5377f9cfaec:450742509,b4732b6c3d158490024b0b6f87c3c687:1907606446,4763676c96158490ec3b7cadb741bee4:-930496913,fd63e36cf915849087a5b3128f4c99b3:526367024,c863a36c94158490faa42fc3f5662312:1983230961,de53236c321584901649cf284c90dc3b:-854872398,d453af2c98158490dd6882f24e30e6a6:601991539,26432f2c4a158490d65dc0989becdc58:2058855476,2a432f2c7c15849067999aeb0f19c456:-104943000</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>_ejense</sys_created_by>
+        <sys_created_on>2019-11-20 20:08:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>6b39ff66fe754e60aa52ccdb2c3b9900</sys_id>
+        <sys_metadata>d44e3c73db4e2300482906e2ca961900</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Module Visibility</sys_name>
+        <sys_package display_value="Time Tracking" source="x_dehp_time_track">fd7546c9db82eb00aa0f71043996190b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Time Tracking">fd7546c9db82eb00aa0f71043996190b</sys_scope>
+        <sys_scope_delete display_value="">5edf6d24d8b349dc86fffcae57928724</sys_scope_delete>
+        <sys_update_name>sys_atf_step_d44e3c73db4e2300482906e2ca961900</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_d44e3c73db4e2300482906e2ca961900">06a3abacdb1584901ab712303996191e</sys_update_version>
+        <sys_updated_by>_ejense</sys_updated_by>
+        <sys_updated_on>2019-11-20 20:08:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

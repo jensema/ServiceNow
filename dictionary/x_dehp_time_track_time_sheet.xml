@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Time Sheet" max_length="40" name="x_dehp_time_track_time_sheet" type="collection">
+    <element audit="true" label="Time Sheet" max_length="40" name="x_dehp_time_track_time_sheet" sizeclass="5049" type="collection">
         <element attributes="edge_encryption_enabled=true" calculation="(function calculatedFieldValue(current) {&#10;&#10;&#9;var timeSheet = new TimeSheet(current);&#10;&#9;var dueDate = timeSheet.getApprovalDueDate();&#10;&#9;return dueDate;&#10;&#10;})(current);" label="Approval Due" max_length="40" name="approval_due" read_only="true" type="glide_date_time" virtual="true"/>
         <element attributes="edge_encryption_enabled=true" label="Approved on Time" max_length="40" name="approved_on_time" read_only="true" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Approver" max_length="32" name="approver" read_only="true" reference="sys_user" reference_qual="roles=x_dehp_time_track.approver^active=true^EQ" reference_qual_condition="roles=x_dehp_time_track.approver^active=true^EQ" type="reference"/>
@@ -31,10 +31,10 @@
         <element attributes="edge_encryption_enabled=true" default="0" label="Wednesday" max_length="15" name="wednesday" read_only="true" type="decimal"/>
         <element attributes="edge_encryption_enabled=true" display="true" label="Week starts on" mandatory="true" max_length="40" name="week_starts_on" type="glide_date"/>
         <index name="index">
-            <element name="user"/>
+            <element name="approver"/>
         </index>
         <index name="index2">
-            <element name="approver"/>
+            <element name="user"/>
         </index>
     </element>
 </database>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
     <sys_atf_test action="INSERT_OR_UPDATE">
         <active>true</active>
+        <copied_from/>
         <description>Regression test to make sure that the correct rate card is being associated with the day card properly.</description>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
         <name>Time - Check Rate Card</name>
+        <parameters/>
         <remember/>
         <sys_class_name>sys_atf_test</sys_class_name>
         <sys_created_by>_ejense</sys_created_by>
